@@ -27,5 +27,6 @@ def create_data_loader_v1(
         dataset= dataset,
         batch_size= batch_size,
         shuffle= shuffle,
-        
+        drop_last= drop_last,
+        num_workers= num_workers
     )
