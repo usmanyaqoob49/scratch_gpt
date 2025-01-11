@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.data_preparation.tokenizer import SimpleTokenizer
 from src.data_preparation.utils import read_verdict, convert_to_tokens, vocab_assign_token_id
 
@@ -14,5 +17,5 @@ for key, item in verdict_text_vocabulary.items():
     if key>4:
         break
 
-    
+
 tokenizer= SimpleTokenizer()
