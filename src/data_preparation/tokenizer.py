@@ -1,4 +1,5 @@
 from utils import convert_to_tokens, read_verdict, vocab_assign_token_id, tokenid_to_token
+import re
 
 class SimpleTokenizer:
     def __init__(self, vocab):
@@ -15,3 +16,7 @@ class SimpleTokenizer:
         ids= [self.str_to_int[s] for s in processed]
         return ids
     
+    def decode(self, ids):
+        text= " ".join([self.int_to_str[i] for i in ids])
+        proper_text= re.sub(r'\s+([,.:;?!"()\'])', r'\1', text) #Replace spaces before the specified punctuations
+        return proper_text
