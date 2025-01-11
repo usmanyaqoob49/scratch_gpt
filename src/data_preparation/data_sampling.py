@@ -12,3 +12,6 @@ class GPTDataset(Dataset):
     def __init__(self, text, tokenizer, max_length, stride):
         self.input_ids= []
         self.output_ids= []
+
+        token_ids= tokenizer.encode(text, allowed_special= {"<|endoftext|>"})
+        
