@@ -5,6 +5,7 @@ from src.data_preparation.tokenizer import SimpleTokenizer
 from src.data_preparation.utils import read_verdict, convert_to_tokens, vocab_assign_token_id, gpt_tokeinzer, tokenid_to_token
 from src.data_preparation.data_sampling import GPTDatasetV1
 from src.data_preparation.data_loader import create_data_loader_v1
+from src.data_preparation.embeddings import create_embeddings
 
 #reading dataset (raw)
 verdict_text= read_verdict(path= "./data/raw/the-verdict.txt")
@@ -50,3 +51,5 @@ for i, (input, output) in enumerate(dataloader):
     if i<5:
         print(f'input Batch {i}: ', input)
         print(f'output Batch {i}: ', output)
+
+#testing embeddings function
