@@ -39,3 +39,8 @@ dataloader= create_data_loader_v1(
     stride=1,
     shuffle= False
 )
+print('Result by dataloader when we gave it dataset: (First 5 input/outputs)')
+for i, (input, output) in enumerate(dataloader):
+    if i<5:
+        print(f'input Batch {i}: ', input)
+        print(f'output Batch{i}: ', output)
