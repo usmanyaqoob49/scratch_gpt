@@ -18,4 +18,8 @@ def create_data_loader_v1(
         num_workers= 0
 ):
     tokenizer= gpt_tokeinzer()
+    dataset= GPTDatasetV1(text= txt,
+                          tokenizer= tokenizer, 
+                          max_length= max_length,
+                          stride= stride)
     
