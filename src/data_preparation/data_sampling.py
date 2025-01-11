@@ -15,3 +15,4 @@ class GPTDataset(Dataset):
 
         token_ids= tokenizer.encode(text, allowed_special= {"<|endoftext|>"})
         
+        # Use a sliding window to chunk the book into overlapping sequences of max_length
