@@ -1,1 +1,1 @@
-#scratch gpt
+# scratch gpt
