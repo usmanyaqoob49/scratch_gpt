@@ -11,7 +11,7 @@ import torch
 from torch.utils.data import Dataset, DataLoader
 from .utils import gpt_tokeinzer
 
-class GPTDataset(Dataset):
+class GPTDatasetV1(Dataset):
     def __init__(self, text, tokenizer, max_length, stride):
         self.input_ids= []
         self.output_ids= []
