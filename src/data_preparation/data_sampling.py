@@ -29,3 +29,6 @@ class GPTDataset(Dataset):
     def __len__(self):
         return len(self.input_ids)
     
+    def __getitem__(self, index):
+        return self.input_ids[index], self.output_ids[index]
+    
