@@ -29,4 +29,5 @@ dataset= GPTDatasetV1(text= verdict_text,
                       max_length= 4,
                       stride= 1)
 
-
+print('input ids 1: ', dataset.input_ids[1])
+print('output ids 1: ', dataset.output_ids[1])
