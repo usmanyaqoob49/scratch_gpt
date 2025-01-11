@@ -10,6 +10,7 @@ def read_verdict(path):
 
 #To convert text to tokens
 def convert_to_tokens(text):
-    tokens= re.split(r'([, .]|\s)', text)
+    pattern= r'([,.:;?_!"()\']|--|\s)'  #pattern for handling punctuations and splitting every string
+    tokens= re.split(pattern, text)
     result= [item for item in tokens if item.strip()] #remove white space
     return result
