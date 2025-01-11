@@ -1,7 +1,7 @@
 """
 This file has module that creates embeddiings from token ids.
 
-It has implementation of tokens 
+It has implementation of tokens embeddings + positional embeddings too.
 """
 import torch
 
