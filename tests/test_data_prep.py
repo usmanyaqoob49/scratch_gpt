@@ -31,3 +31,11 @@ dataset= GPTDatasetV1(text= verdict_text,
 
 print('input ids 1: ', dataset.input_ids[1])
 print('output ids 1: ', dataset.output_ids[1])
+
+dataloader= create_data_loader_v1(
+    txt= verdict_text,
+    batch_size= 4,
+    max_length= 4,
+    stride=1,
+    shuffle= False
+)
