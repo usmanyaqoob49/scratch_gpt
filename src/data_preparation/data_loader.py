@@ -8,3 +8,13 @@ import torch
 from .utils import gpt_tokeinzer
 from .data_sampling import GPTDatasetV1
 
+def create_data_loader_v1(
+        txt,
+        batch_size= 4,
+        max_length= 256,
+        stride= 128,
+        shuffle= True,
+        drop_last= True,
+        num_workers= 0
+):
+    
