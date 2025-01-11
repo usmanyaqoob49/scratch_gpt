@@ -30,3 +30,4 @@ def create_data_loader_v1(
         drop_last= drop_last,
         num_workers= num_workers
     )
+    return dataloader
