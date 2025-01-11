@@ -17,4 +17,6 @@ def create_data_loader_v1(
         drop_last= True,
         num_workers= 0
 ):
+    tokenizer= gpt_tokeinzer()
+    tokens= tokenizer.encode(text= txt)
     
