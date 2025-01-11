@@ -12,5 +12,4 @@ print('Number of tokens after converting text to tokens: ', len(verdict_text_tok
 
 verdict_text_vocabulary= vocab_assign_token_id(tokens= verdict_text_tokens)
 
-
 tokenizer= SimpleTokenizer()
