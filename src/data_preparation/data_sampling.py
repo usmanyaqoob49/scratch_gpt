@@ -9,5 +9,5 @@ from torch.utils.data import Dataset, DataLoader
 from .utils import gpt_tokeinzer
 
 class GPTDataset(Dataset):
-    def __init__(self, text, tokenizer, ):
+    def __init__(self, text, tokenizer, max_length, stride):
         super().__init__()
