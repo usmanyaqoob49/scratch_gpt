@@ -1,3 +1,6 @@
+"""
+File has all the function used in preprocessing.
+"""
 import os
 import re
 
