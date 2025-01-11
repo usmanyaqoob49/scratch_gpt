@@ -2,7 +2,7 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.data_preparation.tokenizer import SimpleTokenizer
-from src.data_preparation.utils import read_verdict, convert_to_tokens, vocab_assign_token_id, gpt_tokeinzer
+from src.data_preparation.utils import read_verdict, convert_to_tokens, vocab_assign_token_id, gpt_tokeinzer, tokenid_to_token
 from src.data_preparation.data_sampling import GPTDatasetV1
 from src.data_preparation.data_loader import create_data_loader_v1
 
@@ -31,3 +31,5 @@ dataset= GPTDatasetV1(text= verdict_text,
 
 print('input ids 1: ', dataset.input_ids[1])
 print('output ids 1: ', dataset.output_ids[1])
+print('input text 1: ', tokenid_to_token(dataset.input_ids[1]))
+print('out text 1: ', tokenid_to_token(dataset.output_ids[1]))
