@@ -23,4 +23,6 @@ class GPTDataset(Dataset):
             input_chunk= token_ids[i:i+max_length]  #ipnut will be start to max_length
             output_chunk= token_ids[i+1:i+max_length+1] #output will be one word to right 
 
+            self.input_ids.append(torch.tensor(input_chunk))
+            self.output_ids.append(torch.tensor(output_chunk))
             
