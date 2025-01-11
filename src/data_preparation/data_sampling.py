@@ -7,4 +7,5 @@ Also it has GPTDataset class that will convert the dataset to dataset required f
 import torch
 from torch.utils.data import Dataset, DataLoader
 
-class GPTDataset()
+class GPTDataset(Dataset):
+    
