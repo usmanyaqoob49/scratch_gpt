@@ -53,3 +53,7 @@ for i, (input, output) in enumerate(dataloader):
         print(f'output Batch {i}: ', output)
 
 #testing embeddings function
+data= iter(dataloader)
+input, output= next(data)
+embedded_input= create_embeddings(input_ids= input, vocab_size= 50257, output_dim= 256)
+print(embedded_input.shape)
