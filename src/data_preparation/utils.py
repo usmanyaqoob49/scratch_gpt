@@ -17,7 +17,7 @@ def convert_to_tokens(text):
 
 #assign token id-->making vocabulary to assign token id
 def vocab_assign_token_id(tokens):
-    all_words= sorted(set(all_words))
+    all_words= sorted(set(tokens))
     vocab= {token:token_id for token_id,token in enumerate(tokens)}
     return vocab
 
