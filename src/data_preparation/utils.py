@@ -3,7 +3,7 @@ File has all the function used in preprocessing.
 """
 import os
 import re
-
+import tiktoken
 
 #To read the verdict dataset
 def read_verdict(path):
@@ -27,3 +27,5 @@ def vocab_assign_token_id(tokens):
 #to convert token_ids to tokens text
 def tokenid_to_token(vocab):
     return {token_id:token for token, token_id in vocab.items()}
+
+#we will use gpt tokenizer by using library called tiktoken
