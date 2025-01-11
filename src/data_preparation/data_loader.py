@@ -7,6 +7,7 @@ in the form of bathces.
 import torch
 from .utils import gpt_tokeinzer
 from .data_sampling import GPTDatasetV1
+from torch.utils.data import Dataset, DataLoader
 
 def create_data_loader_v1(
         txt,
@@ -22,4 +23,9 @@ def create_data_loader_v1(
                           tokenizer= tokenizer, 
                           max_length= max_length,
                           stride= stride)
-    
+    dataloader= DataLoader(
+        dataset= dataset,
+        batch_size= batch_size,
+        shuffle= shuffle,
+        
+    )
