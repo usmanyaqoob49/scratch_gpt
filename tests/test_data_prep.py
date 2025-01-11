@@ -27,6 +27,8 @@ text_from_ids= tokenizer.decode(ids= ids)
 print('Text assigned from decoder using token ids', text_from_ids)
 
 tokenizer= gpt_tokeinzer()
+
+#testing dataset class that converts simple tokens to proper input and output tokens 
 dataset= GPTDatasetV1(text= verdict_text, 
                       tokenizer= tokenizer,
                       max_length= 4,
@@ -35,6 +37,7 @@ dataset= GPTDatasetV1(text= verdict_text,
 print('input ids 1: ', dataset.input_ids[1])
 print('output ids 1: ', dataset.output_ids[1])
 
+#testing dataloader that takes the dataset of input and output and convert them to batches
 dataloader= create_data_loader_v1(
     txt= verdict_text,
     batch_size= 4,
