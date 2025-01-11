@@ -14,3 +14,7 @@ def convert_to_tokens(text):
     tokens= re.split(pattern, text)
     result= [item for item in tokens if item.strip()] #remove white space
     return result
+
+#assign token id-->making vocabulary to assign token id
+def vocab_assign_token_id(tokens):
+    
