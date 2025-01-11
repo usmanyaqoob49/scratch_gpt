@@ -12,10 +12,9 @@ print('Number of tokens after converting text to tokens: ', len(verdict_text_tok
 
 verdict_text_vocabulary= vocab_assign_token_id(tokens= verdict_text_tokens)
 for key, item in verdict_text_vocabulary.items():
-    print('First 5 items in vocbulary: ')
-    print(item)
-    if key>4:
-        break
+    print('First items pair in vocbulary: ')
+    print(key, item)
+
 
 
 tokenizer= SimpleTokenizer()
