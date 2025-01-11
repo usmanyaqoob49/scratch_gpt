@@ -10,4 +10,5 @@ from .utils import gpt_tokeinzer
 
 class GPTDataset(Dataset):
     def __init__(self, text, tokenizer, max_length, stride):
-        super().__init__()
+        self.input_ids= []
+        self.output_ids= []
