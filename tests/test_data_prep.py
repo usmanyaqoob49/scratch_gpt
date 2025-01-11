@@ -6,9 +6,11 @@ from src.data_preparation.utils import read_verdict, convert_to_tokens, vocab_as
 from src.data_preparation.data_sampling import GPTDatasetV1
 from src.data_preparation.data_loader import create_data_loader_v1
 
+#reading dataset (raw)
 verdict_text= read_verdict(path= "./data/raw/the-verdict.txt")
 print('verdict_text_lenght= ', len(verdict_text))
 
+#converting to tokens
 verdict_text_tokens= convert_to_tokens(text= verdict_text)
 print('Number of tokens after converting text to tokens: ', len(verdict_text_tokens))
 
