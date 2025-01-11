@@ -20,3 +20,4 @@ def vocab_assign_token_id(tokens):
     all_words= sorted(set(all_words))
     vocab= {token:token_id for token_id,token in enumerate(tokens)}
     return vocab
+
