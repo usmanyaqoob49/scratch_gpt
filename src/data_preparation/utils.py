@@ -21,3 +21,6 @@ def vocab_assign_token_id(tokens):
     vocab= {token:token_id for token_id,token in enumerate(tokens)}
     return vocab
 
+#to convert token_ids to tokens text
+def tokenid_to_token(vocab):
+    return {token_id:token for token, token_id in vocab.items()}
