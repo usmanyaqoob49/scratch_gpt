@@ -31,5 +31,3 @@ dataset= GPTDatasetV1(text= verdict_text,
 
 print('input ids 1: ', dataset.input_ids[1])
 print('output ids 1: ', dataset.output_ids[1])
-print('input text 1: ', tokenid_to_token(dataset.input_ids[1]))
-print('out text 1: ', tokenid_to_token(dataset.output_ids[1]))
