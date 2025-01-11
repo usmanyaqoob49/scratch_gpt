@@ -12,4 +12,11 @@ print('Number of tokens after converting text to tokens: ', len(verdict_text_tok
 
 verdict_text_vocabulary= vocab_assign_token_id(tokens= verdict_text_tokens)
 
-tokenizer= SimpleTokenizer()
+tokenizer= SimpleTokenizer(vocab= verdict_text_vocabulary)
+sample_text= """"It's the last he painted, you know," 
+           Mrs. Gisburn said with pardonable pride."""
+ids= tokenizer.encode(text= sample_text)
+print('Token ids assigned by encoder of tokenizer: ', ids)
+
+text_from_ids= tokenizer.decode(ids= ids)
+print('Text assigned from decoder using token ids', text_from_ids)
