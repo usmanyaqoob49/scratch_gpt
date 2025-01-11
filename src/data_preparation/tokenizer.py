@@ -1,3 +1,6 @@
+"""
+This module contains a SimpleTokenizer class which is used to encode and decode text using a given vocabulary.
+"""
 from .utils import convert_to_tokens, read_verdict, vocab_assign_token_id, tokenid_to_token
 import re
 
