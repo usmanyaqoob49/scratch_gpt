@@ -31,3 +31,4 @@ def tokenid_to_token(vocab):
 #we will use gpt tokenizer by using library called tiktoken
 def gpt_tokeinzer():
     tokenizer= tiktoken.get_encoding('gpt-2')
+    return tokenizer
