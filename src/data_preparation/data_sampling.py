@@ -6,6 +6,6 @@ Also it has GPTDataset class that will convert the dataset to dataset required f
 """
 import torch
 from torch.utils.data import Dataset, DataLoader
+from .utils import gpt_tokeinzer
 
 class GPTDataset(Dataset):
-    
