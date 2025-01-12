@@ -16,3 +16,5 @@ def find_context_vector(inputs, query_index):
         attention_scores[i]= torch.dot(query, x_i)
 
     attention_scores_normalized= torch.softmax(attention_scores, dim= 0)
+
+    
