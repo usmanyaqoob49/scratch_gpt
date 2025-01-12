@@ -1,4 +1,9 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from src.attention_mechanism.context_vector import find_context_vector
+import torch
 
 inputs = torch.tensor(
   [[0.43, 0.15, 0.89], # Your     (x^1)
