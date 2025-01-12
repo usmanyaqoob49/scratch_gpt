@@ -20,6 +20,6 @@ def find_context_vector(inputs, query_index):
     context_vector_query= torch.zeros(size= query.shape)
     #context_vector= input*attension_score_normalized and summing
     for i, x_i in enumerate(inputs):
-        context_vector_query+= attention_scores_normalized[i] * x_i.
+        context_vector_query+= attention_scores_normalized[i] * x_i
     return context_vector_query
 
