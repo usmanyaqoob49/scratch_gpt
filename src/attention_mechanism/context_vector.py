@@ -8,7 +8,7 @@ This function will find the context vector of specific input from all inputs.
 inputs----> All tokens 
 query_index----> input of which we want to find context vector (that will show relation of that input will all others)
 """
-def find_context_vector(inputs, query_index):
+def find_context_vector_query(inputs, query_index):
     query= inputs[query_index]
     
     attention_scores= torch.empty(inputs.shape[0])
@@ -23,3 +23,8 @@ def find_context_vector(inputs, query_index):
         context_vector_query+= attention_scores_normalized[i] * x_i
     return context_vector_query
 
+
+"""
+This function will find context vectors for all the input, that means relation of every token with every other token.
+"""
+def fin
