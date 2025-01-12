@@ -1,5 +1,5 @@
 """
-This module finds the context vector for each input.
+This module finds the context vector.
 """
 import torch
 
