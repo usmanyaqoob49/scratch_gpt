@@ -55,5 +55,4 @@ for i, (input, output) in enumerate(dataloader):
 #testing embeddings function
 data= iter(dataloader)
 input, output= next(data)
-embedded_input= create_embeddings(input_ids= input, vocab_size= 50257, output_dim= 256)
-print(embedded_input.shape)
+embedded_input= create_embeddings(input_ids= input, vocab_size= 50257, context_length= 4, output_dim= 256)
