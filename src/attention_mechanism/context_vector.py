@@ -19,5 +19,4 @@ def find_context_vector(inputs, query_index):
 
     #context_vector= input*attension_score_normalized and summing
     for i, x_i in enumerate(inputs):
-        
-    context_vector= 
+        context_vector= 
