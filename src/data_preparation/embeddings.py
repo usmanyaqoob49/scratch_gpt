@@ -12,6 +12,7 @@ def create_embeddings(input_ids, vocab_size, context_length, output_dim):
 
     positional_embeddings_layer= torch.nn.Embedding(context_length, output_dim)
     positional_embeddings_layer= positional_embeddings_layer(torch.arange(context_length)) #it will have numbers from 0 to input_lenght-1
+    print(positional_embeddings_layer.shape)
 
     final_input_embeddings= input_embeddings + positional_embeddings_layer
     return final_input_embeddings
