@@ -14,3 +14,5 @@ inputs = torch.tensor(
    [0.05, 0.80, 0.55]] # step     (x^6)
 )
 
+context_vector_1= find_context_vector(inputs= inputs, query_index= 1)
+print('Context vector for 2nd input (journey): ', context_vector_1)
