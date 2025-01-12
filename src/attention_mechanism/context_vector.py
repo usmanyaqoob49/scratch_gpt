@@ -10,4 +10,5 @@ import torch
 
 def find_context_vector(inputs, query_index):
     query= inputs[query_index]
+    attention_scores= torch.empty(size= inputs.shape[0])
     
