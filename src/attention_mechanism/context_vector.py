@@ -30,5 +30,5 @@ This function will find context vectors for all the input, that means relation o
 def find_context_vector(inputs):
     attention_scores= torch.empty(inputs.shape[0], inputs.shape[0])
     for i, x_i in enumerate(inputs):    #take row
-        for j, x_j in enumerate(inputs): #take col
+        for j, x_j in enumerate(inputs): #take row
             attention_scores[i][j]= torch.dot(x_i, x_j)
