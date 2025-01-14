@@ -32,3 +32,6 @@ def find_context_vector(inputs):
     for i, x_i in enumerate(inputs):    #take row
         for j, x_j in enumerate(inputs): #take row
             attention_scores[i][j]= torch.dot(x_i, x_j)
+
+    normalized_attention_scores= torch.softmax(attention_scores, dim= 0)    #row wised normalization 
+    
