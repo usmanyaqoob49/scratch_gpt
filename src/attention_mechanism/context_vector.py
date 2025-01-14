@@ -35,5 +35,5 @@ def find_context_vector(inputs):
 
     normalized_attention_scores= torch.softmax(attention_scores, dim= -1)    #each tensor showld some to 1, so column wise softmax
 
-    final_context_vector= normalized_attention_scores @ inputs  #matrix multiplication
-    return find_context_vector
+    context_vector= normalized_attention_scores @ inputs  #matrix multiplication
+    return context_vector
