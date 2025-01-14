@@ -2,7 +2,7 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from src.attention_mechanism.context_vector import find_context_vector_query
+from src.attention_mechanism.context_vector import find_context_vector_query, find_context_vector
 import torch
 
 inputs = torch.tensor(
@@ -18,3 +18,4 @@ context_vector_1= find_context_vector_query(inputs= inputs, query_index= 1)
 print('Context vector for 2nd input (journey): ', context_vector_1)
 
 #testing function that returns complete context vector of all the inputs
+complete_context_vector= 
