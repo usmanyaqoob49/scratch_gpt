@@ -18,4 +18,4 @@ context_vector_1= find_context_vector_query(inputs= inputs, query_index= 1)
 print('Context vector for 2nd input (journey): ', context_vector_1)
 
 #testing function that returns complete context vector of all the inputs
-complete_context_vector= find_context_vector()
+complete_context_vector= find_context_vector(inputs= inputs)
