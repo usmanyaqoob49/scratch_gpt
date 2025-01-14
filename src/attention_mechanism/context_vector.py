@@ -15,7 +15,7 @@ def find_context_vector_query(inputs, query_index):
     for i, x_i in enumerate(inputs):
         attention_scores[i]= torch.dot(query, x_i)
 
-    attention_scores_normalized= torch.softmax(attention_scores, dim= 0)
+    attention_scores_normalized= torch.softmax(attention_scores, dim= 0)    #we have only one row so we can do row wise softmax
 
     context_vector_query= torch.zeros(size= query.shape)
     #context_vector= input*attension_score_normalized and summing
@@ -33,4 +33,5 @@ def find_context_vector(inputs):
         for j, x_j in enumerate(inputs): #take row
             attention_scores[i][j]= torch.dot(x_i, x_j)
 
-    normalized_attention_scores= torch.softmax(attention_scores, dim= -1)    
+    normalized_attention_scores= torch.softmax(attention_scores, dim= -1)    #each tensor showld some to 1, so column wise softmax
+
