@@ -23,5 +23,7 @@ class selfAttention(nn.Module):
         )
 
     def forward(self, x):
+        #Find query, key, value
+        
 
         
