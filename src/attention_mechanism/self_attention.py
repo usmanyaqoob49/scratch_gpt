@@ -36,5 +36,6 @@ class selfAttention(nn.Module):
 
         #Finding context vector
         context_vector= attention_scores @ value
+        return context_vector
 
         
