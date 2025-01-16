@@ -29,7 +29,7 @@ class selfAttention(nn.Module):
         value= x @ self.W_value
 
         #Find attention weights (unnormalized)
-        attention_weights= torch.dot(query, key)
+        attention_weights= query @ key.T
 
         #Unnormalizing the attention wrights
         attention_scores= torch.softmax(attention_weights, dim= -1)
