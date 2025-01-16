@@ -25,9 +25,9 @@ class SelfAttention(nn.Module):
 
     def forward(self, x):
         #Find query, key, value
-        query= x @ self.W_query
-        key= x @ self.W_key
-        value= x @ self.W_value
+        query= self.W_query(x)
+        key= self.W_key(x)
+        value= self.W_value(x)
 
         #Find attention weights (unnormalized)
         attention_weights= query @ key.T
