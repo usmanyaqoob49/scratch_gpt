@@ -8,3 +8,4 @@ We find it using attention weights and inputs. (Matrix Multiplication)
 """
 import torch
 
+class selfAttention()
