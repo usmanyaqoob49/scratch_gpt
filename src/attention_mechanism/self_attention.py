@@ -29,3 +29,5 @@ class selfAttention(nn.Module):
         value= x @ self.W_value
 
         
+
+        
