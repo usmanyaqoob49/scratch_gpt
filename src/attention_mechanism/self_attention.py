@@ -26,5 +26,6 @@ class selfAttention(nn.Module):
         #Find query, key, value
         query= x @ self.W_query
         key= x @ self.W_key
+        value= x @ self.W_value
 
         
