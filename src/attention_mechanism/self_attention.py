@@ -31,8 +31,8 @@ class selfAttention(nn.Module):
         #Find attention weights (unnormalized)
         attention_weights= query @ key.T
 
-        #Unnormalizing the attention wrights
-        attention_scores= torch.softmax(attention_weights, dim= -1)
+        #Unnormalizing the attention wrights--->scaled self attenion
+        attention_scores= torch.softmax(attention_weights / key.shape[1] ** 5, dim= -1)
 
         #Finding context vector
         context_vector= attention_scores @ value
