@@ -12,6 +12,7 @@ import torch.nn as nn
 class SelfAttention(nn.Module):
     def __init__(self, d_in, d_out, qkv_bias=False):
         super().__init__()
+        #making them linear layers and turning bias off so that they directly takes matric multiplication with whatever is passed to them (optimal implementation)
         self.W_query= nn.Linear(
             d_in, d_out, bias= qkv_bias
         )
