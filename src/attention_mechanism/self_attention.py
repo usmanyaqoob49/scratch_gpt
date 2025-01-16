@@ -33,6 +33,8 @@ class selfAttention(nn.Module):
 
         #Unnormalizing the attention wrights
         attention_scores= torch.softmax(attention_weights, dim= -1)
-        
+
+        #Finding context vector
+        context_vector= attention_scores @ value
 
         
