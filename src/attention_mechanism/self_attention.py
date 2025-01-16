@@ -29,6 +29,6 @@ class selfAttention(nn.Module):
         value= x @ self.W_value
 
         #Find attention weights (unnormalized)
-        attention_weights= 
+        attention_weights= torch.dot(query, key)
 
         
