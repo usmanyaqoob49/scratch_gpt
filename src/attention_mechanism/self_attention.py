@@ -18,4 +18,7 @@ class selfAttention(nn.Module):
         self.W_key= nn.Linear(
             d_in, d_out, bias= qkv_bias
         )
+        self.W_value= nn.Linear(
+            d_in, d_out, bias= qkv_bias
+        )
         
