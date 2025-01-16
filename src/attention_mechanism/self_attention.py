@@ -25,5 +25,6 @@ class selfAttention(nn.Module):
     def forward(self, x):
         #Find query, key, value
         query= x @ self.W_query
+        key= x @ self.W_key
 
         
