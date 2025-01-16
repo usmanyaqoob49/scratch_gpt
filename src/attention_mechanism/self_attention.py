@@ -9,7 +9,7 @@ We find it using attention weights and inputs. (Matrix Multiplication)
 import torch
 import torch.nn as nn
 
-class selfAttention(nn.Module):
+class SelfAttention(nn.Module):
     def __init__(self, d_in, d_out, qkv_bias=False):
         super().__init__()
         self.W_query= nn.Linear(
