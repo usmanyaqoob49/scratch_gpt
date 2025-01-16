@@ -22,5 +22,6 @@ print('Context vector for 2nd input (journey): ', context_vector_1)
 complete_context_vector= find_context_vector(inputs= inputs)
 print(complete_context_vector)
 
-self_attention_object= SelfAttention
+self_attention_object= SelfAttention(d_in= inputs.shape[0], d_out= 2)
+
 
