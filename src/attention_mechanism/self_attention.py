@@ -9,5 +9,6 @@ We find it using attention weights and inputs. (Matrix Multiplication)
 import torch
 
 class selfAttention(nn.Module):
-    def __init__(self):
+    def __init__(self, d_in, d_out, qkv_bias= False):
+        
         
