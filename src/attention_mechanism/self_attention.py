@@ -10,5 +10,5 @@ import torch
 
 class selfAttention(nn.Module):
     def __init__(self, d_in, d_out, qkv_bias= False):
-        
+        self.W_query= 
         
