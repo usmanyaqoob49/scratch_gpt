@@ -22,5 +22,6 @@ class selfAttention(nn.Module):
             d_in, d_out, bias= qkv_bias
         )
 
+    #Find query, key, value
     
         
