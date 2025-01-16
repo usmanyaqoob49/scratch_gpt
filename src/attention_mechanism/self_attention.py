@@ -28,6 +28,6 @@ class selfAttention(nn.Module):
         key= x @ self.W_key
         value= x @ self.W_value
 
-        
+        #Find attention weights (unnormalized)
 
         
