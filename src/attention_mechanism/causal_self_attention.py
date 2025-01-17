@@ -1,3 +1,4 @@
 """
-In standard self attention that is implemented in self_attention.py
+In standard self attention that is implemented in self_attention.py, while finding the context vector,
+it has access of all the attention weights 
 """
