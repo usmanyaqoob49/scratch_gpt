@@ -7,6 +7,8 @@ only current and previous tokens are processed together, this is done by masking
 weights of the future tokens.
 
 We will also have drop out layer implemented in this to avoid overfitting.
+This module takes batch of examples so shape of x will be (num_examples, num_tokens_in_each_example, dim)
+context length ---->Number of tokens in each example.
 """
 import torch
 import torch.nn as nn
