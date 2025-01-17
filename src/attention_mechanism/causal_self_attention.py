@@ -39,6 +39,4 @@ class CausalAttention(nn.Module):
         attention_weights= queries @ keys.Transpose(1,2)    #as we pass multiple examples (batch) so we will take transpose w.r.t row and col
         
         #step 3-->Mask the future values with -inf (so that when softmax applied they become zero)
-        attention_scores= torch.softmax(
-            attention_weights / 
-        )
+        masked_attention_weights= 
