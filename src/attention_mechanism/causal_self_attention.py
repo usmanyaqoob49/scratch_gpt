@@ -16,4 +16,7 @@ class CausalAttention(nn.Module):
         super().__init__()
 
         self.W_query= nn.Linear(d_in, d_out, bias= qkv_bias)
-        self.W_key= 
+        self.W_key= nn.Linear(d_in, d_out, bias= qkv_bias)
+        self.W_value= nn.Linear(d_in, d_out, bias= qkv_bias)
+
+        
