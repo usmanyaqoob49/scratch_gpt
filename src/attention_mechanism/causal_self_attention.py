@@ -20,7 +20,6 @@ class CausalAttention(nn.Module):
         self.W_value= nn.Linear(d_in, d_out, bias= qkv_bias)
 
         self.drop_out= nn.Dropout(p= dropout)
-
         self.d_out= d_out
 
     def forward(self, x):
