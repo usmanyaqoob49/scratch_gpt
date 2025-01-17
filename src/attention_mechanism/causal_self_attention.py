@@ -9,4 +9,6 @@ weights of the future tokens.
 import torch
 import torch.nn as nn
 
-class CausalAttention(nn.Module)
+class CausalAttention(nn.Module):
+    def __init__(self, d_in, d_out, qkv_bias= False):
+        super().__init__()
