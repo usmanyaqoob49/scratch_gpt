@@ -47,3 +47,6 @@ class CausalAttention(nn.Module):
         masked_attention_scores= torch.softmax(
             masked_attention_weights / keys.shape[-1]**0.5, dim=-1
         )
+
+        #step 5-->Applying dropout
+        attention_weights= self.drop_out(masked_attention_scores)
