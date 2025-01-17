@@ -27,4 +27,5 @@ class CausalAttention(nn.Module):
         value= self.W_value(x)
 
         #step 2-->Find the attention weights
-        attention_weights= queries
+        attention_weights= queries @ keys.Transpose(1,2)    #as we pass multiple examples (batch) so we will take transpose w.r.t row and col
+        
