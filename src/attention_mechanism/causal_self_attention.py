@@ -19,6 +19,8 @@ class CausalAttention(nn.Module):
         self.W_key= nn.Linear(d_in, d_out, bias= qkv_bias)
         self.W_value= nn.Linear(d_in, d_out, bias= qkv_bias)
 
+        self.drop_out= 
+
     def forward(self, x):
         num_example, num_tokens, d_in= x.shape
         #step 1-->Find the key, query, value
@@ -29,3 +31,7 @@ class CausalAttention(nn.Module):
         #step 2-->Find the attention weights
         attention_weights= queries @ keys.Transpose(1,2)    #as we pass multiple examples (batch) so we will take transpose w.r.t row and col
         
+        #step 3-->Find the attention scores by normalizing
+        attention_scores= torch.softmax(
+            attention_weights / 
+        )
