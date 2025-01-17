@@ -42,3 +42,5 @@ class CausalAttention(nn.Module):
         masked_attention_weights= attention_weights.masked_fill_(
             self.mask.bool()[:num_tokens, :num_tokens], -torch.inf
         )
+
+        #step 4-->Normalize the masked attention weights
