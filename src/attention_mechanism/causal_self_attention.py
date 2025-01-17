@@ -21,7 +21,7 @@ class CausalAttention(nn.Module):
 
         self.drop_out= nn.Dropout(p= dropout)
 
-        
+        self.d_out= d_out
 
     def forward(self, x):
         num_example, num_tokens, d_in= x.shape
