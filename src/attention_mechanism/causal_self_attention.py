@@ -38,7 +38,7 @@ class CausalAttention(nn.Module):
         values= self.W_value(x)
 
         #step 2-->Find the attention weights
-        attention_weights= queries @ keys.Transpose(1,2)    #as we pass multiple examples (batch) so we will take transpose w.r.t row and col
+        attention_weights= queries @ keys.transpose(1,2)    #as we pass multiple examples (batch) so we will take transpose w.r.t row and col
         
         #step 3-->Mask the future values with -inf (so that when softmax applied they become zero)
         masked_attention_weights= attention_weights.masked_fill_(
