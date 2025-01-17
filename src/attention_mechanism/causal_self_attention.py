@@ -45,5 +45,5 @@ class CausalAttention(nn.Module):
 
         #step 4-->Normalize the masked attention weights
         masked_attention_scores= torch.softmax(
-            masked_attention_weights, 
+            masked_attention_weights / keys.shape[-1]**0.5, dim=-1
         )
