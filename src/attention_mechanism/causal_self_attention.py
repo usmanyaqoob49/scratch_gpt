@@ -20,10 +20,10 @@ class CausalAttention(nn.Module):
         self.W_value= nn.Linear(d_in, d_out, bias= qkv_bias)
 
     def forward(self, x):
+        num_example, num_tokens, d_in= x.shape
         #step 1-->Find the key, query, value
         keys= self.W_key(x)
         query= self.W_query(x)
         value= self.W_value(x)
 
         #step 2-->Find the attention weights
-        
