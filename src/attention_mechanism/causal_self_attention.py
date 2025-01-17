@@ -40,5 +40,5 @@ class CausalAttention(nn.Module):
         
         #step 3-->Mask the future values with -inf (so that when softmax applied they become zero)
         masked_attention_weights= attention_weights.masked_fill_(
-            self.mask.bool()
+            self.mask.bool()[:num_tokens, :num_tokens], -torch.inf
         )
