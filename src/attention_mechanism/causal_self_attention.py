@@ -21,6 +21,8 @@ class CausalAttention(nn.Module):
 
         self.drop_out= nn.Dropout(p= dropout)
 
+        
+
     def forward(self, x):
         num_example, num_tokens, d_in= x.shape
         #step 1-->Find the key, query, value
