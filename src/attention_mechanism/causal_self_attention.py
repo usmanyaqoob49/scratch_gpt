@@ -53,3 +53,4 @@ class CausalAttention(nn.Module):
 
         #step 6-->Finding context vector
         context_vector= attention_weights @ values
+        return context_vector
