@@ -6,3 +6,7 @@ But in causal self attention future tokens are masked out and not shown,
 only current and previous tokens are processed together, this is done by masking out the attention
 weights of the future tokens.
 """
+import torch
+import torch.nn as nn
+
+class CausalAttention(nn.Module)
