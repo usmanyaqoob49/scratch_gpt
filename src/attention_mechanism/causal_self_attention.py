@@ -23,7 +23,8 @@ class CausalAttention(nn.Module):
         num_example, num_tokens, d_in= x.shape
         #step 1-->Find the key, query, value
         keys= self.W_key(x)
-        query= self.W_query(x)
+        queries= self.W_query(x)
         value= self.W_value(x)
 
         #step 2-->Find the attention weights
+        attention_weights= queries
