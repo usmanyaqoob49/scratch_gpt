@@ -22,7 +22,12 @@ print('Context vector for 2nd input (journey): ', context_vector_1)
 complete_context_vector= find_context_vector(inputs= inputs)
 print(complete_context_vector)
 
+#----Testing self attention
 self_attention_object= SelfAttention(d_in= inputs.shape[1], d_out= 2)
 context_vector= self_attention_object.forward(x= inputs)
 print("Complete Scaled Self attention-Context Vector: ", context_vector)
 
+
+#------Testing causal attention
+batch= torch.stack((inputs, inputs), dim= 0)  #combining inputs to make batch
+print('Batch for causal attention: ', batch)
