@@ -21,4 +21,8 @@ class CausalAttention(nn.Module):
 
     def forward(self, x):
         #step 1-->Find the key, query, value
+        keys= self.W_key(x)
+        query= self.W_query(x)
+        value= self.W_value(x)
+
         
