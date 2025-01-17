@@ -4,6 +4,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from src.attention_mechanism.context_vector import find_context_vector_query, find_context_vector
 from src.attention_mechanism.self_attention import SelfAttention
+from src.attention_mechanism.causal_self_attention import CausalAttention
 import torch
 
 inputs = torch.tensor(
@@ -31,3 +32,5 @@ print("Complete Scaled Self attention-Context Vector: ", context_vector)
 #------Testing causal attention
 batch= torch.stack((inputs, inputs), dim= 0)  #combining inputs to make batch
 print('Batch for causal attention: ', batch)
+
+
