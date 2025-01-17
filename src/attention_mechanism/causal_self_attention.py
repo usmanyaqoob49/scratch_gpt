@@ -25,4 +25,5 @@ class CausalAttention(nn.Module):
         query= self.W_query(x)
         value= self.W_value(x)
 
+        #step 2-->Find the attention weights
         
