@@ -32,5 +32,7 @@ print("Complete Scaled Self attention-Context Vector: ", context_vector)
 #------Testing causal attention
 batch= torch.stack((inputs, inputs), dim= 0)  #combining inputs to make batch
 print('Batch for causal attention: ', batch)
-
+causal_attention= CausalAttention(d_in= batch.shape[2], d_out= 2, context_length= batch.shape[1])
+context_vector_causal= causal_attention.forward(batch)
+print('Context Vector of Causal Attention: ', context_vector_causal)
 
