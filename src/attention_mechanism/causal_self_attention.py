@@ -24,7 +24,7 @@ class CausalAttention(nn.Module):
         self.drop_out= nn.Dropout(p= dropout)
         self.d_out= d_out
 
-        #for masking upper diagonal (future values)
+        #for masking upper diagonal (future values)--->In buffer to reduce memory (1 for future tokens so we replace them with true and replace them with -inf)
         self.register_buffer(
             'mask',
             torch.triu(torch.ones(context_length, context_length), diagonal=1)
