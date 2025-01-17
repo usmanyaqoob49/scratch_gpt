@@ -33,7 +33,7 @@ class CausalAttention(nn.Module):
         #step 1-->Find the key, query, value
         keys= self.W_key(x)
         queries= self.W_query(x)
-        value= self.W_value(x)
+        values= self.W_value(x)
 
         #step 2-->Find the attention weights
         attention_weights= queries @ keys.Transpose(1,2)    #as we pass multiple examples (batch) so we will take transpose w.r.t row and col
@@ -50,3 +50,6 @@ class CausalAttention(nn.Module):
 
         #step 5-->Applying dropout
         attention_weights= self.drop_out(masked_attention_scores)
+
+        #step 6-->Finding context vector
+        context_vector= attention_weights @ values
