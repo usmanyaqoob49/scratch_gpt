@@ -52,8 +52,10 @@ class MultiHeadAttention(nn.Module):
                     [1.3,2.3]   
 
         After applying reshaping it will become like:
-                
-
+                    [ [1.1],[2.1]]
+                    [ [1.2],[2.2]]
+                    [ [1.3],[2.3]]​
+        Where now each token 1 d_out represent response of one head seprtely. I hope it makes sense:)
         """
         keys= keys.view(num_examples, num_tokens, self.num_heads, self.head_dim)
         values= values.view(num_examples, num_tokens, self.num_heads, self.head_dim)
