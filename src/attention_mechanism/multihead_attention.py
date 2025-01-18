@@ -79,5 +79,5 @@ class MultiHeadAttention(nn.Module):
         masked_attention_weights= attention_weights.masked_fill_(mask_bool, -torch.inf)
 
         #---Normalize the masked attention weights
-
+        attention_scores= torch.softmax(masked_attention_weights / keys.shape[-1] ** 0/5, dim= -1)
 
