@@ -6,3 +6,6 @@ Better to understand complex pattern, each head try to look at seprate angle of 
 
 As we will have multiple context vecots (one from each head, we will concatenate them in the end).
 """
+import torch
+import torch.nn as nn
+
