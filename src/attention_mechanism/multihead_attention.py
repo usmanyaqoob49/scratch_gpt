@@ -34,3 +34,5 @@ class MultiHeadAttention(nn.Module):
             torch.triu(torch.ones(context_length, context_length),  diagonal= 1)
         )
         
+    def forward(self, x):
+        
