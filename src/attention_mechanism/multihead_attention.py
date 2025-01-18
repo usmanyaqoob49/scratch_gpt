@@ -25,4 +25,12 @@ class MultiHeadAttention(nn.Module):
         self.W_query= nn.Linear(d_in, d_out, bias= qkv_bias)
         self.W_key= nn.Linear(d_in, d_out, bias= qkv_bias)
         self.W_value= nn.Linear(d_in, d_out, bias= qkv_bias)
+
+        self.out_proj= nn.Lienar(d_out, d_out)  #to combine heads outputs
+        self.drop_out= nn.Dropout(p= dropout)
+
+        self.register_buffer(
+            "mask",
+            torch.triu(torch.ones(context_length, context_length),  diagonal= 1)
+        )
         
