@@ -88,3 +88,10 @@ class MultiHeadAttention(nn.Module):
         #---apply dropout
         attention_scores= self.drop_out(attention_scores)
 
+        #---Finding context vector
+        """
+        Shape of attention weights= (num_examples,num_heads,num_tokens,num_tokens)
+        Shape of value= (b, num_tokens, num_heads, head_dim)
+    
+        """
+
