@@ -43,3 +43,6 @@ class MultiHeadAttention(nn.Module):
         keys= self.W_key(x)
         query= self.W_query(x)
         value= self.W_value(x)
+
+        #---now we have to reshape our keys, query, value to form mulitple heads
+        
