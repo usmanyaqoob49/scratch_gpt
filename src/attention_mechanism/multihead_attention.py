@@ -76,7 +76,8 @@ class MultiHeadAttention(nn.Module):
 
         #mask the attention weights of future tokens as we are implementing in causal attention
         mask_bool= self.mask.bool()[:num_tokens, :num_tokens]
-        attention_weights.masked_fill_(mask_bool, -torch.inf)
-        #---Normalize the attention weights
+        masked_attention_weights= attention_weights.masked_fill_(mask_bool, -torch.inf)
 
+        #---Normalize the attention weights
+        
 
