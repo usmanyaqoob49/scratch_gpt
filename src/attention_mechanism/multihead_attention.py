@@ -75,7 +75,7 @@ class MultiHeadAttention(nn.Module):
         attention_weights= queries @ keys.transpose(2,3)
 
         #mask the attention weights of future tokens as we are implementing in causal attention
-        
+        mask_bool= self.mask.bool()[:num_tokens, :num_tokens]
         #---Normalize the attention weights
 
 
