@@ -45,4 +45,4 @@ class MultiHeadAttention(nn.Module):
         value= self.W_value(x)
 
         #---now we have to reshape our keys, query, value to form mulitple heads
-        
+        keys= keys.view(num_examples, num_tokens, self.num_head, )
