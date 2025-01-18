@@ -11,6 +11,9 @@ can have same size context vector.
 
 We will split input into multiple heads by reshaping our projected query, key, value and then combining
 the results.
+
+
+
 """
 import torch
 import torch.nn as nn
@@ -47,4 +50,4 @@ class MultiHeadAttention(nn.Module):
         #---now we have to reshape our keys, query, value to form mulitple heads
         keys= keys.view(num_examples, num_tokens, self.num_heads, self.head_dim)
         values= values.view(num_examples, num_tokens, self.num_heads, self.head_dim)
-        q
+        queries= queries.view(num_examples, num_tokens, self.num_heads, self.head_dim)
