@@ -94,3 +94,5 @@ class MultiHeadAttention(nn.Module):
         Shape of value= (b, num_tokens, num_heads, head_dim)
         """
         context_vector= (attention_scores @ values).transpose(1,2)
+
+        #---Combine heads, where self.d_out = self.num_heads * self.head_dim
