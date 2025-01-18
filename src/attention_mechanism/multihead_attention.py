@@ -74,3 +74,6 @@ class MultiHeadAttention(nn.Module):
         so number of col of query = number of rows of keys"""
         attention_weights= queries @ keys.transpose(2,3)
 
+        #---Normalize the attention weights
+        
+
