@@ -22,7 +22,7 @@ class MultiHeadAttention(nn.Module):
         assert (d_out % num_heads == 0),    \
             "d_out must be divisible by num_heads so that each head can have same sized context vector."
         self.d_out= d_out
-        self.num_head= num_heads
+        self.num_heads= num_heads
         self.head_dim= d_out // num_heads              #dimentions of each heads context vector d_out/total heads
         
         self.W_query= nn.Linear(d_in, d_out, bias= qkv_bias)
@@ -45,4 +45,4 @@ class MultiHeadAttention(nn.Module):
         value= self.W_value(x)
 
         #---now we have to reshape our keys, query, value to form mulitple heads
-        keys= keys.view(num_examples, num_tokens, self.num_head, )
+        keys= keys.view(num_examples, num_tokens, self.num_head,    )
