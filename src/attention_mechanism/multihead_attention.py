@@ -10,6 +10,5 @@ import torch
 import torch.nn as nn
 
 class MultiHeadAttention(nn.Module):
-    def __init__(self, d_in, d_out, context_length, dropout, num_heads, qkv_bias= Flase):
+    def __init__(self, d_in, d_out, context_length, dropout, num_heads, qkv_bias= False):
         super().__init__()
-        
