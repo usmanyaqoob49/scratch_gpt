@@ -9,3 +9,5 @@ As we will have multiple context vecots (one from each head, we will concatenate
 import torch
 import torch.nn as nn
 
+class MultiHeadAttention(nn.Module):
+    
