@@ -21,3 +21,8 @@ class MultiHeadAttention(nn.Module):
         self.d_out= d_out
         self.num_head= num_heads
         self.head_dim= d_out // num_heads              #dimentions of each heads context vector d_out/total heads
+        
+        self.W_query= nn.Linear(d_in, d_out, bias= qkv_bias)
+        self.W_key= nn.Linear(d_in, d_out, bias= qkv_bias)
+        self.W_value= nn.Linear(d_in, d_out, bias= qkv_bias)
+        
