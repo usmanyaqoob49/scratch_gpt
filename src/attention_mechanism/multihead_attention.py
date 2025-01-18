@@ -67,5 +67,7 @@ class MultiHeadAttention(nn.Module):
         keys= keys.transpose(1,2)
         values= values.tranpose(1,2)
         queries= queries.transpose(1,2)
-        
+
+        #---Find attention weights
+        attention_weights= queries @ keys.transpose(2,3)
 
