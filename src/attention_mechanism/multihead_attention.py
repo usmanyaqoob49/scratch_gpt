@@ -80,5 +80,7 @@ class MultiHeadAttention(nn.Module):
 
         #---Normalize the masked attention weights
         attention_scores= torch.softmax(masked_attention_weights / keys.shape[-1] ** 0/5, dim= -1)
-        
+
+        #---apply dropout
+        attention_scores= self.drop_out(attention_scores)
 
