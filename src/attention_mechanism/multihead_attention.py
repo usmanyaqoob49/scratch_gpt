@@ -35,4 +35,8 @@ class MultiHeadAttention(nn.Module):
         )
         
     def forward(self, x):
-        
+        num_examples, num_tokens, d_in= x.shape
+
+        keys= self.W_key(x)
+        query= self.W_query(x)
+        value= self.W_value(x)
