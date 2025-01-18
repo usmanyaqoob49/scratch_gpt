@@ -69,9 +69,13 @@ class MultiHeadAttention(nn.Module):
         queries= queries.transpose(1,2)
 
         #---Find attention weights
-        """query shape= (b, num_heads, num_tokens, head_dim), 
+        """
+        query shape= (b, num_heads, num_tokens, head_dim), 
         after transpose key will be= (b, num_heads, head_dim,  num_tokens)
-        so number of col of query (head_dim)= number of rows of keys (head_dim)"""
+        so number of col of query (head_dim)= number of rows of keys (head_dim)
+        
+        shape of attention scores will be: (num_examples,num_heads,num_tokens,num_tokens)
+        """
         attention_weights= queries @ keys.transpose(2,3)
 
         #mask the attention weights of future tokens as we are implementing in causal attention
