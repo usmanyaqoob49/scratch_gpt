@@ -69,5 +69,8 @@ class MultiHeadAttention(nn.Module):
         queries= queries.transpose(1,2)
 
         #---Find attention weights
+        """query shape= (b, num_heads, num_tokens, head_dim), 
+        after transpose key will be= (b, num_heads, head_dim  num_tokens)
+        so number of col of query = number of rows of keys"""
         attention_weights= queries @ keys.transpose(2,3)
 
