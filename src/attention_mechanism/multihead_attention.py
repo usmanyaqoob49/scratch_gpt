@@ -8,6 +8,9 @@ As we will have multiple context vecots (one from each head, we will concatenate
 
 Remember d_out which is context vector (col) number, must be divisible by num_heads so that each head
 can have same size context vector.
+
+We will split input into multiple heads by reshaping our projected query, key, value and then combining
+the results.
 """
 import torch
 import torch.nn as nn
