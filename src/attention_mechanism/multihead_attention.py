@@ -78,6 +78,6 @@ class MultiHeadAttention(nn.Module):
         mask_bool= self.mask.bool()[:num_tokens, :num_tokens]
         masked_attention_weights= attention_weights.masked_fill_(mask_bool, -torch.inf)
 
-        #---Normalize the attention weights
-        
+        #---Normalize the masked attention weights
+
 
