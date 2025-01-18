@@ -18,3 +18,6 @@ class MultiHeadAttention(nn.Module):
 
         assert (d_out % num_heads == 0),    \
             "d_out must be divisible by num_heads so that each head can have same sized context vector."
+        self.d_out= d_out
+        self.num_head= num_heads
+        self.head_dim= d_out // num_heads              #dimentions of each heads context vector d_out/total heads
