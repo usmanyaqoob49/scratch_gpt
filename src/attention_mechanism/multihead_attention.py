@@ -92,6 +92,5 @@ class MultiHeadAttention(nn.Module):
         """
         Shape of attention weights= (num_examples,num_heads,num_tokens,num_tokens)
         Shape of value= (b, num_tokens, num_heads, head_dim)
-    
         """
         context_vector= (attention_scores @ values).transpose(1,2)
