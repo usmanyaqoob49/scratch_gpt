@@ -96,7 +96,7 @@ class MultiHeadAttention(nn.Module):
         context_vector= (attention_scores @ values).transpose(1,2)
 
         #---Combine heads, where self.d_out = self.num_heads * self.head_dim
-        context_vec = context_vec.contiguous().view(num_examples, num_tokens, self.d_out)
-        context_vec = self.out_proj(context_vec) # optional projection
+        context_vector = context_vector.contiguous().view(num_examples, num_tokens, self.d_out)
+        context_vector = self.out_proj(context_vector) # optional projection
 
-        return context_vec
+        return context_vector
