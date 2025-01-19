@@ -6,4 +6,5 @@ import torch.nn as nn
 
 class LayerNorm(nn.Module):
     def __init__(self, normalized_shape, eps= 1e-5):
-        super().__init__(*args, **kwargs)
+        super().__init__()
+    
