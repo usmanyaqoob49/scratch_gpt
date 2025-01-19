@@ -31,4 +31,7 @@ class GELU(nn.Module):
 class FeedForward(nn.Module):
     def __init__(self):
         super().__init__()
-        
+        self.layers= nn.Sequential(
+            nn.Linear(GPT_CONFIG_124M['emb_dim'], 4* GPT_CONFIG_124M['emb_dim'])
+            
+        )
