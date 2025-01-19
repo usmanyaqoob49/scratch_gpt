@@ -26,3 +26,5 @@ class GELU(nn.Module):
             torch.sqrt(torch.tensor(2.0 / torch.pi)) *
             (x + 0.044715 * torch.pow(x, 3))
         ))
+    
+#-----Feed Forward Network 
