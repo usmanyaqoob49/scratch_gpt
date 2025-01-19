@@ -14,3 +14,8 @@ class GPTModel(nn.Module):
         self.token_emb= nn.Embedding(cfg['vocab_size'], cfg['emb_dim'])
         self.positional_emb= nn.Embedding(cfg['context_length'], cfg['emb_dim'])
         self.drop_out= nn.Dropout(cfg['drop_out'])
+
+        #multiple transforners blocks
+        self.transformer_blocks= [
+            *[Transformer(cfg=cfg) for _ in range(cfg['n_layers'])]
+        ]
