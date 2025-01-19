@@ -3,6 +3,8 @@ It has dummy gpt model class.
 
 This is what happens in gpt:
         input --->token embeddings --->Position embeddings ---> token emb + positional emb --->drop out --->transformer block --->layer norm --->logits
+
+It will give us logits that will be the probability of all the tokens in the vocabulay to be the next token.
 """
 import torch
 import torch.nn as nn
