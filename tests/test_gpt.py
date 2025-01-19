@@ -30,3 +30,6 @@ print("Logits shape: ", logits.shape)
 #---------Testing Layer Norm class
 norm= LayerNorm(emb_dims= 5)
 out_norm= LayerNorm.forward(x= batch)
+print("Normalized Output: ", out_norm)
+print("Mean of Normalized output: ",  out_norm.mean)
+print("Varaince of the normalized output: ", out_norm.variance)
