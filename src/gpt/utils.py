@@ -1,5 +1,6 @@
 """
-This module has all utils like configuration of the gpt model, implementation of the GELU.
+This module has all utils like configuration of the gpt model, implementation of the GELU, implmentation of 
+feed forward network module that all will be used in gpt module.
 """
 import torch
 import torch.nn as nn
