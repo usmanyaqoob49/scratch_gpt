@@ -29,4 +29,6 @@ class GELU(nn.Module):
     
 #-----Feed Forward Network 
 class FeedForward(nn.Module):
-    
+    def __init__(self):
+        super().__init__()
+        
