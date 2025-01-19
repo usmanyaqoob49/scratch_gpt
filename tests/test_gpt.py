@@ -5,6 +5,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.data_preparation.utils import gpt_tokeinzer
 from src.gpt.gpt_model import GPTModel
 from src.gpt.utils import GPT_CONFIG_124M
+from src.gpt.layer_norm import LayerNorm
 import torch
 
 #---------Testing GPTModel class
@@ -26,4 +27,5 @@ print("Resulting Logits: ", logits)
 print("Logits shape: ", logits.shape)
 
 
-#---------Testing
+#---------Testing Layer Norm class
+norm= LayerNorm(emb_dims= 5)
