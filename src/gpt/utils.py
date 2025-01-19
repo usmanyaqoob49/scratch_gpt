@@ -36,3 +36,6 @@ class FeedForward(nn.Module):
             GELU(),
             nn.Linear(4* GPT_CONFIG_124M['emb_dim'], GPT_CONFIG_124M['emb_dim'])
         )
+    
+    def forwrad(self, x):
+        
