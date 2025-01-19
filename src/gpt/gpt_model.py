@@ -12,4 +12,4 @@ class GPTModel(nn.Module):
         super().__init__()
 
         self.token_emb= nn.Embedding(cfg['vocab_size'], cfg['emb_dim'])
-        
+        self.positional_emb= nn.Embedding(cfg['context_length'], cfg['emb_dim'])
