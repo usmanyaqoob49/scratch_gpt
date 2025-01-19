@@ -19,4 +19,4 @@ class LayerNorm(nn.Module):
         variance= torch.var(x, dim= -1, keepdim= True)
 
         normalized_output= (x-mean) / torch.sqrt(variance + self.eps) 
-        return x
+        return self.scale * normalized_output + self.shift
