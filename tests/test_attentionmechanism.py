@@ -39,3 +39,5 @@ print('Context Vector of Causal Attention: ', context_vector_causal)
 
 #------Testing multihead attention
 num_example, num_tokens, d_in= batch.shape
+d_out= 2
+num_heads= 2
