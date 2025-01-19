@@ -12,3 +12,5 @@ text2= 'Every day holds a'
 
 batch.append(torch.tensor(gpt_tokeinzer.encode(text1)))
 batch.append(torch.tensor(gpt_tokeinzer.encode(text2)))
+
+
