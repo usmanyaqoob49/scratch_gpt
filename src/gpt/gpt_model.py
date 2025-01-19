@@ -11,4 +11,5 @@ class GPTModel(nn.Module):
     def __init__(self, cfg):
         super().__init__()
 
-        self.token_emb= nn
+        self.token_emb= nn.Embedding(cfg['vocab_size'], cfg['emb_dim'])
+        
