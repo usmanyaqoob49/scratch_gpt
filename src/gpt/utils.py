@@ -1,3 +1,6 @@
+"""
+This module has all utils like configuration of the gpt model, implementation of the GELU.
+"""
 #Settings for GPT-2 (124M) 
 GPT_CONFIG_124M= {
     'vocab_size': 50257, 
