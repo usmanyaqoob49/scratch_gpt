@@ -36,6 +36,8 @@ class GPTModel(nn.Module):
         x_drop_out= self.drop_out(x)
         x_trf_block= self.transformer_blocks(x_drop_out)
         x_norm= self.final_norm(x_trf_block)
-        
+        logits= self.out_head(x_norm)
+
+        return logits
 
                                           
