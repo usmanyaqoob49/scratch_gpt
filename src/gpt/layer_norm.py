@@ -8,8 +8,9 @@ import torch
 import torch.nn as nn
 
 class LayerNorm(nn.Module):
-    def __init__(self, normalized_shape, eps= 1e-5):
+    def __init__(self, emb_dims):
         super().__init__()
+        self.eps= 1e-5  #very small number that we will add in denuminator to prevent division by 0 problem
     
     def forward(self, x):
         return x
