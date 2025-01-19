@@ -1,5 +1,8 @@
 """
 It has dummy gpt model class.
+
+This is what happens in gpt:
+        input --->token embeddings --->Position embeddings ---> token emb + positional emb --->drop out --->transformer block --->layer norm --->logits
 """
 import torch
 import torch.nn as nn
