@@ -2,6 +2,7 @@
 This module has all utils like configuration of the gpt model, implementation of the GELU.
 """
 import torch
+import torch.nn as nn
 
 #Settings for GPT-2 (124M) 
 GPT_CONFIG_124M= {
