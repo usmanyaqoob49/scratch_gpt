@@ -65,7 +65,7 @@ class MultiHeadAttention(nn.Module):
 
         #---Transpose: (b, num_tokens, num_heads, head_dim) -> (b, num_heads, num_tokens, head_dim) to match the shapes for matrix mulitplication
         keys= keys.transpose(1,2)
-        values= values.tranpose(1,2)
+        values= values.transpose(1,2)
         queries= queries.transpose(1,2)
 
         #---Find attention weights
