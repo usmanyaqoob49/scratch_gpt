@@ -21,9 +21,9 @@ class GPTModel(nn.Module):
         self.drop_out= nn.Dropout(cfg['drop_out'])
 
         #multiple transforners blocks
-        self.transformer_blocks= [
+        self.transformer_blocks= nn.Sequential([
             *[Transformer(cfg=cfg) for _ in range(cfg['n_layers'])]
-        ]
+        ])
 
         #layer normalization
         self.final_norm= LayerNorm(cfg['emb_dim'])
