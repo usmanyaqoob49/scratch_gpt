@@ -16,3 +16,5 @@ GPT_CONFIG_124M= {
 }
 
 #------GeLu Implementation
+class GELU(nn.Module):
+    
