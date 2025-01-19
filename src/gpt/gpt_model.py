@@ -26,4 +26,6 @@ class GPTModel(nn.Module):
         self.out_head= nn.Linear(
             cfg['emb_dim'], cfg['vocab_size'], bias= False
         )
+    
+    def forward(self, in_idx):
         
