@@ -16,3 +16,4 @@ print("Batch of examples that we are using: ", batch)
 
 gpt= GPTModel(cfg= GPT_CONFIG_124M)
 logits= gpt.forward(in_idx= batch)
+print("Resulting Logits: ", logits)
