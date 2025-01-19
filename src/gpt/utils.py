@@ -28,3 +28,5 @@ class GELU(nn.Module):
         ))
     
 #-----Feed Forward Network 
+class FeedForward(nn.Module):
+    
