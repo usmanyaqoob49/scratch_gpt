@@ -8,4 +8,5 @@ from layer_norm import LayerNorm
 from src.transformer.transformer import Transformer
 
 class GPTModel(nn.Module):
-    
+    def __init__(self, ):
+        super().__init__(*args, **kwargs)
