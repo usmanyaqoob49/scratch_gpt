@@ -20,4 +20,9 @@ class GPTModel(nn.Module):
             *[Transformer(cfg=cfg) for _ in range(cfg['n_layers'])]
         ]
 
-        #la
+        #layer normalization
+        self.final_norm= LayerNorm(cfg['emb_dim'])
+
+        self.out_head= nn.Linear(
+            
+        )
