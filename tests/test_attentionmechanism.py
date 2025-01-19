@@ -36,3 +36,5 @@ causal_attention= CausalAttention(d_in= batch.shape[2], d_out= 2, context_length
 context_vector_causal= causal_attention.forward(batch)
 print('Context Vector of Causal Attention: ', context_vector_causal)
 
+
+#------Testing multihead attention
