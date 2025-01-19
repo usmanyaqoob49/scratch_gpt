@@ -5,6 +5,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.attention_mechanism.context_vector import find_context_vector_query, find_context_vector
 from src.attention_mechanism.self_attention import SelfAttention
 from src.attention_mechanism.causal_self_attention import CausalAttention
+from src.attention_mechanism.multihead_attention import MultiHeadAttention
 import torch
 
 inputs = torch.tensor(
@@ -41,3 +42,4 @@ print('Context Vector of Causal Attention: ', context_vector_causal)
 num_example, num_tokens, d_in= batch.shape
 d_out= 2
 num_heads= 2
+mulihead_attention= MultiHeadAttention(d_in= d_in, d_out= d_out, context_length= num_tokens, dropout= 0.0, num_heads= num_heads)
