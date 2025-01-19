@@ -11,6 +11,8 @@ class LayerNorm(nn.Module):
     def __init__(self, emb_dims):
         super().__init__()
         self.eps= 1e-5  #very small number that we will add in denuminator to prevent division by 0 problem
+        self.scale= nn.Parameter(torch.ones(emb_dims))
+        self.shift= nn.Parameter(torch.zeros(emb_dims))
     
     def forward(self, x):
         return x
