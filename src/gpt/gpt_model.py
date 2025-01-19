@@ -24,5 +24,6 @@ class GPTModel(nn.Module):
         self.final_norm= LayerNorm(cfg['emb_dim'])
 
         self.out_head= nn.Linear(
-            
+            cfg['emb_dim'], cfg['vocab_size'], bias= False
         )
+        
