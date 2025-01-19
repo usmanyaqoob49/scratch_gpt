@@ -14,3 +14,5 @@ GPT_CONFIG_124M= {
     'drop_out': 0.1, 
     'qkv_bias': False
 }
+
+#------GeLu Implementation
