@@ -18,7 +18,7 @@ class LayerNorm(nn.Module):
         self.shift= nn.Parameter(torch.zeros(emb_dims))
     
     def forward(self, x):
-        mean= torch.mean(x, dim= -1, keepdim= True)
-        variance= torch.var(x, dim= -1, keepdim= True, unbiased= False) 
+        mean= x.mean(dim= -1, keepdim= True)
+        variance= x.var(dim= -1, keepdim= True, unbiased= False) 
         normalized_output= (x-mean) / torch.sqrt(variance + self.eps) 
         return self.scale * normalized_output + self.shift
