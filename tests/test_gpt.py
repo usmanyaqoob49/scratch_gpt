@@ -13,4 +13,6 @@ text2= 'Every day holds a'
 batch.append(torch.tensor(gpt_tokeinzer.encode(text1)))
 batch.append(torch.tensor(gpt_tokeinzer.encode(text2)))
 
+batch = torch.stack(batch, dim=0)   #to make batch row by row
+print("Batch of examples that we are using: ", batch)
 
