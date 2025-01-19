@@ -44,4 +44,4 @@ d_out= 2
 num_heads= 2
 mulihead_attention= MultiHeadAttention(d_in= d_in, d_out= d_out, context_length= num_tokens, dropout= 0.0, num_heads= num_heads)
 context_vector_mulithead= mulihead_attention.forward(x= batch)
-print(context_vector_mulithead)
+print('Result of multihead attention: ', context_vector_mulithead)
