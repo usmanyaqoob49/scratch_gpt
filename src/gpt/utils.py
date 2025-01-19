@@ -29,12 +29,12 @@ class GELU(nn.Module):
     
 #-----Feed Forward Network 
 class FeedForward(nn.Module):
-    def __init__(self):
+    def __init__(self, cfg):
         super().__init__()
         self.layers= nn.Sequential(
-            nn.Linear(GPT_CONFIG_124M['emb_dim'], 4* GPT_CONFIG_124M['emb_dim']),
+            nn.Linear(cfg['emb_dim'], 4* cfg['emb_dim']),
             GELU(),
-            nn.Linear(4* GPT_CONFIG_124M['emb_dim'], GPT_CONFIG_124M['emb_dim'])
+            nn.Linear(4* cfg['emb_dim'], cfg['emb_dim'])
         )
     
     def forwrad(self, x):
