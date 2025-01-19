@@ -9,4 +9,5 @@ from src.transformer.transformer import Transformer
 
 class GPTModel(nn.Module):
     def __init__(self, cfg):
-        super().__init__(*args, **kwargs)
+        super().__init__()
+        
