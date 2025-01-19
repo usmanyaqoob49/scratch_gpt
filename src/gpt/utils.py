@@ -19,4 +19,5 @@ GPT_CONFIG_124M= {
 class GELU(nn.Module):
     def __init__(self):
         super().__init__()
-    
+    def forward(self, x):
+        
