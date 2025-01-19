@@ -29,3 +29,4 @@ print("Logits shape: ", logits.shape)
 
 #---------Testing Layer Norm class
 norm= LayerNorm(emb_dims= 5)
+out_norm= LayerNorm.forward(x= batch)
