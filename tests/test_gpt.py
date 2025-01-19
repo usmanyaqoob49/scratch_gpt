@@ -15,4 +15,4 @@ batch = torch.stack(batch, dim=0)   #to make batch row by row
 print("Batch of examples that we are using: ", batch)
 
 gpt= GPTModel(cfg= GPT_CONFIG_124M)
-
+logits= gpt.forward(in_idx= batch)
