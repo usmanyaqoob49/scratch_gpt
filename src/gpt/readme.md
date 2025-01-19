@@ -1,0 +1,1 @@
+Implementation of GPT-2-124M model architecture from scratch.
