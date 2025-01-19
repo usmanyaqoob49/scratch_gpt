@@ -5,3 +5,7 @@ import torch
 
 torch.manual_seed(123)
 gpt= GPTModel(cfg= GPT_CONFIG_124M)
+
+
+text1= 'Every effort moves you'
+text2= 'Every day holds a'
