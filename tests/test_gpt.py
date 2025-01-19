@@ -28,6 +28,7 @@ print("Logits shape: ", logits.shape)
 
 
 #---------Testing Layer Norm class
+batch_examples= torch.randn(2,5)
 norm= LayerNorm(emb_dims= 5)
 out_norm= norm.forward(batch)
 print("Normalized Output: ", out_norm)
