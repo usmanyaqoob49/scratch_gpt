@@ -28,4 +28,5 @@ class GPTModel(nn.Module):
         )
     
     def forward(self, in_idx):
+        batch_size, seq_len= in_idx.shape
         
