@@ -1,5 +1,8 @@
 """
 This module has class for implementation of layer normalization.
+
+Purpose of Layer Normalization is to adjust output of previous layer in the way that they should have
+0 mean and 1 variance. Helps in convergence of to effective weights and effiecient training.
 """
 import torch
 import torch.nn as nn
