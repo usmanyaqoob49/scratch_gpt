@@ -38,4 +38,4 @@ class FeedForward(nn.Module):
         )
     
     def forwrad(self, x):
-        
+        return self.layers(x)
