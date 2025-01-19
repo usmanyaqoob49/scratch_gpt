@@ -18,5 +18,5 @@ class LayerNorm(nn.Module):
         mean= torch.mean(x, dim= -1, keepdim= True)
         variance= torch.var(x, dim= -1, keepdim= True)
 
-        normalized_output= (x-mean) / torch.sqrt(variance)
+        normalized_output= (x-mean) / torch.sqrt(variance) + self.eps
         return x
