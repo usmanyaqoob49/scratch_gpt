@@ -21,7 +21,7 @@ class Transformer(nn.Module):
             qkv_bias= cfg['qkv_bias']
         )
 
-        self.ff= 
+        self.ff= FeedForward(cfg= cfg)
 
     def forward(self, x):
         return x
