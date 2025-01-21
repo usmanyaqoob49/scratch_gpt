@@ -1,5 +1,7 @@
 """
 This module has implementation of transformer block.
+
+We will use all the components like Multihead attention, LayerNorm, FeedForward to build this Transformer Block.
 """
 import torch
 import torch.nn as nn
