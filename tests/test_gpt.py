@@ -40,5 +40,5 @@ print("Varaince of the normalized output: ", out_norm.var(dim= -1, keepdim= True
 #---------Testing Layer feed forward
 ffn= FeedForward(cfg= GPT_CONFIG_124M)
 x= torch.rand(2, 3, 768)
-out= ffn.forward(x)
+out= ffn.layers(x)
 print('Output shape of feed forward: ', out.shape)
