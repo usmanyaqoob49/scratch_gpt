@@ -7,8 +7,6 @@ Here is what happens in transformer block:
 #step 1---> Normalized
 #step 2---> Multihead attention
 #step 3---> Dropout
-
-
 """
 import torch
 import torch.nn as nn
