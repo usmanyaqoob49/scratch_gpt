@@ -7,6 +7,7 @@ Here is what happens in transformer block:
 #step 1---> Normalized
 #step 2---> Multihead attention
 #step 3---> Dropout
+#step 4---> Add shortcut connection (add input to output)
 """
 import torch
 import torch.nn as nn
@@ -34,7 +35,12 @@ class Transformer(nn.Module):
 
         self.drop_shortcut= nn.Dropout(p= cfg['drop_out'])
     def forward(self, x):
+        shortcut_connection= x
+
         normalized1= self.norm1(x)
         context_vector= self.attention(normalized1)
         dropped_out= self.drop_shortcut(context_vector)
+
+        shortcut_out= dropped_out + x
+        
         return x
