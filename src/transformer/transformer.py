@@ -7,6 +7,7 @@ import torch
 import torch.nn as nn
 from src.attention_mechanism.multihead_attention import MultiHeadAttention
 from src.gpt.utils import FeedForward
+from src.gpt.layer_norm import LayerNorm
 
 class Transformer(nn.Module):
     def __init__(self, cfg):
@@ -23,5 +24,6 @@ class Transformer(nn.Module):
 
         self.ff= FeedForward(cfg= cfg)
 
+        self.LayerNorm1= 
     def forward(self, x):
         return x
