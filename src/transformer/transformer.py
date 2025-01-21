@@ -43,6 +43,6 @@ class Transformer(nn.Module):
         out= dropped_out + shortcut_connection
 
         shortcut_connection= out        #update the shortcut connection with output of block1
-        normalized2= self.norm2(shortcut_out)
+        normalized2= self.norm2(out)
 
         return x
