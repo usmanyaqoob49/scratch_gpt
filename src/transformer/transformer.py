@@ -39,12 +39,13 @@ class Transformer(nn.Module):
 
         normalized1= self.norm1(x)
         context_vector= self.attention(normalized1)
-        dropped_out= self.drop_shortcut(context_vector)
-        out= dropped_out + shortcut_connection
+        dropped_out1= self.drop_shortcut(context_vector)
+        out= dropped_out1 + shortcut_connection
 
         shortcut_connection= out        #update the shortcut connection with output of block1
         normalized2= self.norm2(out)
         ff_out= self.ff(normalized2)
+        dropped_out2= self.drop_shortcut(ff_out)
         
 
         return x
