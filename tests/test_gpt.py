@@ -6,6 +6,7 @@ from src.data_preparation.utils import gpt_tokeinzer
 from src.gpt.gpt_model import GPTModel
 from src.gpt.utils import GPT_CONFIG_124M
 from src.gpt.layer_norm import LayerNorm
+from src.gpt.utils import FeedForward
 import torch
 
 #---------Testing GPTModel class
@@ -37,3 +38,4 @@ print("Varaince of the normalized output: ", out_norm.var(dim= -1, keepdim= True
 
 
 #---------Testing Layer feed forward
+ffn= FeedForward
