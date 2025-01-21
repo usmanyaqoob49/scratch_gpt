@@ -2,6 +2,12 @@
 This module has implementation of transformer block.
 
 We will use all the components like Multihead attention, LayerNorm, FeedForward to build this Transformer Block.
+
+Here is what happens in transformer block:
+#step 1---> Normalized
+#step 2---> Multihead attention
+
+
 """
 import torch
 import torch.nn as nn
@@ -29,9 +35,7 @@ class Transformer(nn.Module):
 
         self.drop_shortcut= nn.Dropout(p= cfg['drop_out'])
     def forward(self, x):
-        #step 1---> Normalized
         normalized1= self.norm1(x)
-        #step 2---> Multihead attention
         context_vector= self.attention(normalized1)
         #step 3---> Dropout
         dropped_out= self.drop_shortcut(context_vector)
