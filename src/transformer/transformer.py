@@ -46,6 +46,5 @@ class Transformer(nn.Module):
         normalized2= self.norm2(out)
         ff_out= self.ff(normalized2)
         dropped_out2= self.drop_shortcut(ff_out)
-        
-
-        return x
+        final_out= dropped_out2 + shortcut_connection
+        return final_out
