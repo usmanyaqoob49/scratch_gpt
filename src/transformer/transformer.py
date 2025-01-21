@@ -24,6 +24,7 @@ class Transformer(nn.Module):
 
         self.ff= FeedForward(cfg= cfg)
 
-        self.LayerNorm1= 
+        self.norm1= LayerNorm(emb_dims= cfg['emb_dim'])
+        self.norm2= LayerNorm(emb_dims= cfg['emb_dim'])
     def forward(self, x):
         return x
