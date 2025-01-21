@@ -29,4 +29,5 @@ class Transformer(nn.Module):
 
         self.drop_shortcut= nn.Dropout(p= cfg['drop_out'])
     def forward(self, x):
+        
         return x
