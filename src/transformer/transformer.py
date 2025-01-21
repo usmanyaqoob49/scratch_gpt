@@ -44,5 +44,7 @@ class Transformer(nn.Module):
 
         shortcut_connection= out        #update the shortcut connection with output of block1
         normalized2= self.norm2(out)
+        ff_out= self.ff(normalized2)
+        
 
         return x
