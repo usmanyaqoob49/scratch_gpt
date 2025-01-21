@@ -6,7 +6,7 @@ We will use all the components like Multihead attention, LayerNorm, FeedForward 
 Here is what happens in transformer block:
 #step 1---> Normalized
 #step 2---> Multihead attention
-        #step 3---> Dropout
+#step 3---> Dropout
 
 
 """
