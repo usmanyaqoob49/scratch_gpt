@@ -26,5 +26,7 @@ class Transformer(nn.Module):
 
         self.norm1= LayerNorm(emb_dims= cfg['emb_dim'])
         self.norm2= LayerNorm(emb_dims= cfg['emb_dim'])
+
+        self.drop_shortcut= nn.Dropout(p= cfg['drop_out'])
     def forward(self, x):
         return x
