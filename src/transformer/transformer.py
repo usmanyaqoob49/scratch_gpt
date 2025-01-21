@@ -6,6 +6,7 @@ We will use all the components like Multihead attention, LayerNorm, FeedForward 
 import torch
 import torch.nn as nn
 from src.attention_mechanism.multihead_attention import MultiHeadAttention
+from src.gpt.utils import FeedForward
 
 class Transformer(nn.Module):
     def __init__(self, cfg):
@@ -20,7 +21,7 @@ class Transformer(nn.Module):
             qkv_bias= cfg['qkv_bias']
         )
 
-        
+        self.ff= 
 
     def forward(self, x):
         return x
