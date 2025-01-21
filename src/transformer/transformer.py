@@ -6,6 +6,7 @@ We will use all the components like Multihead attention, LayerNorm, FeedForward 
 Here is what happens in transformer block:
 #step 1---> Normalized
 #step 2---> Multihead attention
+        #step 3---> Dropout
 
 
 """
@@ -37,6 +38,5 @@ class Transformer(nn.Module):
     def forward(self, x):
         normalized1= self.norm1(x)
         context_vector= self.attention(normalized1)
-        #step 3---> Dropout
         dropped_out= self.drop_shortcut(context_vector)
         return x
