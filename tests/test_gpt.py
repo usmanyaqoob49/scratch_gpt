@@ -36,4 +36,4 @@ print("Mean of Normalized output: ",  out_norm.mean(dim= -1, keepdim= True))
 print("Varaince of the normalized output: ", out_norm.var(dim= -1, keepdim= True, unbiased= False))
 
 
-#---------Testing Layer Norm class
+#---------Testing Layer feed forward
