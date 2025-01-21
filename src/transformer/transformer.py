@@ -40,7 +40,7 @@ class Transformer(nn.Module):
         normalized1= self.norm1(x)
         context_vector= self.attention(normalized1)
         dropped_out= self.drop_shortcut(context_vector)
-
         shortcut_out= dropped_out + x
         
+
         return x
