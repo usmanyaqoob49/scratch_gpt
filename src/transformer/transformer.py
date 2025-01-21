@@ -29,5 +29,10 @@ class Transformer(nn.Module):
 
         self.drop_shortcut= nn.Dropout(p= cfg['drop_out'])
     def forward(self, x):
-        
+        #step 1---> Normalized
+        normalized1= self.norm1(x)
+        #step 2---> Multihead attention
+        context_vector= self.attention(normalized1)
+        #step 3---> Dropout
+        dropped_out= self.drop_shortcut(context_vector)
         return x
