@@ -28,6 +28,7 @@ class GPTModel(nn.Module):
         #layer normalization
         self.final_norm= LayerNorm(cfg['emb_dim'])
 
+        #final linear layer that will give us logits for all tokens in vocabulary
         self.out_head= nn.Linear(
             cfg['emb_dim'], cfg['vocab_size'], bias= False
         )
