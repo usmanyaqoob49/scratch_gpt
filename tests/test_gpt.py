@@ -66,6 +66,8 @@ encoded_tensor= torch.tensor(encoded).unsqueeze(0)  #to add batch dimension
 print("Encoded tensor of Context shape: ", encoded_tensor.shape)
 
 gpt.eval() #putting in evaluation mode as we are going to predict
-
+output= generate_text(gpt_model= gpt,
+                      idx= encoded_tensor,
+                      )
 
 print('------------------------------------------------------------------\n\n')
