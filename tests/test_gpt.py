@@ -52,3 +52,6 @@ print("\n\nLogits shape: ", logits.shape)
 
 total_parameters= sum(p.numel() for p in gpt.parameters())
 print("Total parameters in GPT Model:", total_parameters)
+
+
+#---------Testing generate text function that uses the gpt model to generate next token
