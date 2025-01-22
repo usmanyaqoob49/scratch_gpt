@@ -7,6 +7,7 @@ from src.gpt.gpt_model import GPTModel
 from src.gpt.utils import GPT_CONFIG_124M
 from src.gpt.layer_norm import LayerNorm
 from src.gpt.utils import FeedForward
+from src.transformer.transformer_block import Transformer
 import torch
 
 #---------Testing GPTModel class
