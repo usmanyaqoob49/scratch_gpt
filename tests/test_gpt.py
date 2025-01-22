@@ -8,6 +8,7 @@ from src.gpt.utils import GPT_CONFIG_124M
 from src.gpt.layer_norm import LayerNorm
 from src.gpt.utils import FeedForward
 from src.transformer.transformer_block import Transformer
+from src.gpt.utils import generate_text
 import torch
 
 #---------Testing Layer Norm class
