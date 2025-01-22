@@ -50,6 +50,6 @@ def generate_text(gpt_model, idx, max_new_tokens, context_size):
         new_token_logits= logits[:, -1, :]  #only last token logits as it is new generated
         probabilities= torch.softmax(new_token_logits, dim= -1)
         next_token_idx= torch.argmax(probabilities, dim= -1, keepdim= True) #select index of max probability token
-        output= torch.cat((idx, next_token_idx), dim= 1) #appending with input tokens
+        output= torch.cat((idx, next_token_idx), dim=1) #appending with input tokens
     return output
 
