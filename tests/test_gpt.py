@@ -72,7 +72,7 @@ output= generate_text(gpt_model= gpt,
                       context_size= GPT_CONFIG_124M['context_length'])
 print("Output from GPT model: ", output)
 
-decoded_text= tokenizer.decode(output)
+decoded_text= tokenizer.decode(output.squeeze(0).to_list())
 
 
 print('------------------------------------------------------------------\n\n')
