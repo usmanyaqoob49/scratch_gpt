@@ -8,6 +8,7 @@ Here is what happens in transformer block:
 #step 2---> Multihead attention
 #step 3---> Dropout
 #step 4---> Add shortcut connection (add input to output)
+and so on...
 """
 import torch
 import torch.nn as nn
