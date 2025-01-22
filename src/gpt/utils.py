@@ -39,3 +39,6 @@ class FeedForward(nn.Module):
     
     def forward(self, x):
         return self.layers(x)
+
+#----- Generate text from logits
+def 
