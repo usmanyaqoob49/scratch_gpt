@@ -1,8 +1,8 @@
 """
-It has dummy gpt model class.
+It has implementation gpt model class.
 
 This is what happens in gpt:
-        input --->token embeddings --->Position embeddings ---> token emb + positional emb --->drop out --->transformer block --->layer norm --->logits
+        input --->token embeddings --->Position embeddings ---> token emb + positional emb --->drop out --->transformer blocks --->layer norm --->logits
 
 It will give us logits that will be the probability of all the tokens in the vocabulay to be the next token.
 """
