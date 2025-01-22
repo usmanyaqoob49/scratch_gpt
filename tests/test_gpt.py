@@ -61,7 +61,7 @@ print('------------------------------------------------------------------\n\n')
 #---------Testing generate text function that uses the gpt model to generate next token
 context= "Hello I am"
 encoded= tokenizer.encode(text= context)
-print("Encoded Text of Context shape: ", encoded.shape)
+print("Encoded Text of Context: ", encoded)
 encoded_tensor= torch.tensor(encoded).unsqueeze(0)  #to add batch dimension
 print("Encoded tensor of Context shape: ", encoded_tensor.shape)
 
