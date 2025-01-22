@@ -62,7 +62,8 @@ print('------------------------------------------------------------------\n\n')
 context= "Hello I am"
 encoded= tokenizer.encode(text= context)
 print("Encoded Text of Context shape: ", encoded.shape)
-encoded_tensor= torch.tensor(encoded).unsqueeze(0)
+encoded_tensor= torch.tensor(encoded).unsqueeze(0)  #to add batch dimension
+
 
 
 
