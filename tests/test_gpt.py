@@ -56,4 +56,5 @@ print("Total parameters in GPT Model:", total_parameters)
 
 
 #---------Testing generate text function that uses the gpt model to generate next token
+context= "Hello I am"
 
