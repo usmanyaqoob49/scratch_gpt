@@ -23,12 +23,14 @@ batch.append(torch.tensor(tokenizer.encode(text2)))
 batch = torch.stack(batch, dim=0)   #to make batch row by row
 print("Batch of examples that we are using: ", batch)
 
+
+#---------Testing of GPT Model class
 gpt= GPTModel(cfg= GPT_CONFIG_124M)
 logits= gpt.forward(in_idx= batch)
 print("Resulting Logits: ", logits)
 print("\n\nLogits shape: ", logits.shape)
 
-
+total_parameters
 #---------Testing Layer Norm class
 batch_examples= torch.randn(2,5)
 norm= LayerNorm(emb_dims= 5)
