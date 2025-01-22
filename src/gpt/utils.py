@@ -45,4 +45,5 @@ def generate_text(gpt_model, idx, max_new_tokens, context_size):
     for _ in max_new_tokens:
         idx_context= idx[:, -context_size:]     #only pass specific number of tokens that are allowed by context size
         with torch.no_grad():
+            logits= gpt_model(idx_context)
             
