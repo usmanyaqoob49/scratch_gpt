@@ -48,4 +48,5 @@ def generate_text(gpt_model, idx, max_new_tokens, context_size):
             logits= gpt_model(idx_context)
 
         new_token_logits= logits[:, -1, :]  #only last token logits as it is new generated
+        probabilities= torch.softmax(new_token_logits)
         
