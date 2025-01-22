@@ -46,4 +46,7 @@ print('Output shape of feed forward: ', out.shape)
 
 ##---------Testing Transformer Block
 tb= Transformer(cfg= GPT_CONFIG_124M)
+x= torch.randn(2, 4, 768)
 
+output= tb.forward(x=x)
+print("Transformer Block Output: ", output)
