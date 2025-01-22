@@ -30,7 +30,9 @@ logits= gpt.forward(in_idx= batch)
 print("Resulting Logits: ", logits)
 print("\n\nLogits shape: ", logits.shape)
 
-total_parameters
+total_parameters= sum(p.numel() for p in gpt.parameters)
+print("Total parameters in GPT Model:", total_parameters)
+
 #---------Testing Layer Norm class
 batch_examples= torch.randn(2,5)
 norm= LayerNorm(emb_dims= 5)
