@@ -61,7 +61,8 @@ print('------------------------------------------------------------------\n\n')
 #---------Testing generate text function that uses the gpt model to generate next token
 context= "Hello I am"
 encoded= tokenizer.encode(text= context)
-print("Encoded Text of Context: ", )
+print("Encoded Text of Context: ", encoded)
+
 
 
 
