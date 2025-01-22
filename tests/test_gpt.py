@@ -18,12 +18,13 @@ out_norm= norm.forward(batch_examples)
 print("Normalized Output: ", out_norm)
 print("Mean of Normalized output: ",  out_norm.mean(dim= -1, keepdim= True))
 print("Varaince of the normalized output: ", out_norm.var(dim= -1, keepdim= True, unbiased= False))
-
+print('------------------------------------------------------------------\n\n')
 #---------Testing Layer feed forward
 ffn= FeedForward(cfg= GPT_CONFIG_124M)
 x= torch.rand(2, 3, 768)
 out= ffn.forward(x)
 print('Output shape of feed forward: ', out.shape)
+print('------------------------------------------------------------------\n\n')
 
 ##---------Testing Transformer Block
 tb= Transformer(cfg= GPT_CONFIG_124M)
@@ -31,6 +32,7 @@ x= torch.randn(2, 4, 768)
 print("Input of transfomer shape: ", x.shape)
 output= tb.forward(x=x)
 print("Transformer Block Output Shape: ", output.shape)
+print('------------------------------------------------------------------\n\n')
 
 
 #---------Testing GPTModel class
@@ -58,4 +60,4 @@ print("Total parameters in GPT Model:", total_parameters)
 #---------Testing generate text function that uses the gpt model to generate next token
 context= "Hello I am"
 encoded= tokenizer.encode(text= context)
-
+print("Encoded Text of Context: ", )
