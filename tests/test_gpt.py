@@ -45,4 +45,5 @@ out= ffn.forward(x)
 print('Output shape of feed forward: ', out.shape)
 
 ##---------Testing Transformer Block
+tb= Transformer(cfg= GPT_CONFIG_124M)
 
