@@ -62,3 +62,7 @@ print('------------------------------------------------------------------\n\n')
 context= "Hello I am"
 encoded= tokenizer.encode(text= context)
 print("Encoded Text of Context: ", )
+
+
+
+print('------------------------------------------------------------------\n\n')
