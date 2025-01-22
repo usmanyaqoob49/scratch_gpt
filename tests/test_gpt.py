@@ -70,5 +70,6 @@ output= generate_text(gpt_model= gpt,
                       idx= encoded_tensor,
                       max_new_tokens= 6,
                       context_size= GPT_CONFIG_124M['context_size'])
+print("Output from GPT model: ", output)
 
 print('------------------------------------------------------------------\n\n')
