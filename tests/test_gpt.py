@@ -69,7 +69,7 @@ gpt.eval() #putting in evaluation mode as we are going to predict
 output= generate_text(gpt_model= gpt,
                       idx= encoded_tensor,
                       max_new_tokens= 6,
-                      context_size= GPT_CONFIG_124M['context_size'])
+                      context_size= GPT_CONFIG_124M['context_length'])
 print("Output from GPT model: ", output)
 
 print('------------------------------------------------------------------\n\n')
