@@ -68,6 +68,7 @@ print("Encoded tensor of Context shape: ", encoded_tensor.shape)
 gpt.eval() #putting in evaluation mode as we are going to predict
 output= generate_text(gpt_model= gpt,
                       idx= encoded_tensor,
+                      max_new_tokens= 6,
                       )
 
 print('------------------------------------------------------------------\n\n')
