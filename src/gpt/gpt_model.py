@@ -20,7 +20,7 @@ class GPTModel(nn.Module):
         self.positional_emb= nn.Embedding(cfg['context_length'], cfg['emb_dim'])
         self.drop_out= nn.Dropout(cfg['drop_out'])
 
-        #multiple transforners blocks
+        #multiple transforners blocks connexted sequentially
         self.transformer_blocks= nn.Sequential(
             *[Transformer(cfg=cfg) for _ in range(cfg['n_layers'])]
         )
