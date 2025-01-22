@@ -30,7 +30,7 @@ logits= gpt.forward(in_idx= batch)
 print("Resulting Logits: ", logits)
 print("\n\nLogits shape: ", logits.shape)
 
-total_parameters= sum(p.numel() for p in gpt.parameters)
+total_parameters= sum(p.numel() for p in gpt.parameters())
 print("Total parameters in GPT Model:", total_parameters)
 
 #---------Testing Layer Norm class
