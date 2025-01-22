@@ -43,3 +43,6 @@ ffn= FeedForward(cfg= GPT_CONFIG_124M)
 x= torch.rand(2, 3, 768)
 out= ffn.forward(x)
 print('Output shape of feed forward: ', out.shape)
+
+##---------Testing Transformer Block
+
