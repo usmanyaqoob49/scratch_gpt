@@ -2,7 +2,7 @@
 This moduie has all the helper functions. 
 Like:
     - Functiont to convert text input to tokens so that we can pass it to gpt module.
-
+    - Function to convert tokens ids that we get from gpt to text.
 """
 from src.gpt.utils import generate_text
 import tiktoken
