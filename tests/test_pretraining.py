@@ -11,4 +11,5 @@ gpt_model= GPTModel(cfg= GPT_CONFIG_124M)
 
 start_context = "Every effort moves you"
 
+
 print("Testing text_to_tokens Function:")
