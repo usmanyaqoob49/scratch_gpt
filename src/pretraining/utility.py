@@ -6,4 +6,5 @@ Like:
 from src.gpt.utils import generate_text
 import tiktoken
 
+#Function to convert text to tokens 
 def text_to_tokens(tokenizer, text):
