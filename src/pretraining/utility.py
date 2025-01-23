@@ -11,5 +11,5 @@ import torch
 def text_to_tokens(tokenizer, text):
     encoded= tokenizer.encode(text, allowed_special= {'<|endoftext|>'})
     encoded_tensor= torch.tensor(encoded).unsqueeze(0)
-    
-    return encoded
+    return encoded_tensor
+
