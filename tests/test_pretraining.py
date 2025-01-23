@@ -1,6 +1,10 @@
 """
 Test cases for different modules of pretraining.
 """
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from src.pretraining.utils import text_to_tokens, tokens_to_text
 from src.gpt.gpt_model import GPTModel
 from src.gpt.utils import GPT_CONFIG_124M
