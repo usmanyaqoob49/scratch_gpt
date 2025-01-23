@@ -4,3 +4,4 @@ Like:
 
 """
 from src.gpt.utils import generate_text
+import tiktoken
