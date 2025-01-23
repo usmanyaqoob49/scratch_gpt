@@ -1,7 +1,7 @@
 """
 Test cases for different modules of pretraining.
 """
-from src.pretraining.utility import text_to_tokens, tokens_to_text
+from src.pretraining.utils import text_to_tokens, tokens_to_text
 from src.gpt.gpt_model import GPTModel
 from src.gpt.utils import GPT_CONFIG_124M
 from src.data_preparation.utils import gpt_tokeinzer
