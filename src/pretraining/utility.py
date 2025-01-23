@@ -18,3 +18,4 @@ def text_to_tokens(tokenizer, text):
 def tokens_to_text(tokenizer, tokens_ids):
     flat= tokens_ids.sequeeze(0)
     text_tokens= tokenizer.decode(flat.tolist())
+    return text_tokens
