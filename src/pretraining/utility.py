@@ -17,4 +17,4 @@ def text_to_tokens(tokenizer, text):
 #Function to convert tokens to text
 def tokens_to_text(tokenizer, tokens_ids):
     flat= tokens_ids.sequeeze(0)
-    
+    text_tokens= tokenizer.decode(flat.tolist())
