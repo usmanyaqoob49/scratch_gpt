@@ -9,3 +9,4 @@ import tiktoken
 #Function to convert text to tokens 
 def text_to_tokens(tokenizer, text):
     encoded= tokenizer.encode(text, allowed_special= {'<|endoftext|>'})
+    return encoded
