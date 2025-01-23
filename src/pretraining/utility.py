@@ -14,3 +14,4 @@ def text_to_tokens(tokenizer, text):
     encoded_tensor= torch.tensor(encoded).unsqueeze(0)
     return encoded_tensor
 
+#Function to convert tokens to text
