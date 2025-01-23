@@ -5,7 +5,6 @@ Like:
     - Function to convert tokens ids that we get from gpt to text.
 """
 from src.gpt.utils import generate_text
-import tiktoken
 import torch
 
 #Function to convert text to tokens 
