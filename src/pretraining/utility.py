@@ -15,3 +15,5 @@ def text_to_tokens(tokenizer, text):
     return encoded_tensor
 
 #Function to convert tokens to text
+def tokens_to_text(tokenizer, tokens_ids):
+    
