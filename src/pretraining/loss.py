@@ -12,4 +12,5 @@ def compute_loss(model, inputs, targets):
                                    dim= -1,
                                    keepdim= True)
     #taking out target probabilities so that we can maximise them to increase accuracy
-    
+    for target in targets:
+        
