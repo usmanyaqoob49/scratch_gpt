@@ -3,6 +3,7 @@ Module that will compute loss so that we can do evaluation and pretrain accordin
 """
 import torch
 def compute_loss(model, inputs, targets):
+    model.eval()
     with torch.no_grad():
         logits= model(inputs)
     probabilities= torch.softmax(logits,
