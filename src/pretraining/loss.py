@@ -7,5 +7,7 @@ def compute_loss(model, inputs, targets):
         logits= model(inputs)
     probabilities= torch.softmax(logits,
                                  dim= -1)
-    
+    output_token_ids= torch.argmax(probabilities, 
+                                   dim= -1,
+                                   keepdim= True)
     
