@@ -2,8 +2,9 @@
 Module that will compute loss so that we can do evaluation and pretrain according to reducing that loss.
 """
 import torch
-def compute_loss(inputs, targets):
-    with torch.no_grad()
+def compute_loss(model, inputs, targets):
+    with torch.no_grad():
+        
     probabilities= torch.softmax(logits,
                                  dim= -1)
     
