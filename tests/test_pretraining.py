@@ -33,8 +33,9 @@ print("---------------------------------------------------")
 #-----------Testing loss functions
 text_data= read_txt_file(path= "./data/raw/the-verdict.txt")
 train_data_ratio= 0.90
-train_data_text= text_data[:len(text_data) * train_data_ratio]
-validation_data_text= text_data[len(text_data) * train_data_ratio:]
+split_index= train_data_ratio * len(text_data)
+train_data_text= text_data[:split_index]
+validation_data_text= text_data[split_index:]
 
 train_loader= create_data_loader_v1(
     txt= train_data_text,
