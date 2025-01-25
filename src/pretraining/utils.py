@@ -46,4 +46,6 @@ def calculate_loader_loss(data_loader, model, device, num_batches= None):
                 target_batch= target_batch
             )
             total_loss+= batch_loss.item()
-            
+        else:
+            break
+    return total_loss / num_batches #average loss over all the batches
