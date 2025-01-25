@@ -42,7 +42,16 @@ train_loader= create_data_loader_v1(
     max_length= GPT_CONFIG_124M['context_length'],
     stride= GPT_CONFIG_124M['context_length'],
     drop_last= True,
+    shuffle= True,
     num_workers= 0
 )
 
-
+validation_loader= create_data_loader_v1(
+    txt= validation_data_text,
+    batch_size= 2,
+    max_length= GPT_CONFIG_124M['context_length'],
+    stride= GPT_CONFIG_124M['context_length'],
+    drop_last= False,
+    shuffle= False,
+    num_workers= 0
+)
