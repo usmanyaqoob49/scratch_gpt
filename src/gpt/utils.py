@@ -4,6 +4,7 @@ feed forward network module that all will be used in gpt module.
 """
 import torch
 import torch.nn as nn
+import math
 
 #Settings for GPT-2 (124M) 
 GPT_CONFIG_124M= {
@@ -24,7 +25,7 @@ class GELU(nn.Module):
 
     def forward(self, x):
         return 0.5 * x * (1 + torch.tanh(
-            torch.sqrt(torch.tensor(2.0 / torch.pi)) *
+            torch.sqrt(torch.tensor(2.0 / math.pi)) *
             (x + 0.044715 * torch.pow(x, 3))
         ))
     
