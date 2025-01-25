@@ -89,3 +89,4 @@ training_loss, validation_loss, tokens_seen= pretrain_gpt(
 print('***********After training**************')
 print('Training Loss: ', training_loss)
 print('Validation Loss: ', validation_loss)
+print('Num of Token seen in training: ', tokens_seen)
