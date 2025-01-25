@@ -39,4 +39,5 @@ def calculate_loader_loss(data_loader, model, device, num_batches= None):
         num_batches= len(data_loader)
     else:
         num_batches= min(num_batches, len(data_loader))
+    for i, (input_batch, target_batch) in enumerate(data_loader):
         
