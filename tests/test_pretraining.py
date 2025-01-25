@@ -31,7 +31,7 @@ print('Output of GPT Model: ', tokens_to_text(tokenizer= tokenizer,
 print("---------------------------------------------------")
 
 #-----------Testing loss functions
-text_data= read_verdict(path= "../data/raw/the-verdict.txt")
+text_data= read_txt_file(path= "../data/raw/the-verdict.txt")
 train_data_ratio= 0.90
 train_data_text= text_data[:len(text_data) * train_data_ratio]
 validation_data_text= text_data[len(text_data) * train_data_ratio:]
