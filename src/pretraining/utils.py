@@ -77,3 +77,4 @@ def generate_print_sample_text(
         start_context
 ):
     model.eval()
+    context_size= model.pso_emb.weight.shape[0]
