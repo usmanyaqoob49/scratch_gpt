@@ -56,7 +56,6 @@ validation_loader= create_data_loader_v1(
     shuffle= False,
     num_workers= 0
 )
-print(GPT_CONFIG_124M)
 print("Train loader:")
 for x, y in train_loader:
     print(x.shape, y.shape)
