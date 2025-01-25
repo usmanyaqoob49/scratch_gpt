@@ -61,8 +61,8 @@ def calculate_batch_loss(input_batch, target_batch, model, device):
 
 #Function to compute the average loss of complete data loader (all batches)
 def calculate_loader_loss(data_loader, model, device, num_batches= None):
-    total_loss= 0
-    if len(data_loader)==0:
+    total_loss= 0.0
+    if len(data_loader)== 0:
         return float('nan')
     elif num_batches is None:
         num_batches= len(data_loader)
@@ -70,16 +70,11 @@ def calculate_loader_loss(data_loader, model, device, num_batches= None):
         num_batches= min(num_batches, len(data_loader))
     for i, (input_batch, target_batch) in enumerate(data_loader):
         if i<num_batches:
-            batch_loss= calculate_batch_loss(
-                input_batch= input_batch,
-                target_batch= target_batch,
-                model= model,
-                device= device
-            )
-            total_loss+= batch_loss.item()
+            loss= calculate_batch_loss(input_batch, target_batch, model, device)
+            total_loss+= loss.item()
         else:
             break
-    return total_loss / num_batches #average loss over all the batches
+    return total_loss/ num_batches
 
 
 #Function to evaluate model, will take model and data and will call loss functions
