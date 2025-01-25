@@ -29,4 +29,4 @@ print('Output of GPT Model: ', tokens_to_text(tokenizer= tokenizer,
 print("---------------------------------------------------")
 
 #-----------Testing loss functions
-
+text_data= read_verdict(path= "")
