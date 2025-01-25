@@ -8,6 +8,8 @@ def train_model(model, train_loader, validation_loader,
                 eval_freq, eval_iter, start_context,
                 tokenizer):
     training_loss, validattion_loss, track_tokens_seen= [], [], []
+    tokens_seen, global_step= 0, -1
+    
     for epoch in range(num_epochs):
         model.train()
         for input_batch, target_batch in train_loader:
