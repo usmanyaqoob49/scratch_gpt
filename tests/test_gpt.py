@@ -2,7 +2,7 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from src.data_preparation.utils import gpt_tokeinzer
+from src.data_preparation.utils import 
 from src.gpt.gpt_model import GPTModel
 from src.gpt.utils import GPT_CONFIG_124M
 from src.gpt.layer_norm import LayerNorm
@@ -36,7 +36,7 @@ print('------------------------------------------------------------------\n\n')
 
 
 #---------Testing GPTModel class
-tokenizer= gpt_tokeinzer()
+tokenizer= ()
 torch.manual_seed(123)
 batch= []
 text1= 'Every effort moves you'

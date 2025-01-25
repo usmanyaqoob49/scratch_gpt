@@ -8,7 +8,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.pretraining.utils import text_to_tokens, tokens_to_text
 from src.gpt.gpt_model import GPTModel
 from src.gpt.utils import GPT_CONFIG_124M
-from src.data_preparation.utils import gpt_tokeinzer
+from src.data_preparation.utils import gpt_tokenizer
 from src.gpt.utils import generate_text
 from src.data_preparation.utils import read_txt_file
 from src.data_preparation.data_loader import create_data_loader_v1 
@@ -17,7 +17,7 @@ import torch
 torch.manual_seed(123)
 
 #-----------Testing text to token and token to text functions
-tokenizer= gpt_tokeinzer()
+tokenizer= gpt_tokenizer()
 gpt_model= GPTModel(cfg= GPT_CONFIG_124M)
 start_context = "Every effort moves you"
 token_ids_result= generate_text(
