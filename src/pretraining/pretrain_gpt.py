@@ -28,16 +28,6 @@ def pretrain_gpt(file_path, num_epochs):
         text_data= text_data,
         train_data_ratio= 0.9
     )
-
-    print("Train loader:")
-    print("Train loader length: ", len(training_loader))
-    for x, y in training_loader:
-        print(x.shape, y.shape)
-
-    print("\nValidation loader:")
-    for x, y in validation_loader:
-        print(x.shape, y.shape)
-        
     train_losses, validation_losses, tokens_seen= train_model(
         model= gpt_model,
         train_loader= training_loader,
