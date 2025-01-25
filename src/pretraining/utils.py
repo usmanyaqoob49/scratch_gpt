@@ -80,6 +80,14 @@ def calculate_loader_loss(data_loader, model, device, num_batches= None):
 #Function to evaluate model, will take model and data and will call loss functions
 def evaluate_model(model, train_loader, validation_loader, 
                    device, eval_iter):
+    print("Train loader:")
+    print("Train loader length: ", len(train_loader))
+    for x, y in train_loader:
+        print(x.shape, y.shape)
+
+    print("\nValidation loader:")
+    for x, y in validation_loader:
+        print(x.shape, y.shape)
     model.eval()
     with torch.no_grad():
         train_loader_loss= calculate_loader_loss(data_loader= train_loader,
