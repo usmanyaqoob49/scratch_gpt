@@ -56,10 +56,11 @@ validation_loader= create_data_loader_v1(
     shuffle= False,
     num_workers= 0
 )
-print('Train Loader: ')
-for input, target in train_loader:
-    print(input.shape, target.shape)
-print('Validataion Loader: ')
-for input, target in validation_loader:
-    print(input.shape, target.shape)
+print("Train loader:")
+for x, y in train_loader:
+    print(x.shape, y.shape)
+
+print("\nValidation loader:")
+for x, y in validation_loader:
+    print(x.shape, y.shape)
     
