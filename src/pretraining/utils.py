@@ -54,3 +54,5 @@ def calculate_loader_loss(data_loader, model, device, num_batches= None):
 
 
 #Function to evaluate model, will take model and data and will call loss functions
+def evaluate_model(model, train_loader, validation_loader, 
+                   device, eval_iter):
