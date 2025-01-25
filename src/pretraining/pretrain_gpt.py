@@ -41,3 +41,4 @@ def pretrain_gpt(file_path, num_epochs):
         start_context= "Every effort moves you",
         tokenizer= gpt_tokenizer()
     )
+    return train_losses, validation_losses, tokens_seen
