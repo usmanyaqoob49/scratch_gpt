@@ -5,7 +5,7 @@ Data loader is something that convert data to batches, shuffle it, prepare it an
 in the form of bathces.
 """
 import torch
-from .utils import gpt_tokeinzer
+from .utils import gpt_tokenizer
 from .data_sampling import GPTDatasetV1
 from torch.utils.data import Dataset, DataLoader
 
@@ -18,7 +18,7 @@ def create_data_loader_v1(
         drop_last= True,
         num_workers= 0
 ):
-    tokenizer= gpt_tokeinzer()
+    tokenizer= gpt_tokenizer()
     dataset= GPTDatasetV1(text= txt,
                           tokenizer= tokenizer, 
                           max_length= max_length,
