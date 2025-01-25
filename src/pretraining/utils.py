@@ -46,6 +46,7 @@ def make_train_validation_loader(text_data,
         shuffle= False,
         num_workers= 0
     )
+    return train_loader, validation_loader
 
 #Function to calculate the loss of single batch
 def calculate_batch_loss(input_batch, target_batch, model, device):
