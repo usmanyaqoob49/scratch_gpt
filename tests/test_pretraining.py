@@ -12,6 +12,8 @@ from src.data_preparation.utils import gpt_tokeinzer
 from src.gpt.utils import generate_text
 from src.data_preparation.utils import read_verdict
 from src.data_preparation.data_loader import create_data_loader_v1 
+import torch
+torch.manual_seed(123)
 
 #-----------Testing text to token and token to text functions
 tokenizer= gpt_tokeinzer()
