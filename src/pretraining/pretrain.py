@@ -5,6 +5,8 @@ import torch
 from .train import train_model
 from src.gpt.gpt_model import GPTModel
 from src.gpt.utils import GPT_CONFIG_124M
+from .train import train_model
+from src.data_preparation.data_loader import create_data_loader_v1 
 
 device= {
     'cuda' if torch.cuda.is_available() else 'cpu'
@@ -19,4 +21,7 @@ optimizer= torch.optim.AdamW(
 )
 num_epochs= 10
 
-train_losses, validation_losses, tokens_seen= 
+train_losses, validation_losses, tokens_seen= train_model(
+    model= gpt_model,
+    train_loader= 
+)
