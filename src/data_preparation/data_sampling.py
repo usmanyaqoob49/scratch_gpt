@@ -9,7 +9,7 @@ Also it has GPTDataset class that will convert the dataset to dataset required f
 """
 import torch
 from torch.utils.data import Dataset, DataLoader
-from .utils import gpt_tokeinzer
+from .utils import gpt_tokenizer
 
 class GPTDatasetV1(Dataset):
     def __init__(self, text, tokenizer, max_length, stride):
