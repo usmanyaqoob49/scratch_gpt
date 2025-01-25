@@ -2,7 +2,7 @@
 This module has function to pretrain the LLM.
 """
 import torch
-from .utils import calculate_batch_loss
+from .utils import calculate_batch_loss, evaluate_model
 def train_model(model, train_loader, validation_loader,
                 optimizer, device, num_epochs,
                 eval_freq, eval_iter, start_context,
@@ -22,4 +22,3 @@ def train_model(model, train_loader, validation_loader,
             optimizer.step()
             tokens_seen+= input_batch.numel()
             global_step+=1
-            
