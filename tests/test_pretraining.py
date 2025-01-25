@@ -27,3 +27,6 @@ token_ids_result= generate_text(
 print('Output of GPT Model: ', tokens_to_text(tokenizer= tokenizer,
                                               tokens_ids= token_ids_result))
 print("---------------------------------------------------")
+
+#-----------Testing loss functions
+
