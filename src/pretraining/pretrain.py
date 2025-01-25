@@ -39,5 +39,5 @@ def pretrain_gpt(file_path, num_epochs):
         eval_freq= 5,
         eval_iter= 5,
         start_context= "Every effort moves you",
-        tokenizer= gpt_tokeinzer()
+        tokenizer= gpt_tokenizer()
     )
