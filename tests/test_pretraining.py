@@ -10,6 +10,7 @@ from src.gpt.gpt_model import GPTModel
 from src.gpt.utils import GPT_CONFIG_124M
 from src.data_preparation.utils import gpt_tokeinzer
 from src.gpt.utils import generate_text
+from src.data_preparation.utils import read_verdict
 
 #-----------Testing text to token and token to text functions
 tokenizer= gpt_tokeinzer()
