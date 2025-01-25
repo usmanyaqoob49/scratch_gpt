@@ -18,3 +18,5 @@ def tokens_to_text(tokenizer, tokens_ids):
     flat= tokens_ids.sequeeze(0)
     text_tokens= tokenizer.decode(flat.tolist())
     return text_tokens
+
+#Function to calculate the loss of batch
