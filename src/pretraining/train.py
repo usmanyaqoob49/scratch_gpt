@@ -11,3 +11,7 @@ def train_model(model, train_loader, validation_loader,
         model.train()
         for input_batch, target_batch in train_loader:
             optimizer.zero_grad()
+            batch_loss= calculate_batch_loss(input_batch= input_batch,
+                                             target_batch= target_batch,
+                                             model= model,
+                                             device= device)
