@@ -12,3 +12,8 @@ device= {
 torch.manual_seed(123)
 gpt_model= GPTModel(cfg= GPT_CONFIG_124M)
 gpt_model.to(device)
+optimizer= torch.optim.AdamW(
+    gpt_model.parameters,
+    lr= 0.0004,
+    weight_decay= 0.1
+)
