@@ -7,7 +7,7 @@ def train_model(model, train_loader, validation_loader,
                 optimizer, device, num_epochs,
                 eval_freq, eval_iter, start_context,
                 tokenizer):
-    training_loss, validattion_loss, track_tokens_seen= [], [], []
+    training_loss, validation_loss, track_tokens_seen= [], [], []
     tokens_seen, global_step= 0, -1
 
     for epoch in range(num_epochs):
@@ -24,10 +24,12 @@ def train_model(model, train_loader, validation_loader,
             global_step+=1
 
             if global_step%eval_freq == 0:
-                training_loss, validation_loss= evaluate_model(
+                train_loss, val_loss= evaluate_model(
                     model= model,
                     train_loader= train_loader,
                     validation_loader= validation_loader,
                     device= device,
                     eval_iter= eval_iter
                 )
+                training_loss.append(train_loss)
+                validation_loss.append(val_loss)
