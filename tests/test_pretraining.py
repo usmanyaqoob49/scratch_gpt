@@ -69,4 +69,6 @@ device= torch.device('cuda' if torch.cuda.is_available else 'cpu')
 gpt_model.to(device)
 
 with torch.no_grad():
-    train_loss= cal
+    train_loss= calculate_loader_loss(data_loader= train_loader,
+                                      model= gpt_model,
+                                      device= device)
