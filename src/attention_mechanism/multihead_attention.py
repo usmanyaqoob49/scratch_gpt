@@ -80,7 +80,7 @@ class MultiHeadAttention(nn.Module):
 
         #mask the attention weights of future tokens as we are implementing in causal attention
         mask_bool= self.mask.bool()[:num_tokens, :num_tokens]
-        masked_attention_weights= attention_weights.masked_fill_(mask_bool, -torch.inf)
+        masked_attention_weights= attention_weights.masked_fill_(mask_bool, -float('inf'))
 
         #---Normalize the masked attention weights
         attention_scores= torch.softmax(masked_attention_weights / keys.shape[-1] ** 0/5, dim= -1)
