@@ -29,6 +29,6 @@ def tokenid_to_token(vocab):
     return {token_id:token for token, token_id in vocab.items()}
 
 #we will use gpt tokenizer by using library called tiktoken
-def gpt_tokeinzer():
+def gpt_tokenizer():
     tokenizer= tiktoken.get_encoding('gpt2')
     return tokenizer

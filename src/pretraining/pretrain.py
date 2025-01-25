@@ -7,7 +7,7 @@ from src.gpt.gpt_model import GPTModel
 from src.gpt.utils import GPT_CONFIG_124M
 from .train import train_model
 from src.data_preparation.data_loader import create_data_loader_v1 
-from src.data_preparation.utils import read_txt_file
+from src.data_preparation.utils import read_txt_file, gpt_tokeinzer
 from .utils import make_train_validation_loader
 
 torch.manual_seed(123)
@@ -33,5 +33,11 @@ def pretrain_gpt(file_path, num_epochs):
         model= gpt_model,
         train_loader= training_loader,
         validation_loader= validation_loader,
-        optimizer= optimizer
+        optimizer= optimizer,
+        device= device,
+        num_epochs= num_epochs,
+        eval_freq= 5,
+        eval_iter= 5,
+        start_context= "Every effort moves you",
+        tokenizer= gpt_tokeinzer()
     )
