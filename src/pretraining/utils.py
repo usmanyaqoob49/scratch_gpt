@@ -58,4 +58,7 @@ def evaluate_model(model, train_loader, validation_loader,
                    device, eval_iter):
     model.eval()
     with torch.no_grad():
-        
+        train_loader_loss= calculate_loader_loss(data_loader= train_loader,
+                                                 model= model,
+                                                 device= device,
+                                                 num_batches= eval_iter)
