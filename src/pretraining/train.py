@@ -3,7 +3,6 @@ This module has function to pretrain the LLM.
 """
 import torch
 from .utils import calculate_batch_loss, evaluate_model, generate_print_sample_text
-from src.data_preparation.utils import gpt_tokeinzer
 
 def train_model(model, train_loader, validation_loader,
                 optimizer, device, num_epochs,
@@ -40,5 +39,7 @@ def train_model(model, train_loader, validation_loader,
                       f"Train loss {train_loss:.3f}, Val loss {val_loss:.3f}")
                 
         generate_print_sample_text(model= model,
-                                   tokenizer= gpt_tokeinzer())
+                                   tokenizer= tokenizer,
+                                   device= device,
+                                   start_context= start_context)
         
