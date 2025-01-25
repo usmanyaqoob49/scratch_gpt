@@ -43,7 +43,9 @@ def calculate_loader_loss(data_loader, model, device, num_batches= None):
         if i<num_batches:
             batch_loss= calculate_batch_loss(
                 input_batch= input_batch,
-                target_batch= target_batch
+                target_batch= target_batch,
+                model= model,
+                device= device
             )
             total_loss+= batch_loss.item()
         else:
