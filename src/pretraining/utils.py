@@ -4,7 +4,7 @@ Like:
     - Functiont to convert text input to tokens so that we can pass it to gpt module.
     - Function to convert tokens ids that we get from gpt to text.
 """
-from src.gpt.utils import generate_text
+from src.gpt.utils import generate_text, GPT_CONFIG_124M
 import torch
 
 #Function to convert text to tokens 
@@ -18,6 +18,33 @@ def tokens_to_text(tokenizer, tokens_ids):
     flat= tokens_ids.squeeze(0)
     text_tokens= tokenizer.decode(flat.tolist())
     return text_tokens
+
+#Function to make train and test loaders of any dataset
+def make_train_validation_loader(text_data,
+                                train_data_ratio):
+    split_index= int(train_data_ratio * len(text_data))
+    train_data_text= text_data[:split_index]
+    validation_data_text= text_data[split_index:]
+
+    train_loader= create_data_loader_v1(
+        txt= train_data_text,
+        batch_size= 2,
+        max_length= GPT_CONFIG_124M['context_length'],
+        stride= GPT_CONFIG_124M['context_length'],
+        drop_last= True,
+        shuffle= True,
+        num_workers= 0
+    )
+
+    validation_loader= create_data_loader_v1(
+        txt= validation_data_text,
+        batch_size= 2,
+        max_length= GPT_CONFIG_124M['context_length'],
+        stride= GPT_CONFIG_124M['context_length'],
+        drop_last= False,
+        shuffle= False,
+        num_workers= 0
+    )
 
 #Function to calculate the loss of single batch
 def calculate_batch_loss(input_batch, target_batch, model, device):
@@ -93,4 +120,3 @@ def generate_print_sample_text(
     print(decoded_text.replace("\n", " "))  
     model.train()
 
-#Function to make train and test loaders of any dataset
