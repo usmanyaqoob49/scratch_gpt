@@ -8,7 +8,7 @@ It will give us logits that will be the probability of all the tokens in the voc
 """
 import torch
 import torch.nn as nn
-from src.data_preparation.utils import gpt_tokeinzer
+from src.data_preparation.utils import gpt_tokenizer
 from .layer_norm import LayerNorm
 from src.transformer.transformer_block import Transformer
 

@@ -7,7 +7,7 @@ from src.gpt.gpt_model import GPTModel
 from src.gpt.utils import GPT_CONFIG_124M
 from .train import train_model
 from src.data_preparation.data_loader import create_data_loader_v1 
-from src.data_preparation.utils import read_txt_file, gpt_tokeinzer
+from src.data_preparation.utils import read_txt_file, gpt_tokenizer
 from .utils import make_train_validation_loader
 
 torch.manual_seed(123)
