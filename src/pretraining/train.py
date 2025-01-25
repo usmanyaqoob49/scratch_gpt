@@ -16,3 +16,4 @@ def train_model(model, train_loader, validation_loader,
                                              model= model,
                                              device= device)
             batch_loss.backward()
+            optimizer.step()
