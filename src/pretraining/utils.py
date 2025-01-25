@@ -78,6 +78,12 @@ def generate_print_sample_text(
 ):
     model.eval()
     context_size= model.pso_emb.weight.shape[0]
-    encode= text_to_tokens(tokenizer= tokenizer,
+    encoded= text_to_tokens(tokenizer= tokenizer,
                            text= start_context).to(device)
     
+    with torch.no_grad():
+        token_ids= generate_text(
+            gpt_model= model,
+            idx= encoded,
+            
+        )
