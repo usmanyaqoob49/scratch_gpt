@@ -76,4 +76,4 @@ def generate_print_sample_text(
         device, 
         start_context
 ):
-    
+    model.eval()
