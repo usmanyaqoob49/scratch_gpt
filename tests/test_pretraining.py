@@ -72,3 +72,6 @@ with torch.no_grad():
     train_loss= calculate_loader_loss(data_loader= train_loader,
                                       model= gpt_model,
                                       device= device)
+    validation_loss= calculate_loader_loss(data_loader= validation_loader,
+                                           model= gpt_model,
+                                           device= device)
