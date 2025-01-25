@@ -18,7 +18,7 @@ def pretrain_gpt(file_path, num_epochs):
     gpt_model= GPTModel(cfg= GPT_CONFIG_124M)
     gpt_model.to(device)
     optimizer= torch.optim.AdamW(
-        gpt_model.parameters,
+        gpt_model.parameters(),
         lr= 0.0004,
         weight_decay= 0.1
     )
