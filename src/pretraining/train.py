@@ -36,3 +36,4 @@ def train_model(model, train_loader, validation_loader,
                 track_tokens_seen.append(tokens_seen)
                 print(f"Ep {epoch+1} (Step {global_step:06d}): "
                       f"Train loss {train_loss:.3f}, Val loss {val_loss:.3f}")
+                
