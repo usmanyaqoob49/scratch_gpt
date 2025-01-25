@@ -77,3 +77,7 @@ with torch.no_grad():
                                            device= device)
 print("Training Loss: ", train_loss)
 print("Validation Loss: ", validation_loss)
+print("---------------------------------------------------")
+
+
+#-----------Pretraining GPT-2 on verdict dataset
