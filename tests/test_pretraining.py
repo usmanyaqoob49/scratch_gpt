@@ -12,6 +12,7 @@ from src.data_preparation.utils import gpt_tokeinzer
 from src.gpt.utils import generate_text
 from src.data_preparation.utils import read_txt_file
 from src.data_preparation.data_loader import create_data_loader_v1 
+from src.pretraining.utils import calculate_loader_loss
 import torch
 torch.manual_seed(123)
 
@@ -68,4 +69,4 @@ device= torch.device('cuda' if torch.cuda.is_available else 'cpu')
 gpt_model.to(device)
 
 with torch.no_grad():
-    
+    train_loss= cal
