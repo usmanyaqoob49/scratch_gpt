@@ -10,7 +10,7 @@ from src.gpt.gpt_model import GPTModel
 from src.gpt.utils import GPT_CONFIG_124M
 from src.data_preparation.utils import gpt_tokeinzer
 from src.gpt.utils import generate_text
-from src.data_preparation.utils import read_verdict
+from src.data_preparation.utils import read_txt_file
 from src.data_preparation.data_loader import create_data_loader_v1 
 import torch
 torch.manual_seed(123)
@@ -31,7 +31,7 @@ print('Output of GPT Model: ', tokens_to_text(tokenizer= tokenizer,
 print("---------------------------------------------------")
 
 #-----------Testing loss functions
-text_data= read_txt_file(path= "../data/raw/the-verdict.txt")
+text_data= read_txt_file(path= "./data/raw/the-verdict.txt")
 train_data_ratio= 0.90
 train_data_text= text_data[:len(text_data) * train_data_ratio]
 validation_data_text= text_data[len(text_data) * train_data_ratio:]
