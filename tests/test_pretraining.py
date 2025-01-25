@@ -65,3 +65,4 @@ for x, y in validation_loader:
     print(x.shape, y.shape)
     
 device= torch.device('cuda' if torch.cuda.is_available else 'cpu')
+gpt_model.to(device)
