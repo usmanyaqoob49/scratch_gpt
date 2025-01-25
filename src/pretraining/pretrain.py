@@ -19,4 +19,4 @@ optimizer= torch.optim.AdamW(
 )
 num_epochs= 10
 
-train
+train_losses, validation_losses, tokens_seen= 
