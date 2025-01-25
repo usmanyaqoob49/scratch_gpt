@@ -22,3 +22,12 @@ def train_model(model, train_loader, validation_loader,
             optimizer.step()
             tokens_seen+= input_batch.numel()
             global_step+=1
+
+            if global_step%eval_freq == 0:
+                training_loss, validation_loss= evaluate_model(
+                    model= model,
+                    train_loader= train_loader,
+                    validation_loader= validation_loader,
+                    device= device,
+                    eval_iter= eval_iter
+                )
