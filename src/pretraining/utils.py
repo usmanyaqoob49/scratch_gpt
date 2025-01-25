@@ -88,4 +88,7 @@ def generate_print_sample_text(
             max_new_tokens= 50,
             context_size= context_size
         )
-        
+    decoded_text= tokens_to_text(tokenizer= tokenizer,
+                                 tokens_ids= token_ids)
+    print(decoded_text.replace("\n", " "))  
+    model.train()
