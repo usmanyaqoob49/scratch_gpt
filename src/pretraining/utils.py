@@ -32,4 +32,7 @@ def calculate_batch_loss(input_batch, target_batch, model, device):
 
 #Function to compute the loss of complete data loader (all batches)
 def calculate_loader_loss(data_loader, model, device, num_batches= None):
+    total_loss= 0
+    if len(data_loader)==0:
+        return float('nan')
     
