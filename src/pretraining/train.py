@@ -21,3 +21,5 @@ def train_model(model, train_loader, validation_loader,
             batch_loss.backward()
             optimizer.step()
             tokens_seen+= input_batch.numel()
+            global_step+=1
+            
