@@ -62,3 +62,8 @@ def evaluate_model(model, train_loader, validation_loader,
                                                  model= model,
                                                  device= device,
                                                  num_batches= eval_iter)
+        validation_loader_loss= calculate_loader_loss(data_loader= validation_loader,
+                                                      model= model,
+                                                      device= device,
+                                                      num_batches=  iter)
+    return train_loader_loss, validation_loader_loss
