@@ -1,5 +1,5 @@
 """
-Module to pretrain the GPT-2 model using the training function in train.py-
+Module that has function to pretrain the GPT-2 model using the training function in train.py-
 """
 import torch
 from .train import train_model
