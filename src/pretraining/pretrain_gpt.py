@@ -13,9 +13,8 @@ from .utils import make_train_validation_loader
 torch.manual_seed(123)
 
 def pretrain_gpt(file_path, num_epochs):
-    device= {
-        'cuda' if torch.cuda.is_available() else 'cpu'
-    }
+    device= torch.device(
+        'cuda' if torch.cuda.is_available() else 'cpu')
     gpt_model= GPTModel(cfg= GPT_CONFIG_124M)
     gpt_model.to(device)
     optimizer= torch.optim.AdamW(
