@@ -85,5 +85,6 @@ def generate_print_sample_text(
         token_ids= generate_text(
             gpt_model= model,
             idx= encoded,
-            
+            max_new_tokens= 50,
+            context_size= context_size
         )
