@@ -36,3 +36,9 @@ train_data_ratio= 0.90
 train_data_text= text_data[:len(text_data) * train_data_ratio]
 validation_data_text= text_data[len(text_data) * train_data_ratio:]
 
+train_loader= create_data_loader_v1(
+    txt= train_data_text,
+    batch_size= 2,
+    max_length= GPT_CONFIG_124M['context_length'],
+    stride= GPT_CONFIG_124M['context_length']
+)
