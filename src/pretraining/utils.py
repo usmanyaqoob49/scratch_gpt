@@ -22,4 +22,5 @@ def tokens_to_text(tokenizer, tokens_ids):
 #Function to calculate the loss of batch
 def calculate_batch_loss(input_batch, target_batch, model, device):
     input_batch= input_batch.to(device)
+    target_batch= target_batch.to(device)
     
