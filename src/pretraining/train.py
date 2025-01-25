@@ -15,3 +15,4 @@ def train_model(model, train_loader, validation_loader,
                                              target_batch= target_batch,
                                              model= model,
                                              device= device)
+            batch_loss.backward()
