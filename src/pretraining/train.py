@@ -33,3 +33,4 @@ def train_model(model, train_loader, validation_loader,
                 )
                 training_loss.append(train_loss)
                 validation_loss.append(val_loss)
+                track_tokens_seen.append(tokens_seen)
