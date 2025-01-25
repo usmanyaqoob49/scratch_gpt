@@ -7,3 +7,4 @@ from src.gpt.gpt_model import GPTModel
 from src.gpt.utils import GPT_CONFIG_124M
 
 torch.manual_seed(123)
+gpt_model= GPTModel(cfg= GPT_CONFIG_124M)
