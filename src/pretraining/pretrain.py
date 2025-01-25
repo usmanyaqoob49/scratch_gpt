@@ -17,3 +17,6 @@ optimizer= torch.optim.AdamW(
     lr= 0.0004,
     weight_decay= 0.1
 )
+num_epochs= 10
+
+train
