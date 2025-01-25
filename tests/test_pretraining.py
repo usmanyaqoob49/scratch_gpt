@@ -66,3 +66,6 @@ for x, y in validation_loader:
     
 device= torch.device('cuda' if torch.cuda.is_available else 'cpu')
 gpt_model.to(device)
+
+with torch.no_grad():
+    
