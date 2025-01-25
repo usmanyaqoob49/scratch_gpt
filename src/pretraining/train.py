@@ -42,4 +42,5 @@ def train_model(model, train_loader, validation_loader,
                                    tokenizer= tokenizer,
                                    device= device,
                                    start_context= start_context)
+    return training_loss, validation_loss, track_tokens_seen
         
