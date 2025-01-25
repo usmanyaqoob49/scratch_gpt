@@ -9,4 +9,5 @@ def train_model(model, train_loader, validation_loader,
                 tokenizer):
     for epoch in range(num_epochs):
         for input_batch, target_batch in train_loader:
+            optimizer.zero_grad()
             
