@@ -29,3 +29,5 @@ def calculate_batch_loss(input_batch, target_batch, model, device):
         target_batch.flatten()
     )
     return batch_loss
+
+#Function to compute the loss of complete data loader (all batches)
