@@ -27,7 +27,7 @@ print('Token ids assigned by encoder of tokenizer: ', ids)
 text_from_ids= tokenizer.decode(ids= ids)
 print('Text assigned from decoder using token ids', text_from_ids)
 
-tokenizer= gpt_tokeinzer()
+tokenizer= gpt_tokenizer()
 
 #testing dataset class that converts simple tokens to proper input and output tokens 
 dataset= GPTDatasetV1(text= verdict_text, 
