@@ -55,3 +55,6 @@ validation_loader= create_data_loader_v1(
     shuffle= False,
     num_workers= 0
 )
+print('Train Loader: ')
+for input, target in train_loader:
+    print(input.shape, target.shape)
