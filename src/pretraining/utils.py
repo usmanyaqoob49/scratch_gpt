@@ -35,4 +35,6 @@ def calculate_loader_loss(data_loader, model, device, num_batches= None):
     total_loss= 0
     if len(data_loader)==0:
         return float('nan')
-    
+    elif num_batches is None:
+        num_batches= len(data_loader)
+        
