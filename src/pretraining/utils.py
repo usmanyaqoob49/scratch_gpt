@@ -70,3 +70,10 @@ def evaluate_model(model, train_loader, validation_loader,
     return train_loader_loss, validation_loader_loss
 
 #Function to print the text generate by model, this function will be used in while checking the results in training to make sure model is improving
+def generate_print_sample_text(
+        model,
+        tokenizer,
+        device, 
+        start_context
+):
+    
