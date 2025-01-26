@@ -12,4 +12,4 @@ def generate_diverse(model, idx, max_new_tokens,
         idx_context= idx[:, -context_size:]
         with torch.no_grad():
             logits= model(idx_context)
-            
+        new_tokens_logits= logits[:, -1, :]
