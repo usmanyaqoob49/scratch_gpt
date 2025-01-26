@@ -5,6 +5,7 @@ import torch
 import tensorflow as tf
 from .gpt_download import load_gpt2_params_from_tf_ckpt
 import json
+import os
 
 def load_gpt_openai_weights(weights_dir):
     tf_checkpoints= tf.train.latest_checkpoint(checkpoint_dir= weights_dir)
