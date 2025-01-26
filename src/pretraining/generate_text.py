@@ -1,5 +1,6 @@
 """
-Function for generating text with sampling techniques, like top-k sampling, temperature scaling etc.
+Function for generating text with sampling techniques, like probablistic sampling, top-k sampling, temperature scaling etc instead
+of always selecting max probablity token (Greedy Sampling).
 
 Simple text generation function is implemented in src.gpt.utils
 """
@@ -20,4 +21,6 @@ def generate_diverse(model, idx, max_new_tokens,
         if temperature != 0.0:
             new_tokens_logits= temperature_scaling(logits= new_tokens_logits,
                                                temperature= temperature)
+            probabilites= torch.softmax(new_tokens_logits, dim= -1)
+            
             
