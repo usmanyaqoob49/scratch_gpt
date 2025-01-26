@@ -186,11 +186,12 @@ def load_gpt_openai_weights(weights_dir):
 
     return settings, params
 
-#Function to compare shapes of two tensors (used in loading weights in gpt-2 architecture)
+#Function to compare shapes of two tensors, if shapes different give error otherwise returin wights of right (used in loading weights in gpt-2 architecture)
 def assign(left, right):
     if left.shape != right.shape:
         raise ValueError(
             f"Shape mismatch, Left shape: {left.shape}, 
             Right shape: {right.shape}"
         )
-    return 
+    #i
+    return  
