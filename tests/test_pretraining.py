@@ -108,4 +108,4 @@ gpt_2_result_token_ids= generate_diverse(
     temperature= 0.7
 )
 print("Output text:\n", tokens_to_text(tokenizer= gpt_tokenizer(),
-                                       tokens_ids= gpt_2_result_token_ids)
+                                       tokens_ids= gpt_2_result_token_ids))
