@@ -128,3 +128,6 @@ def plot_losses(training_loss, validation_loss, epochs_seen, tokens_seen):
     ax1.set_xlabel('Epochs')
     ax1.set_ylabel('Loss')
     ax1.legend(loc= 'upper right')
+
+    ax1.xaxis.set_major_locator(MaxNLocator(integer=True))  # only show integer labels on x-axis
+
