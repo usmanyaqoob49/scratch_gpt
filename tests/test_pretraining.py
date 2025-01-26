@@ -12,7 +12,7 @@ from src.data_preparation.utils import gpt_tokenizer
 from src.gpt.utils import generate_text
 from src.data_preparation.utils import read_txt_file
 from src.data_preparation.data_loader import create_data_loader_v1 
-from src.pretraining.utils import calculate_loader_loss, make_train_validation_loader
+from src.pretraining.utils import calculate_loader_loss, make_train_validation_loader, load_gpt2_params_from_tf_ckpt
 from src.pretraining.pretrain_gpt import pretrain_gpt
 from src.pretraining.generate_text import generate_diverse
 from src.pretraining.loading_weight_into_gpt import loads_weight_into_gpt
@@ -90,4 +90,6 @@ print("---------------------------------------------------")
 
 #-----------Testing the creative text generation function
 print('Loading weights of openAI in gpt-2 architecture that we have created and testing its text generation: ')
-open_gpt_model= 
+
+open_gpt_model= loads_weight_into_gpt(gpt_model= gpt_model,
+                                      params= )
