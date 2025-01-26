@@ -192,4 +192,4 @@ def assign(left, right):
             f"Shape mismatch, Left shape: {left.shape}, 
             Right shape: {right.shape}"
         )
-    return  
+    return torch.nn.Parameter(torch.tensor(right))
