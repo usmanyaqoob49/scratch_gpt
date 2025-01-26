@@ -187,3 +187,5 @@ def load_gpt_openai_weights(weights_dir):
     return settings, params
 
 #Function to compare shapes of two tensors (used in loading weights in gpt-2 architecture)
+def assign(left, right):
+    
