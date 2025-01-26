@@ -22,5 +22,6 @@ def generate_diverse(model, idx, max_new_tokens,
             new_tokens_logits= temperature_scaling(logits= new_tokens_logits,
                                                temperature= temperature)
             probabilites= torch.softmax(new_tokens_logits, dim= -1)
+            idx_next= torch.multinomial(input= probabilites, num_samples= 1)
             
             
