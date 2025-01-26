@@ -101,5 +101,5 @@ except:
 
 gpt_2_result_token_ids= generate_diverse(
     model= openai_gpt_model,
-    idx= 
+    idx= text_to_tokens(tokenizer= gpt_tokenizer(), )
 )
