@@ -160,8 +160,7 @@ def top_k_sampling(logits, k):
     )
     return new_logits
 
-
-
+#function to load the gpt-2 open ai weights using helper function from gpt_downlaod.
 def load_gpt_openai_weights(weights_dir):
     tf_checkpoints= tf.train.latest_checkpoint(checkpoint_dir= weights_dir)
     settings = json.load(open(os.path.join(weights_dir, "hparams.json")))
