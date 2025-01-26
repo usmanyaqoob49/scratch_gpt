@@ -185,3 +185,5 @@ def load_gpt_openai_weights(weights_dir):
     params = load_gpt2_params_from_tf_ckpt(tf_checkpoints, settings)
 
     return settings, params
+
+#Function to compare shapes of two tensors (used in loading weights in gpt-2 architecture)
