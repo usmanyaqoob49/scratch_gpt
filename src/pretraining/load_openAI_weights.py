@@ -9,6 +9,6 @@ import json
 def load_gpt_openai_weights(weights_dir):
     tf_checkpoints= tf.train.latest_checkpoint(checkpoint_dir= weights_dir)
     settings = json.load(open(os.path.join(weights_dir, "hparams.json")))
-    params = load_gpt2_params_from_tf_ckpt(tf_ckpt_path, settings)
+    params = load_gpt2_params_from_tf_ckpt(tf_checkpoints, settings)
 
     return settings, params
