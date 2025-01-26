@@ -138,3 +138,6 @@ def plot_losses(training_loss, validation_loss, epochs_seen, tokens_seen):
     path= ".src/pretraining/plots/loss-plot.pdf"
     plt.savefig(path)
     return path
+
+
+#Temperature scaling function--->That we can use for selection of logits
