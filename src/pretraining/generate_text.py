@@ -13,3 +13,6 @@ def generate_diverse(model, idx, max_new_tokens,
         with torch.no_grad():
             logits= model(idx_context)
         new_tokens_logits= logits[:, -1, :]
+
+        if top_k is not None:
+            
