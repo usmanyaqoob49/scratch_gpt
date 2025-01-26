@@ -91,14 +91,6 @@ print("---------------------------------------------------")
 #-----------Testing the creative text generation function
 print('Loading weights of openAI in gpt-2 architecture that we have created and testing its text generation: ')
 model_dir= os.path.join('models', 'gpt-2', '124M')
-if os.path.exists(model_dir):
-    files = os.listdir(model_dir)
-    print(f"Files in {model_dir}:")
-    for file in files:
-        print(file)
-else:
-    print(f"Directory {model_dir} does not exist.")
-
 openai_parameters= load_gpt2_params_from_tf_ckpt(ckpt_path= model_dir,
                                                  settings= gpt_2_124m_configurations)
 try:
