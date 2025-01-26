@@ -19,3 +19,18 @@
 
 
 
+#------------API to load openAI weights in our gpt architecture using src.pretrain.loading_weights_into_gpt.py 
+
+
+
+
+
+
+
+
+
+
+
+
+
+#-------------API
