@@ -28,5 +28,5 @@ def generate_diverse(model, idx, max_new_tokens,
         if idx_next == eos_id:
             break
         idx= torch.cat((idx, idx_next))
-        
+    return idx
             
