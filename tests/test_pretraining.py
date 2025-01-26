@@ -79,5 +79,7 @@ token_ids= generate_diverse(
     model= gpt_model,
     idx= text_to_tokens(tokenizer= gpt_tokenizer(), text= "Every effort moves you"),
     max_new_tokens= 15,
+    context_size= GPT_CONFIG_124M['context_length'],
     
+
 )
