@@ -50,15 +50,15 @@ def loads_weight_into_gpt(gpt_model, params):
         gpt_model.trf_blocks[b].ff.layers[2].weight = assign(
             gpt_model.trf_blocks[b].ff.layers[2].weight, 
             params["blocks"][b]["mlp"]["c_proj"]["w"].T)
-        gpt.trf_blocks[b].ff.layers[2].bias = assign(
-            gpt.trf_blocks[b].ff.layers[2].bias, 
+        gpt_model.trf_blocks[b].ff.layers[2].bias = assign(
+            gpt_model.trf_blocks[b].ff.layers[2].bias, 
             params["blocks"][b]["mlp"]["c_proj"]["b"])
 
-        gpt.trf_blocks[b].norm1.scale = assign(
-            gpt.trf_blocks[b].norm1.scale, 
+        gpt_model.trf_blocks[b].norm1.scale = assign(
+            gpt_model.trf_blocks[b].norm1.scale, 
             params["blocks"][b]["ln_1"]["g"])
-        gpt.trf_blocks[b].norm1.shift = assign(
-            gpt.trf_blocks[b].norm1.shift, 
+        gpt_model.trf_blocks[b].norm1.shift = assign(
+            gpt_model.trf_blocks[b].norm1.shift, 
             params["blocks"][b]["ln_1"]["b"])
         gpt.trf_blocks[b].norm2.scale = assign(
             gpt.trf_blocks[b].norm2.scale, 
