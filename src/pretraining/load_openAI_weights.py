@@ -3,4 +3,5 @@ This module will  have function to load the gpt-2 open ai weights using helper f
 """
 import torch
 
-def load_gpt_openai_weights()
+def load_gpt_openai_weights(weights_path):
+    
