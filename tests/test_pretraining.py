@@ -61,11 +61,12 @@ print("---------------------------------------------------")
 
 
 #-----------Pretraining GPT-2 on verdict dataset
-training_loss, validation_loss, tokens_seen= pretrain_gpt(
-    file_path= './data/raw/the-verdict.txt',
-    num_epochs= 10
-)
-print('***********After training**************')
-print('Training Loss: ', training_loss)
-print('Validation Loss: ', validation_loss)
-print('Num of Token seen in training: ', tokens_seen)
+print('Pretraining GPT-2')
+# training_loss, validation_loss, tokens_seen= pretrain_gpt(
+#     file_path= './data/raw/the-verdict.txt',
+#     num_epochs= 10
+# )
+# print('***********After training**************')
+# print('Training Loss: ', training_loss)
+# print('Validation Loss: ', validation_loss)
+# print('Num of Token seen in training: ', tokens_seen)
