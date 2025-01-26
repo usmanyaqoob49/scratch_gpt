@@ -89,4 +89,4 @@ print("---------------------------------------------------")
 
 #-----------Testing the creative text generation function
 print('Loading weights of openAI in gpt-2 architecture that we have created and testing its text generation: ')
-
+open_gpt_model= 
