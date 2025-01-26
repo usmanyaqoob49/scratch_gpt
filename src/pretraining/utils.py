@@ -141,3 +141,5 @@ def plot_losses(training_loss, validation_loss, epochs_seen, tokens_seen):
 
 
 #Temperature scaling function--->That we can use for selection of logits
+def temperature_scaling(logits, temperature):
+    return logits / temperature
