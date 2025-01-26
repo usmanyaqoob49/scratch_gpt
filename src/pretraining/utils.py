@@ -124,4 +124,4 @@ def plot_losses(training_loss, validation_loss, epochs_seen, tokens_seen):
     fig, ax1= plt.subplot(fig_size= (5,3))
 
     ax1.plot(epochs_seen, training_loss, label= 'Training Loss')
-    
+    ax1.plot(epochs_seen, validation_loss, label= 'Validation Loss', linestyle= '-.')
