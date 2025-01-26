@@ -12,7 +12,7 @@ from src.data_preparation.utils import gpt_tokenizer
 from src.gpt.utils import generate_text
 from src.data_preparation.utils import read_txt_file
 from src.data_preparation.data_loader import create_data_loader_v1 
-from src.pretraining.utils import calculate_loader_loss, make_train_validation_loader, load_gpt2_params_from_tf_ckpt
+from src.pretraining.utils import calculate_loader_loss, make_train_validation_loader, load_gpt2_params_from_tf_ckpt, gpt_2_124m_configurations
 from src.pretraining.pretrain_gpt import pretrain_gpt
 from src.pretraining.generate_text import generate_diverse
 from src.pretraining.loading_weight_into_gpt import loads_weight_into_gpt
