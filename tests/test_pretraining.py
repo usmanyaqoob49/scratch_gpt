@@ -15,6 +15,7 @@ from src.data_preparation.data_loader import create_data_loader_v1
 from src.pretraining.utils import calculate_loader_loss, make_train_validation_loader
 from src.pretraining.pretrain_gpt import pretrain_gpt
 from src.pretraining.generate_text import generate_diverse
+from src.pretraining.loading_weight_into_gpt import loads_weight_into_gpt
 import torch
 torch.manual_seed(123)
 
