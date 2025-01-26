@@ -14,6 +14,10 @@ from .gpt_download import load_gpt2_params_from_tf_ckpt
 import json
 import os
 
+
+#Different models configurations of gpt-2
+
+
 #Function to convert text to tokens 
 def text_to_tokens(tokenizer, text):
     encoded= tokenizer.encode(text, allowed_special= {'<|endoftext|>'})
