@@ -117,3 +117,4 @@ def generate_print_sample_text(
     print(decoded_text.replace("\n", " "))  
     model.train()
 
+#Function to plot the training and validation loss
