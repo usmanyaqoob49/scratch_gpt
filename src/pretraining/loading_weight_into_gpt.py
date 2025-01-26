@@ -10,5 +10,7 @@ def loads_weight_into_gpt(gpt_model, params):
     gpt_model.tok_emb.weights= assign(gpt_model.tok_emb.weights, params['wte'])
 
     for b in range(len(params['blocks'])):
+        q_w, k_w, v_w= np.split((params['blocks'][b]['attn']['c_attn'])['w'], 3, axis= -1)
         
+
 
