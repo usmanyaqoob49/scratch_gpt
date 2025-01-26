@@ -4,6 +4,8 @@ This module will  have function to load the gpt-2 open ai weights using helper f
 import torch
 import tensorflow as tf
 from .gpt_download import load_gpt2_params_from_tf_ckpt
+import json
+
 def load_gpt_openai_weights(weights_dir):
     tf_checkpoints= tf.train.latest_checkpoint(checkpoint_dir= weights_dir)
     settings = json.load(open(os.path.join(model_dir, "hparams.json")))
