@@ -15,4 +15,6 @@ def generate_diverse(model, idx, max_new_tokens,
         new_tokens_logits= logits[:, -1, :]
 
         if top_k is not None:
+            top_k_logits= top_k_sampling(logits= new_tokens_logits, 
+                                         k= top_k)
             
