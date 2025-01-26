@@ -5,4 +5,4 @@ import torch
 import tensorflow as tf
 
 def load_gpt_openai_weights(weights_dir):
-    tf_checkpoints= tf.train.latest_checkpoint()
+    tf_checkpoints= tf.train.latest_checkpoint(checkpoint_dir= weights_dir)
