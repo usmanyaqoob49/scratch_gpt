@@ -69,4 +69,4 @@ def loads_weight_into_gpt(gpt_model, params):
 
     gpt_model.final_norm.scale = assign(gpt_model.final_norm.scale, params["g"])
     gpt_model.final_norm.shift = assign(gpt_model.final_norm.shift, params["b"])
-    gpt.out_head.weight = assign(gpt.out_head.weight, params["wte"])
+    gpt_model.out_head.weight = assign(gpt_model.out_head.weight, params["wte"])
