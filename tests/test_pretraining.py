@@ -83,3 +83,4 @@ token_ids= generate_diverse(
     top_k= 25,
     temperature= 1.4
 )
+print("Diverse output: ", tokens_to_text(tokenizer= gpt_tokenizer(), tokens_ids= token_ids))
