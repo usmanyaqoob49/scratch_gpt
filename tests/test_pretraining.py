@@ -96,3 +96,5 @@ try:
     open_gpt_model= loads_weight_into_gpt(gpt_model= gpt_model,
                                         params= openai_parameters)
     print("Weights loaded successfully in GPT-2 architecture!")
+except:
+    raise ValueError("Failed Loading of Weights!")
