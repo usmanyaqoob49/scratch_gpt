@@ -84,3 +84,9 @@ token_ids= generate_diverse(
     temperature= 1.4
 )
 print("Diverse output: ", tokens_to_text(tokenizer= gpt_tokenizer(), tokens_ids= token_ids))
+print("---------------------------------------------------")
+
+
+#-----------Testing the creative text generation function
+print('Loading weights of openAI in gpt-2 architecture that we have created and testing its text generation: ')
+
