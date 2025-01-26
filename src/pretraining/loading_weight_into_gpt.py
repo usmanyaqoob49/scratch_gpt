@@ -16,6 +16,6 @@ def loads_weight_into_gpt(gpt_model, params):
         )
         gpt_model.trf_blocks[b].att.W_Key.weight= assign(
             gpt_model.trf_block[b].att.W_query.weight, q_w.T
-        
+        )
 
 
