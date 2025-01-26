@@ -147,4 +147,9 @@ def temperature_scaling(logits, temperature):
 def top_k_sampling(logits, k):
     top_logits, top_logits_positions= torch.topk(input= logits,
                                                  k= k)
-    
+    new_logits= torch.where(
+        condition= logits < top_logits[-1],
+        input= torch.tensor(float('-inf')),
+        other= logits
+    )
+    return new_logits
