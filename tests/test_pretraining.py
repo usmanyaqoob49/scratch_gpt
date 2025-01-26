@@ -70,3 +70,6 @@ print('Pretraining GPT-2')
 # print('Training Loss: ', training_loss)
 # print('Validation Loss: ', validation_loss)
 # print('Num of Token seen in training: ', tokens_seen)
+print("---------------------------------------------------")
+
+
