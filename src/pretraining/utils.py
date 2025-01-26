@@ -145,4 +145,6 @@ def temperature_scaling(logits, temperature):
 
 #Function for selection of top-k logits for Top-k Selection--->Selects top-k most probable logits to make sure we are using high accurate tokens when we apply randomness
 def top_k_sampling(logits, k):
+    top_logits, top_logits_positions= torch.topk(input= logits,
+                                                 k= k)
     
