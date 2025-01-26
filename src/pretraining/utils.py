@@ -189,7 +189,6 @@ def load_gpt_openai_weights(weights_dir):
 def assign(left, right):
     if left.shape != right.shape:
         raise ValueError(
-            f"Shape mismatch, Left shape: {left.shape}, 
-            Right shape: {right.shape}"
+            f"Shape mismatch, Left shape: {left.shape}, Right shape: {right.shape}"
         )
     return torch.nn.Parameter(torch.tensor(right))
