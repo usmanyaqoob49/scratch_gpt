@@ -139,7 +139,8 @@ def plot_losses(training_loss, validation_loss, epochs_seen, tokens_seen):
     plt.savefig(path)
     return path
 
-
 #Temperature scaling function--->That we can use for selection of logits
 def temperature_scaling(logits, temperature):
     return logits / temperature
+
+#Function for selection of top-k logits for Top-k Selection--->Selects top-k most probable logits to make sure we are using high accurate tokens when we apply randomness
