@@ -135,6 +135,6 @@ def plot_losses(training_loss, validation_loss, epochs_seen, tokens_seen):
     ax2.set_xlabel('Tokens Seen')
 
     fig.tight_layout()
-    path= "./plots/loss-plot.pdf"
+    path= ".src/pretraining/plots/loss-plot.pdf"
     plt.savefig(path)
     return path
