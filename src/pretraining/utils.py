@@ -119,7 +119,7 @@ def generate_print_sample_text(
     print(decoded_text.replace("\n", " "))  
     model.train()
 
-#Function to plot the training and validation loss
+#Function to plot the training and validation loss-->will return
 def plot_losses(training_loss, validation_loss, epochs_seen, tokens_seen):
     fig, ax1= plt.subplot(fig_size= (5,3))
 
