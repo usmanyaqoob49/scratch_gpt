@@ -33,4 +33,4 @@
 
 
 
-#-------------API to use the gpt model that has been loaded with the weights above
+#-------------API to use the gpt model that has been loaded with the weights above (text input text output)
