@@ -64,7 +64,7 @@ def loads_weight_into_gpt(gpt_model, params):
             gpt_model.trf_blocks[b].norm2.scale, 
             params["blocks"][b]["ln_2"]["g"])
         gpt_model.trf_blocks[b].norm2.shift = assign(
-            gpt.trf_blocks[b].norm2.shift, 
+            gpt_model.trf_blocks[b].norm2.shift, 
             params["blocks"][b]["ln_2"]["b"])
 
     gpt_model.final_norm.scale = assign(gpt_model.final_norm.scale, params["g"])
