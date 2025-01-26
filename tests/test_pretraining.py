@@ -99,3 +99,8 @@ try:
 except:
     raise ValueError("Failed Loading of Weights!")
 
+gpt_2_result_token_ids= generate_diverse(
+    model= openai_gpt_model,
+    
+)
+)
