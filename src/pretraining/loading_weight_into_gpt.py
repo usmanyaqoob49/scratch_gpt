@@ -9,5 +9,6 @@ def loads_weight_into_gpt(gpt_model, params):
     gpt_model.pos_emb.weights= assign(gpt_model.pos_emb.weights, params['wpe'])
     gpt_model.tok_emb.weights= assign(gpt_model.tok_emb.weights, params['wte'])
 
-    for b in range(len(params['blocks']))
+    for b in range(len(params['blocks'])):
+        
 
