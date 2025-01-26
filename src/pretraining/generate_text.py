@@ -11,4 +11,5 @@ def generate_diverse(model, idx, max_new_tokens,
     for _ in range(max_new_tokens):
         idx_context= idx[:, -context_size:]
         with torch.no_grad():
+            logits= model(idx_context)
             
