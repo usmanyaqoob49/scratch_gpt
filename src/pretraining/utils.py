@@ -133,3 +133,7 @@ def plot_losses(training_loss, validation_loss, epochs_seen, tokens_seen):
     ax2= ax1.twiny()
     ax2.plot(tokens_seen, training_loss, alpha= 0)
     ax2.set_xlabel('Tokens Seen')
+
+    fig.tight_layout()  
+    plt.savefig("./plots/loss-plot.pdf")
+    plt.show()
