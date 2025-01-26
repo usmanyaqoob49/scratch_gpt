@@ -27,13 +27,10 @@ def loads_weight_into_gpt(gpt_model, params):
         gpt_model.trf_blocks[b].att.W_query.bias= assign(
             gpt_model.trf_blocks[b].att.W_query.bias, q_b
         )
-
-        q_b, k_b, v_b= np.split((params['block'][b]['attn']['c_attn'])['b'], 3, axis=-1)
-        gpt_model.trf_blocks[b].att.W_query.bias= assign(
-            gpt_model.trf_blocks[b].att.W_query.bias, q_b
+        gpt_model.trf_blocks[b].att.W_key.bias= assign(
+            gpt_model.trf_blocks[b].att.W_key.bias, k_b
         )
-        q_b, k_b, v_b= np.split((params['block'][b]['attn']['c_attn'])['b'], 3, axis=-1)
-        gpt_model.trf_blocks[b].att.W_query.bias= assign(
-            gpt_model.trf_blocks[b].att.W_query.bias, q_b
+        gpt_model.trf_blocks[b].att.W_value.bias= assign(
+            gpt_model.trf_blocks[b].att.W_value.bias, v_b
         )
 
