@@ -104,6 +104,7 @@ gpt_2_result_token_ids= generate_diverse(
     idx= text_to_tokens(tokenizer= gpt_tokenizer(), text= "Every step moves you"),
     max_new_tokens= 25,
     context_size= gpt_2_124m_configurations['context_length'],
+    top_k= 50,
     
 
 )
