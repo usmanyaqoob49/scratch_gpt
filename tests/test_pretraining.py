@@ -81,6 +81,5 @@ token_ids= generate_diverse(
     max_new_tokens= 15,
     context_size= GPT_CONFIG_124M['context_length'],
     top_k= 25,
-    
-
+    temperature= 1.4
 )
