@@ -25,5 +25,8 @@ def generate_diverse(model, idx, max_new_tokens,
             idx_next= torch.multinomial(input= probabilites, num_samples= 1)
         else:
             idx_next= torch.argmax(logits, dim= -1, keepdim= True)
-            
+        if idx_next == eos_id:
+            break
+        idx= torch.cat((idx, idx_next))
+        
             
