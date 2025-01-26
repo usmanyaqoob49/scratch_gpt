@@ -6,6 +6,8 @@ Like:
 """
 from src.gpt.utils import generate_text, GPT_CONFIG_124M
 from src.data_preparation.data_loader import create_data_loader_v1
+import matplotlib.pyplot as plt
+from matplotlib.ticker import MaxNLocator
 import torch
 
 #Function to convert text to tokens 
@@ -119,4 +121,3 @@ def generate_print_sample_text(
 
 #Function to plot the training and validation loss
 def plot_losses(training_loss, validation_loss, epochs_seen, tokens_seen):
-    
