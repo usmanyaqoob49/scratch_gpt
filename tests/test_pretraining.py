@@ -92,8 +92,8 @@ print("---------------------------------------------------")
 #-----------Testing the creative text generation function
 print('Loading weights of openAI in gpt-2 architecture that we have created and testing its text generation: ')
 model_dir= os.path.join('models', 'gpt-2', '124M')
-openai_parameters= download_and_load_gpt2(model_size= '124M',
-                                          models_dir= model_dir)
+openai_parameters= load_gpt2_params_from_tf_ckpt(ckpt_path= model_dir,
+                                                 settings= gpt_2_124m_configurations)
 try:
     openai_gpt_model= loads_weight_into_gpt(gpt_model= gpt_model,
                                         params= openai_parameters)
