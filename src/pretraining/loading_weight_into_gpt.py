@@ -14,13 +14,13 @@ def loads_weight_into_gpt(gpt_model, params):
         #q,k,v weights
         q_w, k_w, v_w= np.split((params['blocks'][b]['attn']['c_attn'])['w'], 3, axis= -1)
         gpt_model.trf_blocks[b].att.W_query.weight= assign(
-            gpt_model.trf_block[b].att.W_query.weight, q_w.T
+            gpt_model.trf_blocks[b].att.W_query.weight, q_w.T
         )
         gpt_model.trf_blocks[b].att.W_key.weight= assign(
-            gpt_model.trf_block[b].att.W_key.weight, k_w.T
+            gpt_model.trf_blocks[b].att.W_key.weight, k_w.T
         )
         gpt_model.trf_blocks[b].att.W_value.weight= assign(
-            gpt_model.trf_block[b].att.W_value.weight, v_w.T
+            gpt_model.trf_blocks[b].att.W_value.weight, v_w.T
         )
         #q,k,v biases
         q_b, k_b, v_b= np.split((params['block'][b]['attn']['c_attn'])['b'], 3, axis=-1)

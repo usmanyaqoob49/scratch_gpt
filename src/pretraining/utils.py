@@ -29,7 +29,7 @@ gpt_2_124m_configurations= {'vocab_size': 50257,
                             'emb_dim': 768,
                             'n_heads': 12,
                             'n_layers': 12,
-                            'drop_rate': 0.1,
+                            'drop_out': 0.1,
                             'qkv_bias': True}
 
 #Function to convert text to tokens 
