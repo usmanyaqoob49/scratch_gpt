@@ -22,14 +22,14 @@ torch.manual_seed(123)
 
 #-----------Testing text to token and token to text functions
 tokenizer= gpt_tokenizer()
-gpt_model= GPTModel(cfg= GPT_CONFIG_124M)
+gpt_model= GPTModel(cfg= gpt_2_124m_configurations)
 start_context = "Every effort moves you"
 token_ids_result= generate_text(
     gpt_model= gpt_model,
     idx= text_to_tokens(tokenizer= tokenizer,
                         text= start_context),
     max_new_tokens= 10,
-    context_size= GPT_CONFIG_124M['context_length'],
+    context_size= gpt_2_124m_configurations['context_length'],
 )
 print('Output of GPT Model: ', tokens_to_text(tokenizer= tokenizer,
                                               tokens_ids= token_ids_result))
@@ -81,7 +81,7 @@ token_ids= generate_diverse(
     model= gpt_model,
     idx= text_to_tokens(tokenizer= gpt_tokenizer(), text= "Every effort moves you"),
     max_new_tokens= 15,
-    context_size= GPT_CONFIG_124M['context_length'],
+    context_size= gpt_2_124m_configurations['context_length'],
     top_k= 25,
     temperature= 1.4
 )
