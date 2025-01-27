@@ -8,7 +8,7 @@ from .utils import assign
 def loads_weight_into_gpt(gpt_model, params):
     #positional and token embeddings weights
     gpt_model.positional_emb.weights= assign(gpt_model.positional_emb.weights, params['wpe'])
-    gpt_model.tok_emb.weights= assign(gpt_model.tok_emb.weights, params['wte'])
+    gpt_model.token_emb.weights= assign(gpt_model.token_emb.weights, params['wte'])
 
     for b in range(len(params['blocks'])):
         #q,k,v weights
