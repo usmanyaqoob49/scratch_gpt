@@ -24,7 +24,7 @@ def loads_weight_into_gpt(gpt_model, params):
         )
         #q,k,v biases
         q_b, k_b, v_b= np.split((params['block'][b]['attn']['c_attn'])['b'], 3, axis=-1)
-        gpt_model.transformer_blocks[b].att.W_query.bias= assign(
+        gpt_model.transformer_blocks[b].attention_scores.W_query.bias= assign(
             gpt_model.transformer_blocks[b].att.W_query.bias, q_b
         )
         gpt_model.transformer_blocks[b].att.W_key.bias= assign(
