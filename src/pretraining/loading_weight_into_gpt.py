@@ -38,7 +38,7 @@ def loads_weight_into_gpt(gpt_model, params):
             gpt_model.transformer_blocks[b].attention_scores.out_proj.weight, 
             params["blocks"][b]["attn"]["c_proj"]["w"].T)
         gpt_model.transformer_blocks[b].attention_scores.out_proj.bias = assign(
-            gpt_model.transformer_blocks[b].att.out_proj.bias, 
+            gpt_model.transformer_blocks[b].attention_scores.out_proj.bias, 
             params["blocks"][b]["attn"]["c_proj"]["b"])
 
         gpt_model.transformer_blocks[b].ff.layers[0].weight = assign(
