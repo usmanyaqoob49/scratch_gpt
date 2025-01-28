@@ -27,8 +27,8 @@ def loads_weight_into_gpt(gpt_model, params):
         gpt_model.transformer_blocks[b].attention.W_query.bias= assign(
             gpt_model.transformer_blocks[b].attention.W_query.bias, q_b
         )
-        gpt_model.transformer_blocks[b].attention_scores.W_key.bias= assign(
-            gpt_model.transformer_blocks[b].attention_scores.W_key.bias, k_b
+        gpt_model.transformer_blocks[b].attention.W_key.bias= assign(
+            gpt_model.transformer_blocks[b].attention.W_key.bias, k_b
         )
         gpt_model.transformer_blocks[b].attention_scores.W_value.bias= assign(
             gpt_model.transformer_blocks[b].attention_scores.W_value.bias, v_b
