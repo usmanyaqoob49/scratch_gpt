@@ -5,3 +5,4 @@ from src.classification_finetuning.utils import balance_dataset
 
 data= './data/processed/emotion_dataset/train.csv'
 balance_data= balance_dataset(dataset_path= data, classes_column_name= 'emotion')
+print(balance_dataset['emotions'].values_count())
