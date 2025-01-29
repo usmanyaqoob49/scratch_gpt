@@ -23,7 +23,7 @@ def loads_weight_into_gpt(gpt_model, params):
             gpt_model.transformer_blocks[b].attention.W_value.weight, v_w.T
         )
         #q,k,v biases
-        q_b, k_b, v_b= np.split((params['block'][b]['attn']['c_attn'])['b'], 3, axis=-1)
+        q_b, k_b, v_b= np.split((params['blocks'][b]['attn']['c_attn'])['b'], 3, axis=-1)
         gpt_model.transformer_blocks[b].attention.W_query.bias= assign(
             gpt_model.transformer_blocks[b].attention.W_query.bias, q_b
         )
