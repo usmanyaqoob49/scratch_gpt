@@ -7,4 +7,4 @@ def balance_dataset(dataset_path, classes_column_name):
     lowest_frequency= data_count_df['count'].min()
 
     balanced_data= data.groupby(classes_column_name).apply(lambda x: x.sample(n= lowest_frequency, random_state= 42)).reset_index(drop= True)
-    return balance_dataset
+    return balanced_data
