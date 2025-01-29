@@ -6,4 +6,4 @@ def balance_dataset(dataset_path, classes_column_name):
     data_count_df= pd.DataFrame(data[classes_column_name].value_counts())
     lowest_frequency= data_count_df['Count'].min()
 
-    data= data.groupby(classes_column_name).apply(lambda x: x.sample())
+    data= data.groupby(classes_column_name).apply(lambda x: x.sample(n= lowest_frequency, random_state= 42).reset_index())
