@@ -103,7 +103,7 @@ except:
 
 gpt_2_result_token_ids= generate_diverse(
     model= openai_gpt_model,
-    idx= text_to_tokens(tokenizer= gpt_tokenizer(), text= "Every step moves you"),
+    idx= text_to_tokens(tokenizer= gpt_tokenizer(), text= "Every step moves you forward"),
     max_new_tokens= 25,
     context_size= gpt_2_124m_configurations['context_length'],
     top_k= 50,
