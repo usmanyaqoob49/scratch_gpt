@@ -4,6 +4,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.classification_finetuning.utils import balance_dataset, class_mapping, train_val_test_split
 import pandas as pd
 from src.classification_finetuning.data_loaders import ClassDataset
+from src.data_preparation.utils import gpt_tokenizer
 
 data_path= './data/processed/emotion_dataset/combined_emotions_data.csv'
 balance_data= balance_dataset(dataset_path= data_path, classes_column_name= 'emotion')
@@ -27,4 +28,4 @@ print('-'*50)
 train_dataset_loader= ClassDataset(data_df= train_set,
                                    text_col_name= 'sentence',
                                    labels_col_name= 'emotion',
-                                   tokenizer=)
+                                   tokenizer= )
