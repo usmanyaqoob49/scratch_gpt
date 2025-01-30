@@ -29,4 +29,4 @@ train_dataset_loader= ClassDataset(data_df= train_set,
                                    text_col_name= 'sentence',
                                    labels_col_name= 'emotion',
                                    tokenizer= gpt_tokenizer())
-print('Train dataset loader max length: ', train_dataset_loader.__getitem__(2))
+print('Train dataset sample: ', train_dataset_loader.__getitem__(2))
