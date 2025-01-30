@@ -24,4 +24,7 @@ print('shape of test set: ', test_set.shape)
 print('-'*50)
 
 #-------Testing data loader class
-train_dataset_loader= ClassDataset()
+train_dataset_loader= ClassDataset(data_df= train_set,
+                                   text_col_name= 'sentence',
+                                   labels_col_name= 'emotion',
+                                   tokenizer=)
