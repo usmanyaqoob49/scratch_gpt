@@ -14,3 +14,4 @@ class classDataset(Dataset):
         self.encoded_text= [
             tokenizer.encode(text_row) for text_row in self.dataset[text_col_name]
         ]
+        
