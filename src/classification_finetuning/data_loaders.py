@@ -28,3 +28,5 @@ class classDataset(Dataset):
             torch.tensor(encoded, dtype= torch.long),
             torch.tensor(label, dtype= torch.long)
         )
+    def __len__(self):
+        return len(self.dataset)
