@@ -9,6 +9,7 @@ import pandas as pd
 class classDataset(Dataset):
     def __init__(self, csv_file, text_col_name, labels_col_name, 
                  tokenizer, max_length= None, pad_token_id= 50256):
+        self.label_col_name= labels_col_name
         self.dataset= pd.read_csv(csv_file)
         self.encoded_texts= [
             tokenizer.encode(text_row) for text_row in self.dataset[text_col_name]
@@ -22,5 +23,5 @@ class classDataset(Dataset):
         ]
     def __getitem__(self, index):
         encoded= self.encoded_texts[index]
-        
+        label= self.dataset.iloc[index][self.labels_]
         return 
