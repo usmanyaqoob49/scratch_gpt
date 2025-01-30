@@ -16,5 +16,7 @@ def create_data_loaders(
         data_df= dataset,
         text_col_name= text_col_name,
         class_col_name= class_col_name,
+        tokenizer= tokenizer,
+        
 
     )
