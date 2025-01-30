@@ -8,3 +8,6 @@ def balance_dataset(dataset_path, classes_column_name):
 
     balanced_data= data.groupby(classes_column_name).apply(lambda x: x.sample(n= lowest_frequency, random_state= 42)).reset_index(drop= True)
     return balanced_data
+
+#Function to find the unique claasses and will return their mapping to a number so we can convert class to a number
+def 
