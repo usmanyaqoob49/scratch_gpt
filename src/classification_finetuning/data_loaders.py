@@ -6,5 +6,5 @@ import torch
 from torch.utils.data import Dataset
 
 class classDataset(Dataset):
-    def __init__(self, csv_file, ):
+    def __init__(self, csv_file, text_col_name, labels_col_name, ):
         super().__init__()
