@@ -14,3 +14,5 @@ def class_mapping(classes_list):
     unique_classes= sorted(set(classes_list))
     class_labels_mapping= {cls:number for number, cls in enumerate(unique_classes)}
     return class_labels_mapping
+
+#
