@@ -38,9 +38,12 @@ validation_dataset_loader= create_data_loaders(
     shuffle= False,
     drop_last= False
     )
-test_dataset_loader= create_data_loaders(data_df= mapped_test_set,
-                                   text_col_name= 'sentence',
-                                   labels_col_name= 'emotion',
-                                   tokenizer= gpt_tokenizer())
+test_dataset_loader= create_data_loaders(
+    data_df= test_set,
+    text_col_name= 'sentence',
+    labels_col_name= 'emotion',
+    batch_size= 8,
+    num_workers= 0,
+    shuffle= False)
 print('Train dataset sample: ', train_dataset_loader.__getitem__(2))
 print('-'*50)
