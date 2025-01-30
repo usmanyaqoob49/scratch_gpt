@@ -24,4 +24,4 @@ print('shape of test set: ', test_set.shape)
 print('-'*50)
 
 #-------Testing data loader class
-train_dataset_loader= classDataset()
+train_dataset_loader= ClassDataset()
