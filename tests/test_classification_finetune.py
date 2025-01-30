@@ -28,4 +28,4 @@ print('-'*50)
 train_dataset_loader= ClassDataset(data_df= train_set,
                                    text_col_name= 'sentence',
                                    labels_col_name= 'emotion',
-                                   tokenizer= )
+                                   tokenizer= gpt_tokenizer())
