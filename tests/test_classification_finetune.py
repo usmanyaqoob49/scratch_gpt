@@ -42,4 +42,12 @@ train_dataset_loader= ClassDataset(data_df= mapped_train_set,
                                    text_col_name= 'sentence',
                                    labels_col_name= 'emotion',
                                    tokenizer= gpt_tokenizer())
+train_dataset_loader= ClassDataset(data_df= mapped_train_set,
+                                   text_col_name= 'sentence',
+                                   labels_col_name= 'emotion',
+                                   tokenizer= gpt_tokenizer())
+train_dataset_loader= ClassDataset(data_df= mapped_test_set,
+                                   text_col_name= 'sentence',
+                                   labels_col_name= 'emotion',
+                                   tokenizer= gpt_tokenizer())
 print('Train dataset sample: ', train_dataset_loader.__getitem__(2))
