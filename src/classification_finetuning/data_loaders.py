@@ -14,7 +14,7 @@ class ClassDataset(Dataset):
         self.encoded_texts= [
             tokenizer.encode(text_row) for text_row in self.dataset[text_col_name]
         ]
-        if max_length in None:
+        if max_length is None:
             self.max_length= self._max_length_encode()
             self.encoded_texts= [encoded_text[:self.max_length] for encoded_text in self.encoded_texts]
         self.encoded_texts= [
