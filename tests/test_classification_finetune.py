@@ -13,3 +13,4 @@ print('Lable mapping for the dataset: ', labels_mapping)
 
 #------Testing random split function
 train_set, validation_set, test_set= train_val_test_split(data=data)
+print('shape of train set: ', train_set.shape)
