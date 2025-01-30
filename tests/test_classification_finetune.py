@@ -8,4 +8,4 @@ balance_data= balance_dataset(dataset_path= data, classes_column_name= 'emotion'
 print(balance_data['emotion'].value_counts())
 
 #------Testing class lable mapping function
-labels_mapping= class_mapping()
+labels_mapping= class_mapping(classes_list= balance_data['emotion'].unique().to_list())
