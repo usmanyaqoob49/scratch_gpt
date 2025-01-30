@@ -3,7 +3,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.classification_finetuning.utils import balance_dataset, class_mapping, train_val_test_split, map_classes
 import pandas as pd
-from src.classification_finetuning.data_loaders import ClassDataset
+from src.classification_finetuning.data_prep import ClassDataset
 from src.data_preparation.utils import gpt_tokenizer
 
 data_path= './data/processed/emotion_dataset/combined_emotions_data.csv'
