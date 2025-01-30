@@ -11,7 +11,7 @@ def create_data_loaders(
         shuffle,
         drop_last
 ):
-    tokenizer= gpt_
+    tokenizer= gpt_tokenizer()
     processed_data= ClassDataset(
         data_df= dataset,
         text_col_name= text_col_name,
