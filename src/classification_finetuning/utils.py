@@ -12,3 +12,4 @@ def balance_dataset(dataset_path, classes_column_name):
 #Function to find the unique claasses and will return their mapping to a number so we can convert class to a number
 def class_mapping(classes_list):
     unique_classes= sorted(set(classes_list))
+    class_mapping= 
