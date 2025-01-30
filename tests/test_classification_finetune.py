@@ -42,7 +42,7 @@ train_dataset_loader= ClassDataset(data_df= mapped_train_set,
                                    text_col_name= 'sentence',
                                    labels_col_name= 'emotion',
                                    tokenizer= gpt_tokenizer())
-validation_dataset_loader= ClassDataset(data_df= mapped_train_set,
+validation_dataset_loader= ClassDataset(data_df=mapped_validation_set,
                                    text_col_name= 'sentence',
                                    labels_col_name= 'emotion',
                                    tokenizer= gpt_tokenizer())
