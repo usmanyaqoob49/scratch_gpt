@@ -1,7 +1,7 @@
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from src.classification_finetuning.utils import balance_dataset, class_mapping, train_val_test_split
+from src.classification_finetuning.utils import balance_dataset, class_mapping, train_val_test_split, map_classes
 import pandas as pd
 from src.classification_finetuning.data_loaders import ClassDataset
 from src.data_preparation.utils import gpt_tokenizer
@@ -25,7 +25,7 @@ print('shape of test set: ', test_set.shape)
 print('-'*50)
 
 #Testing class mapping function
-
+mapped_train_set= 
 #-------Testing data loader class
 train_dataset_loader= ClassDataset(data_df= train_set,
                                    text_col_name= 'sentence',
