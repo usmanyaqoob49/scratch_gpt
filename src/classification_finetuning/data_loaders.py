@@ -6,7 +6,7 @@ import torch
 from torch.utils.data import Dataset
 import pandas as pd
 
-class classDataset(Dataset):
+class ClassDataset(Dataset):
     def __init__(self, data_df, text_col_name, labels_col_name, 
                  tokenizer, max_length= None, pad_token_id= 50256):
         self.label_col_name= labels_col_name
