@@ -46,3 +46,10 @@ test_dataset_loader= create_data_loaders(
     num_workers= 0,
     shuffle= False,
     drop_last= False)
+
+print("Train loader:")
+for input_batch, target_batch in train_loader:
+    pass
+
+print("Input batch dimensions:", input_batch.shape)
+print("Label batch dimensions", target_batch.shape)
