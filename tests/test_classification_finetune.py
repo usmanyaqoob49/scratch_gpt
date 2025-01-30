@@ -28,7 +28,7 @@ print('-'*50)
 mapped_train_set= map_classes(dataset= train_set, 
                              class_col_name= 'emotion',
                              class_mapping_dict= labels_mapping)
-mapped_validation_set= map_classes(dataset= train_set, 
+mapped_validation_set= map_classes(dataset= validation_set, 
                              class_col_name= 'emotion',
                              class_mapping_dict= labels_mapping)
 mapped_train_set= map_classes(dataset= train_set, 
