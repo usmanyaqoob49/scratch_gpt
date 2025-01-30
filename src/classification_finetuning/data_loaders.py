@@ -11,4 +11,6 @@ class classDataset(Dataset):
                  tokenizer, max_length= None, pad_token_id= 50256):
         super().__init__()
         self.dataset= pd.read_csv(csv_file)
-        
+        self.encoded_text= [
+            tokenizer.encode(text_row) for text_row in self.dataset[text_col_name]
+        ]
