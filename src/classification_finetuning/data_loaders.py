@@ -18,5 +18,6 @@ class classDataset(Dataset):
             self.max_length= self._max_length_encode()
             self.encoded_texts= [encoded_text[:self.max_length] for encoded_text in self.encoded_texts]
         self.encoded_texts= [
-            encoded_text + [pad_token_id]
+            encoded_text + [pad_token_id] * (self.max_length - len(encoded_text))
+            for encoded_text in self.encoded_texts
         ]
