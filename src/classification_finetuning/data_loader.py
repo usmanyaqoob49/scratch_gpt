@@ -1,1 +1,1 @@
-from .data_prep
+from .data_prep import ClassDataset
