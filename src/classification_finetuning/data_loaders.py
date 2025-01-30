@@ -16,3 +16,4 @@ class classDataset(Dataset):
         ]
         if max_length in None:
             self.max_length= self._max_length_encode()
+            
