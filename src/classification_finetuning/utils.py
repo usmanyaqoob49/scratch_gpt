@@ -15,4 +15,4 @@ def class_mapping(classes_list):
     class_labels_mapping= {cls:number for number, cls in enumerate(unique_classes)}
     return class_labels_mapping
 
-#
+#Function to make the train, test and validation set
