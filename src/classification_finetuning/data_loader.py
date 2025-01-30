@@ -1,5 +1,5 @@
 """
-
+This module has a function that process the dataset dataframe and then make a dataloader of the data.
 """
 from .data_prep import ClassDataset
 from torch.utils.data import DataLoader
