@@ -24,6 +24,8 @@ print('shape of validation set: ', validation_set.shape)
 print('shape of test set: ', test_set.shape)
 print('-'*50)
 
+#Testing class mapping function
+
 #-------Testing data loader class
 train_dataset_loader= ClassDataset(data_df= train_set,
                                    text_col_name= 'sentence',
