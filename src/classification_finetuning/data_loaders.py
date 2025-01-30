@@ -17,4 +17,4 @@ class classDataset(Dataset):
         if max_length in None:
             self.max_length= self._max_length_encode()
             self.encoded_text= [encoded_text[:self.max_length] for encoded_text in self.encoded_texts]
-            
+        
