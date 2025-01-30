@@ -13,7 +13,7 @@ labels_mapping= class_mapping(classes_list= balance_data['emotion'].unique().tol
 print('Lable mapping for the dataset: ', labels_mapping)
 
 #------Testing random split function
-data_df= pd.read_csv()
+data_df= pd.read_csv(data_path)
 train_set, validation_set, test_set= train_val_test_split(data=data)
 print('shape of train set: ', train_set.shape)
 print('shape of validation set: ', validation_set.shape)
