@@ -16,3 +16,4 @@ def class_mapping(classes_list):
     return class_labels_mapping
 
 #Function to make the train, test and validation set
+def train_val_test_split(data)
