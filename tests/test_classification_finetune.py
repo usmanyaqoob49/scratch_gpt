@@ -7,3 +7,4 @@ data= './data/processed/emotion_dataset/train_set.csv'
 balance_data= balance_dataset(dataset_path= data, classes_column_name= 'emotion')
 print(balance_data['emotion'].value_counts())
 
+#------Testing class lable mapping function
