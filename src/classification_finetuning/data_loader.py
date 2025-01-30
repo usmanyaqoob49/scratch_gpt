@@ -20,7 +20,7 @@ def create_data_loaders(
                                 class_mapping_dict= class_mapping_dict)
     tokenizer= gpt_tokenizer()
     processed_data= ClassDataset(
-        data_df= dataset,
+        data_df= mapped_dataset,
         text_col_name= text_col_name,
         class_col_name= class_col_name,
         tokenizer= tokenizer
