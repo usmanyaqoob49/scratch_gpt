@@ -22,7 +22,7 @@ def create_data_loaders(
     processed_data= ClassDataset(
         data_df= mapped_dataset,
         text_col_name= text_col_name,
-        class_col_name= class_col_name,
+        labels_col_name= class_col_name,
         tokenizer= tokenizer
     )
     data_loader= DataLoader(
