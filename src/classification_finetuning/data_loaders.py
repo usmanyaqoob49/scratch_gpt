@@ -15,4 +15,4 @@ class classDataset(Dataset):
             tokenizer.encode(text_row) for text_row in self.dataset[text_col_name]
         ]
         if max_length in None:
-            
+            self.max_length= self._max_length_encode()
