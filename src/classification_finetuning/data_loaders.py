@@ -30,4 +30,5 @@ class classDataset(Dataset):
         )
     def __len__(self):
         return len(self.dataset)
-    
+    def _max_length_encode(self):
+        
