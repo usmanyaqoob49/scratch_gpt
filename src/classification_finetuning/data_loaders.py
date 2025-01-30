@@ -32,5 +32,6 @@ class classDataset(Dataset):
         return len(self.dataset)
     def _max_length_encode(self):
         max_lenght= 0
-        for i in range(len(self.dataset)):
-            
+        for encoded_text in self.encoded_texts:
+            if len(encoded_text)>max_lenght:
+                
