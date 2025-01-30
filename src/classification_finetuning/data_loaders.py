@@ -11,3 +11,4 @@ class classDataset(Dataset):
                  tokenizer, max_length= None, pad_token_id= 50256):
         super().__init__()
         self.dataset= pd.read_csv(csv_file)
+        
