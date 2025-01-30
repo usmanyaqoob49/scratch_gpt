@@ -11,4 +11,4 @@ print(balance_data['emotion'].value_counts())
 labels_mapping= class_mapping(classes_list= balance_data['emotion'].unique().tolist())
 print('Lable mapping for the dataset: ', labels_mapping)
 
-#
+#------Testing random split function
