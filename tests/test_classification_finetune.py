@@ -48,7 +48,7 @@ test_dataset_loader= create_data_loaders(
     drop_last= False)
 
 print("Train loader:")
-for input_batch, target_batch in train_loader:
+for input_batch, target_batch in train_dataset_loader:
     pass
 
 print("Input batch dimensions:", input_batch.shape)
