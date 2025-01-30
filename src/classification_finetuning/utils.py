@@ -17,7 +17,7 @@ def class_mapping(classes_list):
 #Function to make the train, test and validation set
 def train_val_test_split(data, train_frac= 0.7, validation_frac= 0.1):
     shuffled_data= data.sample(frac= 1, random_state= 42).reset_index(drop= True)
-    train_split_index= int(len(data) * train_frac)
+    train_split_index= int(len(shuffled_data) * train_frac)
     validation_split_index= train_split_index + int(len(data) * validation_frac)
     train_set= data[:train_split_index]
     validation_set= data[train_split_index:validation_split_index]
