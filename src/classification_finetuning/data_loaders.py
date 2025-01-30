@@ -24,4 +24,6 @@ class classDataset(Dataset):
     def __getitem__(self, index):
         encoded= self.encoded_texts[index]
         label= self.dataset.iloc[index][self.label_col_name]
-        return 
+        return (
+            torch.tensor(encoded, dtype= torch.long),
+        )
