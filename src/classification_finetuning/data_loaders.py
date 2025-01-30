@@ -22,4 +22,5 @@ class classDataset(Dataset):
         ]
     def __getitem__(self, index):
         encoded= self.encoded_texts[index]
+        
         return 
