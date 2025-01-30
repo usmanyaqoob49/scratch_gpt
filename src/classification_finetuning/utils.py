@@ -25,5 +25,4 @@ def train_val_test_split(data, train_frac= 0.7, validation_frac= 0.1):
     return train_set, validation_set, test_set
 
 #Function to map the lables of the classes to given numbers mapping
-def map_classes(dataset, class_mapping_dict):
-    
+def map_classes(dataset, class_col_name, class_mapping_dict):
