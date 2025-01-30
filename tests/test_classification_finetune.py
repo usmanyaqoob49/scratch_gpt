@@ -35,8 +35,8 @@ validation_dataset_loader= create_data_loaders(
     class_col_name= 'emotion',
     batch_size= 8,
     num_workers= 0,
-    shuffle= True,
-    drop_last= True
+    shuffle= False,
+    drop_last= False
     )
 test_dataset_loader= create_data_loaders(data_df= mapped_test_set,
                                    text_col_name= 'sentence',
