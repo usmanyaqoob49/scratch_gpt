@@ -25,7 +25,7 @@ print('shape of test set: ', test_set.shape)
 print('-'*50)
 
 #Testing class mapping function
-mapped_train_set= 
+mapped_train_set= map_classes(dataset= train_set, class_col_name= 'emotion', class_mapping_dict= labels_mapping)
 #-------Testing data loader class
 train_dataset_loader= ClassDataset(data_df= train_set,
                                    text_col_name= 'sentence',
