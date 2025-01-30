@@ -34,10 +34,11 @@ mapped_validation_set= map_classes(dataset= validation_set,
 mapped_test_set= map_classes(dataset= test_set, 
                              class_col_name= 'emotion',
                              class_mapping_dict= labels_mapping)
+print("After mapping : ", mapped_train_set.head(2))
 print('-'*50)
 
 #-------Testing data loader class
-train_dataset_loader= ClassDataset(data_df= train_set,
+train_dataset_loader= ClassDataset(data_df= mapped_train_set,
                                    text_col_name= 'sentence',
                                    labels_col_name= 'emotion',
                                    tokenizer= gpt_tokenizer())
