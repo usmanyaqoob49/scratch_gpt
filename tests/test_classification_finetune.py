@@ -29,10 +29,15 @@ train_dataset_loader= create_data_loaders(
     shuffle= True,
     drop_last= True
 )
-validation_dataset_loader= create_data_loaders(data_df=mapped_validation_set,
-                                   text_col_name= 'sentence',
-                                   labels_col_name= 'emotion',
-                                   tokenizer= gpt_tokenizer())
+validation_dataset_loader= create_data_loaders(
+    dataset=validation_set,
+    text_col_name= 'sentence',
+    class_col_name= 'emotion',
+    batch_size= 8,
+    num_workers= 0,
+    shuffle= True,
+    drop_last= True
+    )
 test_dataset_loader= create_data_loaders(data_df= mapped_test_set,
                                    text_col_name= 'sentence',
                                    labels_col_name= 'emotion',
