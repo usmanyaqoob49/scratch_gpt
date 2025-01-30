@@ -3,7 +3,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.classification_finetuning.utils import balance_dataset, class_mapping, train_val_test_split
 import pandas as pd
-from src.classification_finetuning.data_loaders import classDataset
+from src.classification_finetuning.data_loaders import ClassDataset
 
 data_path= './data/processed/emotion_dataset/combined_emotions_data.csv'
 balance_data= balance_dataset(dataset_path= data_path, classes_column_name= 'emotion')
@@ -24,3 +24,4 @@ print('shape of test set: ', test_set.shape)
 print('-'*50)
 
 #-------Testing data loader class
+train_dataset_loader= classDataset()
