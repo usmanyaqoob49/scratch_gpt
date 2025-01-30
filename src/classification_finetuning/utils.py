@@ -23,3 +23,5 @@ def train_val_test_split(data, train_frac= 0.7, validation_frac= 0.1):
     validation_set= shuffled_data[train_split_index:validation_split_index]
     test_set= shuffled_data[validation_split_index:]
     return train_set, validation_set, test_set
+
+#Function to map the lables of the classes to given numbers mapping
