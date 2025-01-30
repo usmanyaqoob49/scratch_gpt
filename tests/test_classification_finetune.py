@@ -44,6 +44,7 @@ test_dataset_loader= create_data_loaders(
     labels_col_name= 'emotion',
     batch_size= 8,
     num_workers= 0,
-    shuffle= False)
+    shuffle= False,
+    drop_last= False)
 print('Train dataset sample: ', train_dataset_loader.__getitem__(2))
 print('-'*50)
