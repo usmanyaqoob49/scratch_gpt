@@ -21,3 +21,4 @@ class classDataset(Dataset):
             encoded_text + [pad_token_id] * (self.max_length - len(encoded_text))
             for encoded_text in self.encoded_texts
         ]
+        
