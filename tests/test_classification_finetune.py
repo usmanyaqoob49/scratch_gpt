@@ -18,3 +18,5 @@ train_set, validation_set, test_set= train_val_test_split(data=data_df)
 print('shape of train set: ', train_set.shape)
 print('shape of validation set: ', validation_set.shape)
 print('shape of test set: ', test_set.shape)
+
+#-------Testing data loader class
