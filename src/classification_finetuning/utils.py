@@ -21,5 +21,5 @@ def train_val_test_split(data, train_frac= 0.7, validation_frac= 0.1):
     validation_split_index= train_split_index + int(len(shuffled_data) * validation_frac)
     train_set= shuffled_data[:train_split_index]
     validation_set= shuffled_data[train_split_index:validation_split_index]
-    test_set= data[validation_split_index:]
+    test_set= shuffled_data[validation_split_index:]
     return train_set, validation_set, test_set
