@@ -38,15 +38,15 @@ print("After mapping : ", mapped_train_set.head(2))
 print('-'*50)
 
 #-------Testing data loader class
-train_dataset_loader= ClassDataset(data_df= mapped_train_set,
+train_dataset_loader= create_data_loaders(data_df= mapped_train_set,
                                    text_col_name= 'sentence',
                                    labels_col_name= 'emotion',
                                    tokenizer= gpt_tokenizer())
-validation_dataset_loader= ClassDataset(data_df=mapped_validation_set,
+validation_dataset_loader= create_data_loaders(data_df=mapped_validation_set,
                                    text_col_name= 'sentence',
                                    labels_col_name= 'emotion',
                                    tokenizer= gpt_tokenizer())
-test_dataset_loader= ClassDataset(data_df= mapped_test_set,
+test_dataset_loader= create_data_loaders(data_df= mapped_test_set,
                                    text_col_name= 'sentence',
                                    labels_col_name= 'emotion',
                                    tokenizer= gpt_tokenizer())
