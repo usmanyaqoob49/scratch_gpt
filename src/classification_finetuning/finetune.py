@@ -6,3 +6,4 @@ import torch
 def classification_finetune(gpt_model, num_classes):
     for params in gpt_model.parameters():
         params.required_grad()= False
+    
