@@ -7,6 +7,6 @@ torch.manual_seed(123)
 def classification_finetune(gpt_model, num_classes, got_configurations):
     for params in gpt_model.parameters():
         params.required_grad()= False
-    gpt_model.out_head= torch.nn.Linear(got_configurations['emb_dim'],
+    gpt_model.out_head= torch.nn.Linear(in_features= got_configurations['emb_dim'],
                                          out_features= num_classes)
       
