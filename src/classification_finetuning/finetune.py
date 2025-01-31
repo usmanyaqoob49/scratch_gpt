@@ -7,4 +7,5 @@ torch.manual_seed(123)
 def classification_finetune(gpt_model, num_classes, got_configurations):
     for params in gpt_model.parameters():
         params.required_grad()= False
+    
       
