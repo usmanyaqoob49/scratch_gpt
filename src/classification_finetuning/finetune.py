@@ -3,4 +3,5 @@ This module has the function to finetune the gpt-2 model on the classificatio da
 """
 import torch
 
-def classification_finetune()
+def classification_finetune(gpt_model, num_classes):
+    
