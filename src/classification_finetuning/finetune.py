@@ -9,4 +9,6 @@ def classification_finetune(gpt_model, num_classes, got_configurations):
         params.required_grad()= False
     gpt_model.out_head= torch.nn.Linear(in_features= got_configurations['emb_dim'],
                                          out_features= num_classes)
+    for params in gpt_model.out_head.parameters():
+        params.requires_grad()= True
       
