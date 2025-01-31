@@ -11,4 +11,5 @@ def classification_finetune(gpt_model, num_classes, got_configurations):
                                          out_features= num_classes)
     for params in gpt_model.out_head.parameters():
         params.requires_grad()= True
-      
+    for params in gpt_model.final_norm.parameters():
+        params.requires_grad()= True
