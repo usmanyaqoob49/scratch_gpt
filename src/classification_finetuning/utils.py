@@ -50,3 +50,5 @@ def loader_classification_loss(data_loader, model, device, num_batches= None):
                                            dim= -1)
             num_examples+= predicted_labels.shape[0]
             correct_predictions+= (predicted_labels==target_batch).sum().item()
+        else:
+            break
