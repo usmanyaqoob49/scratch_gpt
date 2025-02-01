@@ -5,3 +5,4 @@ gpt-2, will load these weights in the gpt architecture and in the end it will re
 import torch
 from src.gpt.gpt_model import GPTModel
 from src.pretraining.utils import load_gpt2_params_from_tf_ckpt
+from src.pretraining.loading_weight_into_gpt import loads_weight_into_gpt
