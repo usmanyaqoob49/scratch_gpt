@@ -52,4 +52,4 @@ def loader_classification_loss(data_loader, model, device, num_batches= None):
             correct_predictions+= (predicted_labels==target_batch).sum().item()
         else:
             break
-    return 
+    return correct_predictions / 
