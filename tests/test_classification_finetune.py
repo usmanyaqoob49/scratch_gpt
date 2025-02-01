@@ -9,6 +9,7 @@ from src.classification_finetuning.gpt_model import get_gpt_2_openai
 from src.pretraining.generate_text import generate_diverse
 from src.pretraining.utils import text_to_tokens, tokens_to_text
 from src.pretraining.utils import gpt_2_124m_configurations
+from src.gpt.utils import generate_text
 
 data_path= './data/processed/emotion_dataset/combined_emotions_data.csv'
 balance_data= balance_dataset(dataset_path= data_path, classes_column_name= 'emotion')
