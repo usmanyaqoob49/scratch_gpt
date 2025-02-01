@@ -45,3 +45,4 @@ def loader_classification_loss(data_loader, model, device, num_batches= None):
                 logits= model(
                     input_batch
                 )
+                last_token_logits= logits[:, -1, :]
