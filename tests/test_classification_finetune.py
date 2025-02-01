@@ -56,4 +56,4 @@ print("Label batch dimensions", target_batch.shape)
 print('-'*50)
 
 
-#-------Testing data loader class
+#-------Testing function that returns gpt-2 model with laoded weights of openai
