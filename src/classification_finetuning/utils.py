@@ -39,4 +39,4 @@ def loader_classification_loss(data_loader, model, device, num_batches= None):
         num_batches= min(len(data_loader), num_batches)
     for i, (input_batch, target_batch) in enumerate(data_loader):
         if i<num_batches:
-            
+            input_batch, target_batch= input_batch.to(device)
