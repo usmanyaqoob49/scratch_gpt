@@ -61,13 +61,16 @@ print('-'*50)
 
 
 #-------Testing function that returns gpt-2 model with laoded weights of openai
+gpt_2_tokenizer= gpt_tokenizer()
 gpt_2_model= get_gpt_2_openai()
 sample_text= (
     "What is emotion in the sentence: "
     "I am feeling happy!"
 )
-token_ids= generate_diverse(model= gpt_2_model,
-                            idx= text_to_tokens(tokenizer= gpt_tokenizer(),
+output_token_ids= generate_diverse(model= gpt_2_model,
+                            idx= text_to_tokens(tokenizer= gpt_2_tokenizer,
                                                 text= sample_text),
                             max_new_tokens= 25,
                             context_size= gpt_2_124m_configurations)
+print("Output of loaded gpt-2 model: ", tokens_to_text(tokenizer= gpt_2_tokenizer,
+                                                       tokens_ids= token_ids))
