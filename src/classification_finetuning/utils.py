@@ -42,4 +42,6 @@ def loader_classification_loss(data_loader, model, device, num_batches= None):
         if i<num_batches:
             input_batch, target_batch= input_batch.to(device), target_batch.to(device)
             with torch.no_grad():
-                
+                logits= model(
+                    input_batch
+                )
