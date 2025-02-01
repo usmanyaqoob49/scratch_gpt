@@ -46,3 +46,4 @@ def loader_classification_loss(data_loader, model, device, num_batches= None):
                     input_batch
                 )
                 last_token_logits= logits[:, -1, :]
+            predicted_labels= torch.argmax
