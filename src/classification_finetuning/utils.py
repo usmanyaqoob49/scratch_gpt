@@ -36,4 +36,4 @@ def loader_classification_loss(data_loader, model, device, num_batches= None):
     if num_batches is None:
         num_batches= len(data_loader)
     else:
-        num_batches= min(len(num_batches), num_batches)
+        num_batches= min(len(data_loader), num_batches)
