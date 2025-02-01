@@ -73,4 +73,4 @@ output_token_ids= generate_diverse(model= gpt_2_model,
                             max_new_tokens= 25,
                             context_size= gpt_2_124m_configurations)
 print("Output of loaded gpt-2 model: ", tokens_to_text(tokenizer= gpt_2_tokenizer,
-                                                       tokens_ids= token_ids))
+                                                       tokens_ids= output_token_ids))
