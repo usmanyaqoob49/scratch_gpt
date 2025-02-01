@@ -63,5 +63,6 @@ print('-'*50)
 gpt_2_model= get_gpt_2_openai()
 sample_text= (
     "What is emotion in the sentence: "
+    "I am feeling happy!"
 )
 
