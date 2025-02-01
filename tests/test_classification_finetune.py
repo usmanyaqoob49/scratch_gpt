@@ -6,6 +6,7 @@ import pandas as pd
 from src.classification_finetuning.data_loader import create_data_loaders
 from src.data_preparation.utils import gpt_tokenizer
 from src.classification_finetuning.gpt_model import get_gpt_2_openai
+from src.pretraining.generate_text import generate_diverse
 
 data_path= './data/processed/emotion_dataset/combined_emotions_data.csv'
 balance_data= balance_dataset(dataset_path= data_path, classes_column_name= 'emotion')
