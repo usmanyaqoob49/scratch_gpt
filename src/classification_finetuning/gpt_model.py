@@ -6,5 +6,6 @@ import torch
 from src.gpt.gpt_model import GPTModel
 from src.pretraining.utils import load_gpt2_params_from_tf_ckpt
 from src.pretraining.loading_weight_into_gpt import loads_weight_into_gpt
+from src.pretraining.utils import gpt_2_124m_configurations
 
 def get_gpt_2_openai()
