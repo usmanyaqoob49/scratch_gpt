@@ -4,6 +4,7 @@ This module has the function to finetune the gpt-2 model on the classificatio da
 import torch
 torch.manual_seed(123)
 
+#This function will return the gpt model having all layers freezed except the last one
 def classification_finetune(gpt_model, num_classes, got_configurations):
     for params in gpt_model.parameters():
         params.required_grad()= False
@@ -13,3 +14,4 @@ def classification_finetune(gpt_model, num_classes, got_configurations):
         params.requires_grad()= True
     for params in gpt_model.final_norm.parameters():
         params.requires_grad()= True
+    return gpt_model
