@@ -41,4 +41,5 @@ def loader_classification_loss(data_loader, model, device, num_batches= None):
     for i, (input_batch, target_batch) in enumerate(data_loader):
         if i<num_batches:
             input_batch, target_batch= input_batch.to(device), target_batch.to(device)
-            with torch
+            with torch.no_grad():
+                
