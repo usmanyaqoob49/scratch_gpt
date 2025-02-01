@@ -70,4 +70,4 @@ token_ids= generate_diverse(model= gpt_2_model,
                             idx= text_to_tokens(tokenizer= gpt_tokenizer(),
                                                 text= sample_text),
                             max_new_tokens= 25,
-                            context_size= gp
+                            context_size= gpt_2_124m_configurations)
