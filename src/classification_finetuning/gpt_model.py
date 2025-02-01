@@ -12,5 +12,6 @@ def get_gpt_2_openai():
     gpt_2_architecture= GPTModel(cfg= gpt_2_124m_configurations)
     openai_gpt2_weights= load_gpt2_params_from_tf_ckpt(ckpt_path= './models/gpt-2/124M/124M',
                                                        settings= gpt_2_124m_configurations)
-    gpt_model= loads_weight_into_gpt
+    gpt_model= loads_weight_into_gpt(gpt_model= gpt_2_architecture,
+                                     params= openai_gpt2_weights)
     
