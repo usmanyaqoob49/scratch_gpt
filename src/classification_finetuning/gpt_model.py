@@ -10,3 +10,4 @@ from src.pretraining.utils import gpt_2_124m_configurations
 
 def get_gpt_2_openai():
     gpt_2_architecture= GPTModel(cfg= gpt_2_124m_configurations)
+    
