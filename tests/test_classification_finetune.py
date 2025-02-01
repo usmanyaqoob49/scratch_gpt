@@ -8,6 +8,7 @@ from src.data_preparation.utils import gpt_tokenizer
 from src.classification_finetuning.gpt_model import get_gpt_2_openai
 from src.pretraining.generate_text import generate_diverse
 from src.pretraining.utils import text_to_tokens, tokens_to_text
+from src.pretraining.utils import gpt_2_124m_configurations
 
 data_path= './data/processed/emotion_dataset/combined_emotions_data.csv'
 balance_data= balance_dataset(dataset_path= data_path, classes_column_name= 'emotion')
@@ -65,4 +66,8 @@ sample_text= (
     "What is emotion in the sentence: "
     "I am feeling happy!"
 )
-
+token_ids= generate_diverse(model= gpt_2_model,
+                            idx= text_to_tokens(tokenizer= gpt_tokenizer(),
+                                                text= sample_text),
+                            max_new_tokens= 25,
+                            context_size= gp
