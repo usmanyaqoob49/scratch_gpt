@@ -61,5 +61,7 @@ print('-'*50)
 
 #-------Testing function that returns gpt-2 model with laoded weights of openai
 gpt_2_model= get_gpt_2_openai()
-
+sample_text= (
+    "What is emotion in the sentence: "
+)
 
