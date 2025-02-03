@@ -87,3 +87,10 @@ def loader_classification_loss(gpt_model, loader, device, num_batches= None):
     return loss_per_batch
 
 #Function to evaluate model
+def evaluate_model(model, train_loader, val_loader, device, eval_iter):
+    model.eval()
+    with torch.no_grad():
+        train_loss = loader_classification_loss(train_loader, model, device, num_batches=eval_iter)
+        val_loss = loader_classification_loss(val_loader, model, device, num_batches=eval_iter)
+    model.train()
+    return train_loss, val_loss
