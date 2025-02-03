@@ -6,7 +6,7 @@ torch.manual_seed(123)
 from .utils import batch_classification_loss
 
 def finetune_model(model, train_loader, validation_loader, optimizer, device, num_epochs, eval_frequency, eval_iter):
-    for epoch in num_epochs:
+    for epoch in range(num_epochs):
         model.train()
         for input_batch, target_batch in train_loader:
             optimizer.zero_grad()
