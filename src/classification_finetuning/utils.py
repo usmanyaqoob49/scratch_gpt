@@ -77,3 +77,4 @@ def loader_classification_loss(gpt_model, loader, device, num_batches= None):
     for i, (input_batch, target_batch) in enumerate(loader):
         if i < num_batches:
             input_batch, target_batch= input_batch.to(device), target_batch.to(device)
+            logits= 
