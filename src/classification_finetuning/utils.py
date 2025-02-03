@@ -68,6 +68,7 @@ def batch_classification_loss(gpt_model, input_batch, target_batch, device):
 def loader_classification_loss(gpt_model, loader, device, num_batches= None):
     if len(loader) == 0:
         return float('nan')
+    
     gpt_model.eval()
     for input_batch, target_batch in loader:
         input_batch, target_batch= input_batch.to(device), target_batch.to(device)
