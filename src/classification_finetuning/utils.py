@@ -57,4 +57,4 @@ def loader_classification_accuracy(data_loader, model, device, num_batches= None
 #Function to find the classification loss via cross entropy of a batch
 def batch_classification_loss(gpt_model, input_batch, target_batch, device):
     input_batch, target_batch= input_batch.to(device), target_batch.to(device)
-    logits= model
+    logits= gpt_model()
