@@ -3,6 +3,7 @@ This module has the function to finetune the gpt-2 model on the classificatio da
 """
 import torch
 torch.manual_seed(123)
+from .utils import batch_classification_loss
 
 def finetune_model(model, train_loader, validation_loader, optimizer, device, num_epochs, eval_frequency, eval_iter):
     for epoch in num_epochs:
@@ -12,3 +13,4 @@ def finetune_model(model, train_loader, validation_loader, optimizer, device, nu
             optimizer.zero_grad()
             with torch.no_grad():
                 logits= model(input_batch)
+
