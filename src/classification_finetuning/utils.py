@@ -76,7 +76,4 @@ def loader_classification_loss(gpt_model, loader, device, num_batches= None):
     total_loss= 0
     for i, (input_batch, target_batch) in enumerate(loader):
         if i < num_batches:
-            input_batch, target_batch= input_batch.to(device), target_batch.to(device)
-            logits= gpt_model(input_batch)
-            last_token_logit= logits[:, -1, :]
-            loss= batch_classification_loss()
+            batch_loss= batch_classification_loss()
