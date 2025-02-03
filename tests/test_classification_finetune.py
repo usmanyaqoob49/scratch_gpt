@@ -73,5 +73,5 @@ output_token_ids= generate_text(gpt_model= gpt_2_model,
                                                 text= sample_text),
                             max_new_tokens= 25,
                             context_size= gpt_2_124m_configurations['context_length'])
-print("Output of loaded gpt-2 model: ", tokens_to_text(tokenizer= gpt_2_tokenizer,
+print("Output of loaded gpt-2 model before Classification finetuning: ", tokens_to_text(tokenizer= gpt_2_tokenizer,
                                                        tokens_ids= output_token_ids))
