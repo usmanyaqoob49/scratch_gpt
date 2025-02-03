@@ -11,4 +11,4 @@ def finetune_model(model, train_loader, validation_loader, optimizer, device, nu
             input_batch, target_batch= input_batch.to(device), target_batch.to(device)
             optimizer.zero_grad()
             with torch.no_grad():
-                
+                logits= model(input_batch)
