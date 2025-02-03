@@ -81,3 +81,7 @@ def loader_classification_loss(gpt_model, loader, device, num_batches= None):
                                                   target_batch= target_batch,
                                                   device= device)
             total_loss += batch_loss
+        else:
+            break
+    loss_per_batch= total_loss / num_batches
+    return total_loss 
