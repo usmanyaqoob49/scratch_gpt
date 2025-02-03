@@ -65,7 +65,7 @@ def batch_classification_loss(gpt_model, input_batch, target_batch, device):
     return loss
 
 #Function to find the loss of complete loader
-def loader_classification_loss(gpt_model, loader, device):
+def loader_classification_loss(gpt_model, loader, device, , num_batches= None):
     if len(loader) == 0:
         return float('nan')
     gpt_model.eval()
