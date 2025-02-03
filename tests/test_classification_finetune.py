@@ -68,7 +68,6 @@ sample_text= (
     "What is emotion in the sentence: "
     "I am feeling happy!"
 )
-print("Start Context sample for LLM: ", sample_text)
 output_token_ids= generate_text(gpt_model= gpt_2_model,
                             idx= text_to_tokens(tokenizer= gpt_2_tokenizer,
                                                 text= sample_text),
