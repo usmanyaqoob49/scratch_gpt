@@ -96,7 +96,7 @@ def evaluate_model(model, train_loader, val_loader, device, eval_iter):
     return train_loss, val_loss
 
 #This function will return the gpt model having all layers freezed except the last one
-def freeze_model(gpt_model, num_classes, got_configurations):
+def freeze_model_layers(gpt_model, num_classes, got_configurations):
     for params in gpt_model.parameters():
         params.required_grad()= False
     gpt_model.out_head= torch.nn.Linear(in_features= got_configurations['emb_dim'],
