@@ -60,5 +60,5 @@ def batch_classification_loss(gpt_model, input_batch, target_batch, device):
     input_batch, target_batch= input_batch.to(device), target_batch.to(device)
     logits= gpt_model(input_batch)
     last_token_logits= logits[:, -1, :]
-    loss= torch.nn.functional.cross_entropy(input= last_token_logits,
-                                            )
+    loss= torch.nn.functional.cross_entropy(input= last_token_logits, 
+                                            target= target_batch)
