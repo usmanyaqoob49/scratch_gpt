@@ -69,7 +69,7 @@ sample_text= (
     "I am feeling happy!"
 )
 print("Start Context sample for LLM: ", sample_text)
-output_token_ids= generate_diverse(model= gpt_2_model,
+output_token_ids= generate_text(model= gpt_2_model,
                             idx= text_to_tokens(tokenizer= gpt_2_tokenizer,
                                                 text= sample_text),
                             max_new_tokens= 25,
