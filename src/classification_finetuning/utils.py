@@ -30,7 +30,7 @@ def map_classes(dataset, class_col_name, class_mapping_dict):
     dataset[class_col_name]= dataset[class_col_name].map(class_mapping_dict)
     return dataset
 
-#Function to find the classification loss of the loader
+#Function to find the classification accuracy of the loader
 def loader_classification_loss(data_loader, model, device, num_batches= None):
     model.eval()
     correct_predictions, num_examples= 0, 0
@@ -53,3 +53,5 @@ def loader_classification_loss(data_loader, model, device, num_batches= None):
         else:
             break
     return correct_predictions / num_examples
+
+#Fu
