@@ -88,7 +88,8 @@ def loader_classification_loss(gpt_model, loader, device, num_batches= None):
 
 def loader_classification_loss_v2(gpt_model, loader, device):
     gpt_model.eval()
-    
+    for input_batch, target_batch in loader:
+        
 #Function to evaluate model--->Find train and validation loader loss
 def evaluate_model(model, train_loader, val_loader, device, eval_iter):
     model.eval()
