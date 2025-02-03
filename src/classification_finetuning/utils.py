@@ -98,8 +98,6 @@ def loader_classification_loss_v2(gpt_model, loader, device, num_batches= None):
     loss_per_batch= total_loss / num_batches
     return loss_per_batch
 
-
-
 #Function to evaluate model--->Find train and validation loader loss
 def evaluate_model(model, train_loader, val_loader, device, eval_iter):
     model.eval()
