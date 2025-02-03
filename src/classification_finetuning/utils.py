@@ -64,4 +64,4 @@ def batch_classification_loss(gpt_model, input_batch, target_batch, device):
                                             target= target_batch)
     return loss
 
-#Function to find the loss
+#Function to find the loss of complete 
