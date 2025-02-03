@@ -63,3 +63,5 @@ def batch_classification_loss(gpt_model, input_batch, target_batch, device):
     loss= torch.nn.functional.cross_entropy(input= last_token_logits, 
                                             target= target_batch)
     return loss
+
+#Function to find the loss
