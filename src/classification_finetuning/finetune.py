@@ -9,8 +9,9 @@ def finetune_model(model, train_loader, validation_loader, optimizer, device, nu
     for epoch in num_epochs:
         model.train()
         for input_batch, target_batch in train_loader:
-            input_batch, target_batch= input_batch.to(device), target_batch.to(device)
             optimizer.zero_grad()
             batch_loss= batch_classification_loss(gpt_model= model,
-                                                  input_batch= input_batch)
+                                                  input_batch= input_batch,
+                                                  target_batch= target_batch.
+                                                  device= device)
 
