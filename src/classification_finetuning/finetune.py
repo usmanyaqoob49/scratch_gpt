@@ -11,6 +11,6 @@ def finetune_model(model, train_loader, validation_loader, optimizer, device, nu
         for input_batch, target_batch in train_loader:
             input_batch, target_batch= input_batch.to(device), target_batch.to(device)
             optimizer.zero_grad()
-            with torch.no_grad():
-                logits= model(input_batch)
+            batch_loss= batch_classification_loss(gpt_model= model,
+                                                  input_batch= input_batch)
 
