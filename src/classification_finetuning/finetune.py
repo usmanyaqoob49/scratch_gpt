@@ -12,6 +12,7 @@ def finetune_model(model, train_loader, validation_loader, optimizer, device, nu
             optimizer.zero_grad()
             batch_loss= batch_classification_loss(gpt_model= model,
                                                   input_batch= input_batch,
-                                                  target_batch= target_batch.
+                                                  target_batch= target_batch,
                                                   device= device)
+    
 
