@@ -31,7 +31,7 @@ def map_classes(dataset, class_col_name, class_mapping_dict):
     return dataset
 
 #Function to find the classification accuracy of the loader
-def loader_classification_loss(data_loader, model, device, num_batches= None):
+def loader_classification_accuracy(data_loader, model, device, num_batches= None):
     model.eval()
     correct_predictions, num_examples= 0, 0
     if num_batches is None:
