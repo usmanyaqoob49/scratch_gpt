@@ -65,7 +65,7 @@ def batch_classification_loss(gpt_model, input_batch, target_batch, device):
     return loss
 
 #Function to find the loss of complete loader
-def loader_classification_loss(gpt_model, loader, device, num_batches= None):
+def loader_classification_loss_v2(gpt_model, loader, device, num_batches= None):
     if len(loader) == 0:
         return float('nan')
     elif num_batches == None:
@@ -85,17 +85,7 @@ def loader_classification_loss(gpt_model, loader, device, num_batches= None):
     loss_per_batch= total_loss / num_batches
     return loss_per_batch
 
-def loader_classification_loss_v2(gpt_model, loader, device):
-    num_batches= 0
-    total_loss= 0
-    for input_batch, target_batch in loader:
-        batch_loss= batch_classification_loss(gpt_model= gpt_model, 
-                                              input_batch= input_batch,
-                                              target_batch= target_batch, 
-                                              device= device)
-        total_loss+= batch_loss
-        num_batches+= 1
-    return  total_loss / num_batches
+
 
 #Function to evaluate model--->Find train and validation loader loss
 def evaluate_model(model, train_loader, val_loader, device, eval_iter):
