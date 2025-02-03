@@ -80,4 +80,4 @@ def loader_classification_loss(gpt_model, loader, device, num_batches= None):
                                                   input_batch= input_batch,
                                                   target_batch= target_batch,
                                                   device= device)
-            
+            total_loss += batch_loss
