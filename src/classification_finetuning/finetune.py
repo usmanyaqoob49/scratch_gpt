@@ -5,7 +5,7 @@ import torch
 torch.manual_seed(123)
 
 #This function will return the gpt model having all layers freezed except the last one
-def classification_finetune(gpt_model, num_classes, got_configurations):
+def freeze_model(gpt_model, num_classes, got_configurations):
     for params in gpt_model.parameters():
         params.required_grad()= False
     gpt_model.out_head= torch.nn.Linear(in_features= got_configurations['emb_dim'],
