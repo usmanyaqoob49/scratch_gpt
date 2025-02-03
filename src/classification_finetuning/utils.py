@@ -55,4 +55,5 @@ def loader_classification_accuracy(data_loader, model, device, num_batches= None
     return correct_predictions / num_examples
 
 #Function to find the classification loss via cross entropy of a batch
-def batch_classification_loss()
+def batch_classification_loss(input_batch, target_batch, device):
+    
