@@ -69,3 +69,4 @@ def loader_classification_loss(gpt_model, loader, device):
     gpt_model.eval()
     for input_batch, target_batch in loader:
         input_batch, target_batch= input_batch.to(device), target_batch.to(device)
+        
