@@ -59,4 +59,4 @@ def batch_classification_loss(gpt_model, input_batch, target_batch, device):
     gpt_model.eval()
     input_batch, target_batch= input_batch.to(device), target_batch.to(device)
     logits= gpt_model(input_batch)
-    last_token_logits= logits[:, -1,]
+    last_token_logits= logits[:, -1, :]
