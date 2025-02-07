@@ -1,5 +1,9 @@
 import pandas as pd 
 import torch
+from src.gpt.gpt_model import GPTModel
+from src.pretraining.utils import load_gpt2_params_from_tf_ckpt
+from src.pretraining.loading_weight_into_gpt import loads_weight_into_gpt
+from src.pretraining.utils import gpt_2_124m_configurations
 
 #Function that will balance the classification dataset based on minimum number of classes present in it (like all class frequence will be equal to lowest repeated class)
 def balance_dataset(dataset_path, classes_column_name):
@@ -118,3 +122,13 @@ def freeze_model_layers(gpt_model, num_classes, got_configurations):
     for params in gpt_model.final_norm.parameters():
         params.requires_grad()= True
     return gpt_model
+
+#Initialize the gpt architecture, will load openai downloaded weights for 
+def get_gpt_2_openai():
+    gpt_2_architecture= GPTModel(cfg= gpt_2_124m_configurations)
+    openai_gpt2_weights= load_gpt2_params_from_tf_ckpt(ckpt_path= './models/gpt-2/124M/124M',
+                                                       settings= gpt_2_124m_configurations)
+    gpt_2_model= loads_weight_into_gpt(gpt_model= gpt_2_architecture,
+                                     params= openai_gpt2_weights)
+    return gpt_2_model
+    
