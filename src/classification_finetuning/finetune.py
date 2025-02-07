@@ -1,7 +1,9 @@
 """
 This module has the function to finetune the gpt-2 model on the classificatio dataset.
-
 Evaluation Frequency decides after how many batches that will be processed, evaluation will happen.
+
+It will return training and validation accuracy list after every epoch, trainin and validation loss lists that are calculated
+after every batch.
 
 """
 import torch
