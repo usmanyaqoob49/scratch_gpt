@@ -27,6 +27,7 @@ def finetune_model(model, train_loader, validation_loader, optimizer, device, nu
             examples_seen+= input_batch.shape[0]
             global_step+=1  
             if global_step % eval_frequency == 0:
+                train_loss, val_loss= evaluate_model()
 
 
 
