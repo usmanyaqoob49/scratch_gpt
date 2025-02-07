@@ -30,7 +30,8 @@ def finetune_model(model, train_loader, validation_loader, optimizer, device, nu
                 train_loss, val_loss= evaluate_model(model= model,
                                                      train_loader= train_loader,
                                                      val_loader= validation_loader,
-                                                     )
+                                                     device= device,
+                                                     eval_iter= eval_iter)
 
 
 
