@@ -2,4 +2,5 @@
 from .utils import get_gpt_2_openai
 
 def train():
+    gpt_2_openai= get_gpt_2_openai()
     
