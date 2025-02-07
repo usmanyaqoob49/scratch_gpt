@@ -32,6 +32,8 @@ def finetune_model(model, train_loader, validation_loader, optimizer, device, nu
                                                      val_loader= validation_loader,
                                                      device= device,
                                                      eval_iter= eval_iter)
+                training_loss.append(train_loss)
+                validation_loss.append(val_loss)
                 print(f"Epoch: {epoch+1} and Global Step: {global_step} \n Training Loss: {train_loss} and Validation Loss: {val_loss}")
         training_loader_accuracy= loader_classification_accuracy(data_loader= train_loader,
                                                                  model= model,
@@ -45,7 +47,7 @@ def finetune_model(model, train_loader, validation_loader, optimizer, device, nu
         validation_accuracy.append(validation_loader_accuracy)
         print(f"Training Accuracy after epoch: {epoch+1} is {training_loader_accuracy}")
         print(f"Validation Accuracy after epoch: {epoch+1} is {validation_loader_accuracy}")
-        
+        return training_accuray, 
 
 
 
