@@ -1,5 +1,8 @@
 """
 This module has the function to finetune the gpt-2 model on the classificatio dataset.
+
+Evaluation Frequency decides after how many batches that will be processed, evaluation will happen.
+
 """
 import torch
 torch.manual_seed(123)
@@ -22,8 +25,8 @@ def finetune_model(model, train_loader, validation_loader, optimizer, device, nu
             batch_loss.backward()
             optimizer.step()
             examples_seen+= input_batch.shape[0]
-            global_step+=1
-            
+            global_step+=1  
+
 
 
     
