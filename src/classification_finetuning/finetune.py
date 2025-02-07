@@ -32,7 +32,7 @@ def finetune_model(model, train_loader, validation_loader, optimizer, device, nu
                                                      val_loader= validation_loader,
                                                      device= device,
                                                      eval_iter= eval_iter)
-                print(f"Epoch: {epoch}")
+                print(f"Epoch: {epoch} \n Training Loss: {train_loss} and Validation Loss: {val_loss}")
 
 
 
