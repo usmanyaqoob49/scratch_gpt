@@ -4,3 +4,4 @@ from .finetune import finetune_model
 
 def train():
     gpt_2_openai= get_gpt_2_openai()
+    
