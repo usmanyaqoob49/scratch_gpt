@@ -6,7 +6,7 @@ Evaluation Frequency decides after how many batches that will be processed, eval
 """
 import torch
 torch.manual_seed(123)
-from .utils import batch_classification_loss
+from .utils import batch_classification_loss, evaluate_model
 
 def finetune_model(model, train_loader, validation_loader, optimizer, device, num_epochs, eval_frequency, eval_iter):
     examples_seen= 0
@@ -27,7 +27,7 @@ def finetune_model(model, train_loader, validation_loader, optimizer, device, nu
             examples_seen+= input_batch.shape[0]
             global_step+=1  
             if global_step % eval_frequency == 0:
-                
+
 
 
 
