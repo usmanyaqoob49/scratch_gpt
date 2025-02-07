@@ -37,6 +37,10 @@ def finetune_model(model, train_loader, validation_loader, optimizer, device, nu
                                                                  model= model,
                                                                  device= device,
                                                                  num_batches= eval_iter)
+        validation_loader_accuracy= loader_classification_accuracy(data_loader= validation_loader,
+                                                                   model= model,
+                                                                   device= device,
+                                                                   num_batches= eval_iter)
 
 
 
