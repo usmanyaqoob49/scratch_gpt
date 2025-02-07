@@ -33,7 +33,10 @@ def finetune_model(model, train_loader, validation_loader, optimizer, device, nu
                                                      device= device,
                                                      eval_iter= eval_iter)
                 print(f"Epoch: {epoch+1} and Global Step: {global_step} \n Training Loss: {train_loss} and Validation Loss: {val_loss}")
-
+        training_loader_accuracy= loader_classification_accuracy(data_loader= train_loader,
+                                                                 model= model,
+                                                                 device= device,
+                                                                 num_batches= eval_iter)
 
 
 
