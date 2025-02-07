@@ -21,7 +21,7 @@ def finetune_model(model, train_loader, validation_loader, optimizer, device, nu
                                                   device= device)
             batch_loss.backward()
             optimizer.step()
-            
+            examples_seen+= input_batch.shape[0]
 
 
     
