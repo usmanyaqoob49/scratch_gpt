@@ -123,7 +123,7 @@ def freeze_model_layers(gpt_model, num_classes, got_configurations):
         params.requires_grad()= True
     return gpt_model
 
-#Initialize the gpt architecture, will load openai downloaded weights for 
+#Initialize the gpt architecture, will load openai downloaded weights in it and return gpt-2-openai model
 def get_gpt_2_openai():
     gpt_2_architecture= GPTModel(cfg= gpt_2_124m_configurations)
     openai_gpt2_weights= load_gpt2_params_from_tf_ckpt(ckpt_path= './models/gpt-2/124M/124M',
