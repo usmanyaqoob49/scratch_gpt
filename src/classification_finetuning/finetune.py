@@ -32,7 +32,7 @@ def finetune_model(model, train_loader, validation_loader, optimizer, device, nu
                                                      val_loader= validation_loader,
                                                      device= device,
                                                      eval_iter= eval_iter)
-                print("")
+                print(f"")
 
 
 
