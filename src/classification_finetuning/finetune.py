@@ -15,6 +15,7 @@ def finetune_model(model, train_loader, validation_loader, optimizer, device, nu
                                                   target_batch= target_batch,
                                                   device= device)
             batch_loss.backward()
-            optimizer.step()
+            optimizer.step().
+            
     
 
