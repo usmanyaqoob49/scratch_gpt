@@ -9,6 +9,8 @@ def finetune_model(model, train_loader, validation_loader, optimizer, device, nu
     examples_seen= 0
     global_step= -1
     training_loss, validation_loss= [], []
+    training_accuray, validation_accuracy= [], []
+    
     for epoch in range(num_epochs):
         model.train()
         for input_batch, target_batch in train_loader:
