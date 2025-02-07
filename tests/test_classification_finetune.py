@@ -5,7 +5,7 @@ from src.classification_finetuning.utils import balance_dataset, class_mapping, 
 import pandas as pd
 from src.classification_finetuning.data_loader import create_data_loaders
 from src.data_preparation.utils import gpt_tokenizer
-from src.classification_finetuning.gpt_model import get_gpt_2_openai
+from src.classification_finetuning.utils import get_gpt_2_openai
 from src.pretraining.generate_text import generate_diverse
 from src.pretraining.utils import text_to_tokens, tokens_to_text
 from src.pretraining.utils import gpt_2_124m_configurations
