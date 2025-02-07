@@ -43,7 +43,7 @@ def finetune_model(model, train_loader, validation_loader, optimizer, device, nu
                                                                    num_batches= eval_iter)
         training_accuray.append(training_loader_accuracy)
         validation_accuracy.append(validation_loader_accuracy)
-        print(f"Training Accuracy after epoch: {epoch} is {training_loader_accuracy}")
+        print(f"Training Accuracy after epoch: {epoch+1} is {training_loader_accuracy}")
         print(f"Validation Accuracy after epoch: {epoch}")
 
 
