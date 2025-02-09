@@ -13,3 +13,4 @@ def train(training_loader, validation_loader, optimizer, device, num_epochs, eva
                                                                                                          eval_frequency= eval_frequency,
                                                                                                          eval_iter= batch_size)
     
+    
