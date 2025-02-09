@@ -3,6 +3,6 @@ from .utils import get_gpt_2_openai
 from .finetune import finetune_model
 from .data_loader import create_data_loaders
 
-def train(classification_dataset, text_col_name, labels_col_name, batch_size, num_workers):
+def train():
     gpt_2_openai= get_gpt_2_openai()
     
