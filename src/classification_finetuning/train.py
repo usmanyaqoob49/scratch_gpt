@@ -2,6 +2,6 @@
 from .utils import get_gpt_2_openai
 from .finetune import finetune_model
 
-def train():
+def train(dataset, text_col_name, labels_col_name):
     gpt_2_openai= get_gpt_2_openai()
     
