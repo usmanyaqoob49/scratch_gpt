@@ -13,4 +13,4 @@ def train(training_loader, validation_loader, optimizer, device, num_epochs, eva
                                                                                                          eval_frequency= eval_frequency,
                                                                                                          eval_iter= batch_size)
     
-    
+    return training_accuray, validation_accuracy, training_loss, validation_loss, examples_seen
