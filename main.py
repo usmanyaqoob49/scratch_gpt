@@ -45,4 +45,4 @@
 
 
 
-#---------API that will take classification dataset, will process it (make loaders), load gpt model, and finetune it on that datasets for classification task
+#---------API that will take classification dataset, will process it (make loaders), and wll call train.py from src.classification finetuning 
