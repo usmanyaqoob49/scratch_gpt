@@ -77,6 +77,7 @@ output_token_ids= generate_text(gpt_model= gpt_2_model,
                             context_size= gpt_2_124m_configurations['context_length'])
 print("Output of loaded gpt-2 model before Classification finetuning: ", tokens_to_text(tokenizer= gpt_2_tokenizer,
                                                        tokens_ids= output_token_ids))
+print('-'*50)
 
 #------Testing training function that performs classification finetuning
 batch_size= 5
@@ -87,3 +88,7 @@ finetuned_model, training_accuray, validation_accuracy, training_loss, validatio
                                                                                             eval_frequency= 50,
                                                                                             batch_size= batch_size)
 torch.save(finetuned_model.state_dict(), f"./models/classification_finetuned/class_finetuned_{num_epochs}")
+print("Training Accuracy: ", training_accuray)
+print("Validation Accuracy: ", validation_accuracy)
+print("Training Loss: ", training_loss)
+print('Validation Loss: ', validation_loss)
