@@ -2,3 +2,4 @@
 /models/gpt-2/
 /src/pretraining/__pycache__/
 /src/classification_finetuning/__pycache__
+/models/class_finetuned/
