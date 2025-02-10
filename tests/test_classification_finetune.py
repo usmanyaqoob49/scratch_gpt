@@ -80,8 +80,10 @@ print("Output of loaded gpt-2 model before Classification finetuning: ", tokens_
 
 #------Testing training function that performs classification finetuning
 batch_size= 5
-training_accuray, validation_accuracy, training_loss, validation_loss, examples_seen= train(training_loader= train_dataset_loader,
+num_epochs= 1
+finetuned_model, training_accuray, validation_accuracy, training_loss, validation_loss, examples_seen= train(training_loader= train_dataset_loader,
                                                                                             validation_loader= validation_dataset_loader,
-                                                                                            num_epochs= 5,
+                                                                                            num_epochs= num_epochs,
                                                                                             eval_frequency= 50,
                                                                                             batch_size= batch_size)
+torch.save(finetuned_model.state_dict(), f"./models/classification_finetuned/class_finetuned_{num_epochs}")

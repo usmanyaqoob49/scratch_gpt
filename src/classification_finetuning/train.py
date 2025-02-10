@@ -9,7 +9,7 @@ def train(training_loader, validation_loader, num_epochs, eval_frequency, batch_
                                  lr= 5e-5,
                                  weight_decay= 0.1)
     device= torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    training_accuray, validation_accuracy, training_loss, validation_loss, examples_seen= finetune_model(model= gpt_2_openai,
+    finetuned_model, training_accuray, validation_accuracy, training_loss, validation_loss, examples_seen= finetune_model(model= gpt_2_openai,
                                                                                                          train_loader= training_loader,
                                                                                                          validation_loader= validation_loader,
                                                                                                          optimizer= optimizer,
@@ -18,4 +18,4 @@ def train(training_loader, validation_loader, num_epochs, eval_frequency, batch_
                                                                                                          eval_frequency= eval_frequency,
                                                                                                          eval_iter= batch_size)
     
-    return training_accuray, validation_accuracy, training_loss, validation_loss, examples_seen
+    return finetuned_model, training_accuray, validation_accuracy, training_loss, validation_loss, examples_seen
