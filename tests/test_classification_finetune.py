@@ -10,6 +10,8 @@ from src.pretraining.generate_text import generate_diverse
 from src.pretraining.utils import text_to_tokens, tokens_to_text
 from src.pretraining.utils import gpt_2_124m_configurations
 from src.gpt.utils import generate_text
+from src.classification_finetuning.train import train
+import torch
 
 data_path= './data/processed/emotion_dataset/combined_emotions_data.csv'
 balance_data= balance_dataset(dataset_path= data_path, classes_column_name= 'emotion')
@@ -75,3 +77,10 @@ output_token_ids= generate_text(gpt_model= gpt_2_model,
                             context_size= gpt_2_124m_configurations['context_length'])
 print("Output of loaded gpt-2 model before Classification finetuning: ", tokens_to_text(tokenizer= gpt_2_tokenizer,
                                                        tokens_ids= output_token_ids))
+
+#------Testing training function that performs classification finetuning
+optimizer_for_finetune= torch.optim.AdamW()
+training_accuray, validation_accuracy, training_loss, validation_loss, examples_seen= train(training_loader= train_dataset_loader,
+                                                                                            validation_loader= validation_dataset_loader,
+                                                                                            num_epochs= 5,
+                                                                                            )
