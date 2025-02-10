@@ -79,8 +79,9 @@ print("Output of loaded gpt-2 model before Classification finetuning: ", tokens_
                                                        tokens_ids= output_token_ids))
 
 #------Testing training function that performs classification finetuning
-optimizer_for_finetune= torch.optim.AdamW()
+batch_size= 5
 training_accuray, validation_accuracy, training_loss, validation_loss, examples_seen= train(training_loader= train_dataset_loader,
                                                                                             validation_loader= validation_dataset_loader,
                                                                                             num_epochs= 5,
-                                                                                            )
+                                                                                            eval_frequency= 50,
+                                                                                            batch_size= batch_size)
