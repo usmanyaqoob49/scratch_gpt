@@ -14,7 +14,7 @@ from src.classification_finetuning.train import train
 import torch
 
 data_path= './data/processed/sms_spam_dataset/sms_spam_ham_data.csv'
-balance_data= balance_dataset(dataset_path= data_path, classes_column_name= 'emotion')
+balance_data= balance_dataset(dataset_path= data_path, classes_column_name= 'Label')
 print(balance_data['emotion'].value_counts())
 print('-'*50)
 
