@@ -27,7 +27,7 @@ print('shape of test set: ', test_set.shape)
 print('-'*50)
 
 #-------Testing data loader class
-train_dataset_loader= create_data_loaders(
+train_dataset_loader, class_to_label_dict= create_data_loaders(
     dataset= train_set,
     text_col_name= 'sentence',
     class_col_name= 'emotion',
@@ -36,7 +36,7 @@ train_dataset_loader= create_data_loaders(
     shuffle= True,
     drop_last= True
 )
-validation_dataset_loader= create_data_loaders(
+validation_dataset_loader, class_to_label_dict= create_data_loaders(
     dataset=validation_set,
     text_col_name= 'sentence',
     class_col_name= 'emotion',
@@ -45,7 +45,7 @@ validation_dataset_loader= create_data_loaders(
     shuffle= False,
     drop_last= False
     )
-test_dataset_loader= create_data_loaders(
+test_dataset_loader, class_to_label_dict= create_data_loaders(
     dataset= test_set,
     text_col_name= 'sentence',
     class_col_name= 'emotion',
@@ -60,6 +60,7 @@ for input_batch, target_batch in train_dataset_loader:
 
 print("Input batch dimensions:", input_batch.shape)
 print("Label batch dimensions", target_batch.shape)
+print('Class to label mapping dictionary: ', class_to_label_dict)
 print('-'*50)
 
 
