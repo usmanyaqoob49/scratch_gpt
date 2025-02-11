@@ -155,4 +155,9 @@ def classify_text_example(finetuned_model, text_example, tokenizer, max_length= 
     allowed_context_length= finetuned_model.pos_emb.weight.shape[0]
     allowed_input_ids= input_ids[:min(max_length, allowed_context_length)]
     padded_input_ids= input_ids + ([pad_token_id] * (max_length - len(input_ids)))
-    
+    input_tensor= torch.tensor(padded_input_ids, device= torch.device('cuda' if torch.cuda.is_available() else 'cpu')).unsqueeze(0)
+
+    with torch.no_grad():
+        logits= finetuned_model(input_tensor)
+        last_token_logit= logits[:, -1, :]
+    predicted_label= torch.argmax(last_token_logit, dim= -1).item()
