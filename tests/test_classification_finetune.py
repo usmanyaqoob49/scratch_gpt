@@ -13,7 +13,7 @@ from src.gpt.utils import generate_text
 from src.classification_finetuning.train import train
 import torch
 
-data_path= './data/processed/emotion_dataset/combined_emotions_data.csv'
+data_path= './data/processed/sms_spam_dataset/SMSSpamCollection.tsv'
 balance_data= balance_dataset(dataset_path= data_path, classes_column_name= 'emotion')
 print(balance_data['emotion'].value_counts())
 print('-'*50)
