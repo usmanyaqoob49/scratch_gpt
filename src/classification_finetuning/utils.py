@@ -161,3 +161,4 @@ def classify_text_example(finetuned_model, text_example, tokenizer, max_length= 
         logits= finetuned_model(input_tensor)
         last_token_logit= logits[:, -1, :]
     predicted_label= torch.argmax(last_token_logit, dim= -1).item()
+    return predicted_label
