@@ -15,7 +15,7 @@ import torch
 
 data_path= './data/processed/sms_spam_dataset/sms_spam_ham_data.csv'
 balance_data= balance_dataset(dataset_path= data_path, classes_column_name= 'Label')
-print(balance_data['emotion'].value_counts())
+print(balance_data['Label'].value_counts())
 print('-'*50)
 
 #------Testing random split function
@@ -29,8 +29,8 @@ print('-'*50)
 #-------Testing data loader class
 train_dataset_loader, class_to_label_dict= create_data_loaders(
     dataset= train_set,
-    text_col_name= 'sentence',
-    class_col_name= 'emotion',
+    text_col_name= 'Text',
+    class_col_name= 'Label',
     batch_size= 8,
     num_workers= 0,
     shuffle= True,
@@ -38,8 +38,8 @@ train_dataset_loader, class_to_label_dict= create_data_loaders(
 )
 validation_dataset_loader, class_to_label_dict= create_data_loaders(
     dataset=validation_set,
-    text_col_name= 'sentence',
-    class_col_name= 'emotion',
+    text_col_name= 'Text',
+    class_col_name= 'Label',
     batch_size= 8,
     num_workers= 0,
     shuffle= False,
@@ -47,8 +47,8 @@ validation_dataset_loader, class_to_label_dict= create_data_loaders(
     )
 test_dataset_loader, class_to_label_dict= create_data_loaders(
     dataset= test_set,
-    text_col_name= 'sentence',
-    class_col_name= 'emotion',
+    text_col_name= 'Text',
+    class_col_name= 'Label',
     batch_size= 8,
     num_workers= 0,
     shuffle= False,
