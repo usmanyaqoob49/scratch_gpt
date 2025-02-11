@@ -20,6 +20,11 @@ def class_mapping(classes_list):
     class_labels_mapping= {cls:number for number, cls in enumerate(unique_classes)}
     return class_labels_mapping
 
+#Function to perform inverse of the class_mapping, to convert the predicted lable to class name so that we can display a proper class name
+def convert_label_to_class(class_mapping_dict, label):
+    labels_to_class_mapping= {number:class_name for number, class_name in class_mapping_dict.items()}
+    return labels_to_class_mapping[label]
+
 #Function to make the train, test and validation set
 def train_val_test_split(data, train_frac= 0.7, validation_frac= 0.1):
     shuffled_data= data.sample(frac= 1, random_state= 42).reset_index(drop= True)

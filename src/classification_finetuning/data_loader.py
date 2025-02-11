@@ -32,4 +32,4 @@ def create_data_loaders(
         num_workers= num_workers,
         drop_last= drop_last
     )
-    return data_loader
+    return data_loader, class_mapping_dict
