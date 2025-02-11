@@ -1,7 +1,7 @@
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from src.classification_finetuning.utils import balance_dataset, class_mapping, train_val_test_split, map_classes
+from src.classification_finetuning.utils import balance_dataset, class_mapping, train_val_test_split, map_classes, classify_text_example, convert_label_to_class
 import pandas as pd
 from src.classification_finetuning.data_loader import create_data_loaders
 from src.data_preparation.utils import gpt_tokenizer
@@ -93,3 +93,12 @@ print("Training Accuracy: ", training_accuray)
 print("Validation Accuracy: ", validation_accuracy)
 print("Training Loss: ", training_loss)
 print('Validation Loss: ', validation_loss)
+print('-'*50)
+
+#-------Testing prediction function and reverse labeling from label to class name function
+text_sample= "Hello you have won the price!"
+predicted_label= classify_text_example(finetuned_model= finetuned_model,
+                                       text_example= text_sample,
+                                       tokenizer= gpt_2_tokenizer)
+print('Label predicted by the finetuned model: ', predicted_label)
+print('Class Name predicted by the finetuned model: ', convert_label_to_class(class_mapping_dict= class_to_label_dict, label= predicted_label))
