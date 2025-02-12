@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.intruction_finetuning.utils import InstructionDataset, custom_collate
 from src.data_preparation.utils import gpt_tokenizer
 
