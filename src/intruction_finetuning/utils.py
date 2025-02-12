@@ -2,6 +2,7 @@
 Helping functions for the Instruction Finetuning of the LLM model.
 """
 import torch
+from torch.utils.data import Dataset
 
 #Function to format the instructions data in a specific aplaca prompt template
 def format_input(input_entry):
@@ -18,3 +19,15 @@ def format_input(input_entry):
     )
     final_input_text= instructions_text + input_text + response_text
     return final_input_text
+
+#class for preparing the datasets before being loaded in the data loader
+class InstructionDataset(Dataset):
+    def __init__(self, data, tokenizer):
+        super().__init__()
+        self.encoded_text= []
+        self.data= data
+        for entry in data:
+            aplaca_formatted_text= format_input(input_entry= entry)
+            tokenized_text= tokenizer.encode(aplaca_formatted_text)
+            self.encoded_text.append(tokenized_text)
+
