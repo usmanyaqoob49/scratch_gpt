@@ -52,6 +52,10 @@ def custom_collate(batch, pad_token_id= 50256, ignore_index= -100, allowed_max_l
         if allowed_max_length is not None:
             allowed_input= input_tensor[:allowed_max_length]
             allowed_target= target_tensor[:allowed_max_length]
-            
+        input_ids.append(allowed_input)
+        target_ids.append(allowed_target)
+    input_tensors= torch.stack(input_ids).to(device)
+    target_tensors= torch.stack(target_ids).to(device)
+    return input_tensor, target_tensor
 
 
