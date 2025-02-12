@@ -56,6 +56,6 @@ def custom_collate(batch, pad_token_id= 50256, ignore_index= -100, allowed_max_l
         target_ids.append(allowed_target)
     input_tensors= torch.stack(input_ids).to(device)
     target_tensors= torch.stack(target_ids).to(device)
-    return input_tensor, target_tensor
+    return input_tensors, target_tensors
 
 
