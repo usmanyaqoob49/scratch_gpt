@@ -46,6 +46,12 @@ def custom_collate(batch, pad_token_id= 50256, ignore_index= -100, allowed_max_l
         input_tensor= torch.tensor(padded_entry)
         target_tensor= torch.tensor(padded_entry[1:] + [pad_token_id])
         mask= target_tensor == pad_token_id
-        
+        padded_indices= torch.nonzero(mask).sequeeze() 
+        if padded_indices.numel() > 1:
+            target_tensor[padded_indices[1:]]= ignore_index
+        if allowed_max_length is not None:
+            allowed_input= input_tensor[:allowed_max_length]
+            allowed_target= target_tensor[:allowed_max_length]
+            
 
 
