@@ -30,4 +30,8 @@ class InstructionDataset(Dataset):
             aplaca_formatted_text= format_input(input_entry= entry)
             tokenized_text= tokenizer.encode(aplaca_formatted_text)
             self.encoded_text.append(tokenized_text)
-
+    def __getitem__(self, index):
+        return self.encoded_text(index)
+    def __len__(self):
+        return len(self.encoded_text)
+    
