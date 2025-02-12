@@ -35,3 +35,17 @@ class InstructionDataset(Dataset):
     def __len__(self):
         return len(self.encoded_text)
     
+#Function to perform-->We will get tokenized batches, we will pad them. We will replace padding number with -100 so it can be ignored during training, in the end we will make target by shifting input by 1
+def custom_collate(batch, pad_token_id= 50256, ignore_index= -100, allowed_max_length= None, device= 'cpu'):
+    max_length_in_batch= max(len(entry) + 1 for entry in batch)
+    input_ids, target_ids= [], []
+    for entry in batch:
+        padded_entry= (
+            entry + [pad_token_id] * (max_length_in_batch - (len(entry) + 1))
+        )
+        input_tensor= torch.tensor(padded_entry)
+        target_tensor= torch.tensor(padded_entry[1:] + [pad_token_id])
+        mask= target_tensor == pad_token_id
+        
+
+
