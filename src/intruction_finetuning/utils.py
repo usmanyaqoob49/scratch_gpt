@@ -20,7 +20,7 @@ def format_input(input_entry):
     final_input_text= instructions_text + input_text + response_text
     return final_input_text
 
-#class for preparing the datasets before being loaded in the data loader
+#class for preparing the datasets before being loaded in the data loader--->Format the input, tokenize it
 class InstructionDataset(Dataset):
     def __init__(self, data, tokenizer):
         super().__init__()
