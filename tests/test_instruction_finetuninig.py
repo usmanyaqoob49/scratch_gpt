@@ -15,7 +15,13 @@ batch = [
 ]
 gpt_2_tokenizer= gpt_tokenizer()
 instruction_dataset= InstructionDataset(data= batch, tokenizer= gpt_2_tokenizer)
-print("Encoded: ", instruction_dataset.encoded_text)
+encoded_batch= instruction_dataset.encoded_text
+print("Encoded: ", encoded_batch)
 print('Number of encoded data samples: ', instruction_dataset.__len__())
+print('-'*50)
 
-
+#---------Testing Custom Collate functiont that pads the examples and make input and target samples from batch
+input_tensors, target_tensors= custom_collate(batch= encoded_batch)
+print('Input Tensors: ', input_tensors)
+print('Output Tensors: ', target_tensors)
+print('-'*50)
