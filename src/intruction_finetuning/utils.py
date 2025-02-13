@@ -46,7 +46,7 @@ def custom_collate(batch, pad_token_id= 50256, ignore_index= -100, allowed_max_l
         input_tensor= torch.tensor(padded_entry)
         target_tensor= torch.tensor(padded_entry[1:] + [pad_token_id])
         mask= target_tensor == pad_token_id
-        padded_indices= torch.nonzero(mask).sequeeze() 
+        padded_indices= torch.nonzero(mask).squeeze() 
         if padded_indices.numel() > 1:
             target_tensor[padded_indices[1:]]= ignore_index #leave first padded_token so that model can know that text ended here
         if allowed_max_length is not None:
