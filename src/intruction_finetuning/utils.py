@@ -58,4 +58,12 @@ def custom_collate(batch, pad_token_id= 50256, ignore_index= -100, allowed_max_l
     target_tensors= torch.stack(target_ids).to(device)
     return input_tensors, target_tensors
 
+#Function to split data into train, val, test sets
+def train_val_test_split(json_data, training_fraction= 0.85, validation_fraction= 0.1):
+    train_portion = int(len(json_data) * training_fraction)  
+    val_portion = int(len(json_data) * validation_fraction)    
 
+    train_data = json_data[:train_portion]
+    val_data = json_data[train_portion:train_portion + val_portion]
+    test_data= json_data[train_portion + val_portion:]
+    return train_data, val_data, test_data
