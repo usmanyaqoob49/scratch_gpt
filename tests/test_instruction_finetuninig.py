@@ -3,12 +3,15 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.intruction_finetuning.utils import InstructionDataset, custom_collate
 from src.data_preparation.utils import gpt_tokenizer
+import json
 
-inputs_1 = "Hi how are you doing?"
-inputs_2 = "I am doing great"
+with open('./data/raw/instructions_data/instruction-data.json', 'r', encoding= 'utf-8') as file:
+    data= json.load(file)
+
+print('First data sample from the instructions dataset: ', data[0])
 batch = [
-    inputs_1,
-    inputs_2,
+    data[0],
+    data[1],
 ]
 gpt_2_tokenizer= gpt_tokenizer()
 instruction_dataset= InstructionDataset(data= batch, tokenizer= gpt_2_tokenizer)
