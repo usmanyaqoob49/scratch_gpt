@@ -1,5 +1,5 @@
 """"
-This Module has data loader function that takes datasets, prepare them, and create loaders from them.
+This Module has data loader function that takes datasets, prepare them, use custom collate function to pad and make targets and create loaders from them.
 """
 from .utils import InstructionDataset, custom_collate
 from torch.utils.data import DataLoader
