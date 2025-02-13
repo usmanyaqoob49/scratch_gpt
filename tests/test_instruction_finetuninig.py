@@ -19,7 +19,7 @@ train_set, validation_set, test_set= train_val_test_split(json_data= data)
 training_loader, validation_loader, test_loader= create_istructions_data_loader(training_dataset=train_set,
                                                                                 validation_dataset= validation_set,
                                                                                 test_dataset= test_set,
-                                                                                tokenizer= gpt_tokenizer,
+                                                                                tokenizer= gpt_2_tokenizer,
                                                                                 batch_size= 8,
                                                                                 num_workers= 0)
 for input, target in training_loader:
