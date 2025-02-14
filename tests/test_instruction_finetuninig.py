@@ -11,11 +11,6 @@ import json
 #----------Testing Data Loader
 with open('./data/raw/instructions_data/instruction-data.json', 'r', encoding= 'utf-8') as file:
     data= json.load(file)
-print('First data sample from the instructions dataset: ', data[0])
-batch = [
-    data[0],
-    data[1],
-]
 gpt_2_tokenizer= gpt_tokenizer()
 train_set, validation_set, test_set= train_val_test_split(json_data= data)
 training_loader, validation_loader, test_loader= create_istructions_data_loader(training_dataset=train_set,
@@ -29,15 +24,13 @@ training_loader, validation_loader, test_loader= create_istructions_data_loader(
 openai_gpt_2_model= get_gpt_2_openai()
 openai_gpt_2_model.eval()
 
-# #------Testing not finetuned model on the instruction data
-for input, target in validation_loader:
-    token_ids= generate_text(
-        gpt_model= openai_gpt_2_model,
-        idx= input[0].squeeze(),
-        max_new_tokens= 50,
-        context_size= gpt_2_124m_configurations['context_length']
-    )
-    generated_text= tokens_to_text(tokenizer= gpt_2_tokenizer, 
-                                  tokens_ids= token_ids)
-    print("Text produce by un-finetuned Gpt-2: ", generated_text)
-    break
+#------Testing not finetuned model on the instruction data
+token_ids= generate_text(
+    gpt_model= openai_gpt_2_model,
+    idx= input[0],
+    max_new_tokens= 50,
+    context_size= gpt_2_124m_configurations['context_length']
+)
+generated_text= tokens_to_text(tokenizer= gpt_2_tokenizer, 
+                                tokens_ids= token_ids)
+print("Text produce by un-finetuned Gpt-2: ", generated_text)
