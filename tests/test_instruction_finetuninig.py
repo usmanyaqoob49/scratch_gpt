@@ -25,3 +25,4 @@ training_loader, validation_loader, test_loader= create_istructions_data_loader(
                                                                                 num_workers= 0)
 
 #------Using the function that initialize the gpt-architecture and then loads openai weights in it
+openai_gpt_2_model= get_gpt_2_openai()
