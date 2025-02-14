@@ -33,7 +33,7 @@ openai_gpt_2_model.eval()
 for input, target in validation_loader:
     token_ids= generate_text(
         gpt_model= openai_gpt_2_model,
-        idx= input[0],
+        idx= input[0].squeeze(),
         max_new_tokens= 50,
         context_size= gpt_2_124m_configurations['context_length']
     )
