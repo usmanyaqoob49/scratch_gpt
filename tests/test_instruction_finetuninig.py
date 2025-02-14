@@ -3,6 +3,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.intruction_finetuning.data_loader import create_istructions_data_loader
 from src.data_preparation.utils import gpt_tokenizer
+from src.intruction_finetuning.utils import format_input
 from src.intruction_finetuning.utils import train_val_test_split
 from src.classification_finetuning.utils import get_gpt_2_openai
 from src.pretraining.utils import text_to_tokens, tokens_to_text, generate_text, gpt_2_124m_configurations
@@ -25,10 +26,12 @@ openai_gpt_2_model= get_gpt_2_openai()
 openai_gpt_2_model.eval()
 
 #------Testing not finetuned model on the instruction data
-print('First text data point: ', data[0])
+formatted_input_sample= format_input(input_entry=data[0])
+print('First text data point foramatted in aplaca template: ', formatted_input_sample)
 token_ids= generate_text(
     gpt_model= openai_gpt_2_model,
-    idx= text_to_tokens(),
+    idx= text_to_tokens(tokenizer= gpt_2_tokenizer,
+                        text= formatted_input_sample),
     max_new_tokens= 50,
     context_size= gpt_2_124m_configurations['context_length']
 )
