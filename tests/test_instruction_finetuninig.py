@@ -5,7 +5,7 @@ from src.intruction_finetuning.data_loader import create_istructions_data_loader
 from src.data_preparation.utils import gpt_tokenizer
 from src.intruction_finetuning.utils import train_val_test_split
 from src.classification_finetuning.utils import get_gpt_2_openai
-from src.pretraining.utils import text_to_tokens, tokens_to_text, generate_text
+from src.pretraining.utils import text_to_tokens, tokens_to_text, generate_text, gpt_2_124m_configurations
 import json
 
 #----------Testing Data Loader
@@ -31,11 +31,13 @@ openai_gpt_2_model.eval()
 
 # #------Testing not finetuned model on the instruction data
 for input, target in validation_loader:
-    print('First Input in first batch :', input[0])
-    print('First target in first batch :', target[0])
     token_ids= generate_text(
         gpt_model= openai_gpt_2_model,
-        idx= validation_loader[0],
-
+        idx= input[0],
+        max_new_tokens= 50,
+        context_size= gpt_2_124m_configurations['context_length']
     )
+    generated_text= tokens_to_text(tokenizer= gpt_2_tokenizer, 
+                                  tokens_ids= token_ids)
+    print("Text produce by un-finetuned Gpt-2: ", generated_text)
     break
