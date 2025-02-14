@@ -24,7 +24,14 @@ training_loader, validation_loader, test_loader= create_istructions_data_loader(
                                                                                 tokenizer= gpt_2_tokenizer,
                                                                                 batch_size= 8,
                                                                                 num_workers= 0)
-
+print(validation_loader[0])
 #------Using the function that initialize the gpt-architecture and then loads openai weights in it
 openai_gpt_2_model= get_gpt_2_openai()
-openai_gpt_2_model.eval();
+openai_gpt_2_model.eval()
+
+# #------Testing not finetuned model on the instruction data
+# token_ids= generate_text(
+#     gpt_model= openai_gpt_2_model,
+#     idx= validation_loader[0],
+
+# )
