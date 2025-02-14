@@ -27,7 +27,7 @@ openai_gpt_2_model.eval()
 #------Testing not finetuned model on the instruction data
 token_ids= generate_text(
     gpt_model= openai_gpt_2_model,
-    idx= input[0],
+    idx= text_to_tokens(data[0], tokenizer= gpt_2_tokenizer),
     max_new_tokens= 50,
     context_size= gpt_2_124m_configurations['context_length']
 )
