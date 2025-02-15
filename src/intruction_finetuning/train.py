@@ -2,7 +2,7 @@
 This module has function to train the LLM on the given data loaders. We will use it for the instruction finetuning.
 """
 import torch
-from .utils import calculate_batch_loss, evaluate_model, generate_print_sample_text
+from src.pretraining.utils import calculate_batch_loss, evaluate_model, generate_print_sample_text
 
 def train_model(model, train_loader, validation_loader,
                 optimizer, device, num_epochs,
