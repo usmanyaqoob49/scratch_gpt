@@ -7,6 +7,7 @@ from src.intruction_finetuning.utils import format_input
 from src.intruction_finetuning.utils import train_val_test_split
 from src.classification_finetuning.utils import get_gpt_2_openai
 from src.pretraining.utils import text_to_tokens, tokens_to_text, generate_text, gpt_2_124m_configurations
+from src.classification_finetuning.finetune import finetune_model
 import json
 
 #----------Testing Data Loader
