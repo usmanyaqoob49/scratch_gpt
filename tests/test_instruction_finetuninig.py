@@ -7,7 +7,7 @@ from src.intruction_finetuning.utils import format_input
 from src.intruction_finetuning.utils import train_val_test_split
 from src.classification_finetuning.utils import get_gpt_2_openai
 from src.pretraining.utils import text_to_tokens, tokens_to_text, generate_text, gpt_2_124m_configurations
-from src.classification_finetuning.finetune import finetune_model
+import torch
 from src.intruction_finetuning.train import train_model
 import json
 
@@ -42,3 +42,18 @@ generated_text= tokens_to_text(tokenizer= gpt_2_tokenizer,
 print("Text produce by un-finetuned Gpt-2: ", generated_text)
 
 #-----Testing training function for finetuning 
+optim= torch.optim.AdamW(params= openai_gpt_2_model.parameters(),
+                         lr= 0.00005,
+                         weight_decay= 0.1)
+device= torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+instruction_finetuned_model, training_loss, validation_loss, track_tokens_seen= train_model(
+    model= openai_gpt_2_model,
+    train_loader= training_loader,
+    validation_loader= validation_loader,
+    optimizer=optim,
+    device= device,
+    eval_freq= 5,
+    eval_iter= 5,
+    start_context= formatted_input_sample,
+    tokenizer= gpt_2_tokenizer
+)
