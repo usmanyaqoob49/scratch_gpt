@@ -57,3 +57,5 @@ instruction_finetuned_model, training_loss, validation_loss, track_tokens_seen= 
     start_context= formatted_input_sample,
     tokenizer= gpt_2_tokenizer
 )
+print('Training Loss for the Instruction finetuning: ', training_loss)
+print('Validation Loss Loss for the Instruction finetuning: ', validation_loss)
