@@ -8,6 +8,7 @@ from src.intruction_finetuning.utils import train_val_test_split
 from src.classification_finetuning.utils import get_gpt_2_openai
 from src.pretraining.utils import text_to_tokens, tokens_to_text, generate_text, gpt_2_124m_configurations
 from src.classification_finetuning.finetune import finetune_model
+from src.intruction_finetuning.train import train_model
 import json
 
 #----------Testing Data Loader
@@ -39,3 +40,5 @@ token_ids= generate_text(
 generated_text= tokens_to_text(tokenizer= gpt_2_tokenizer, 
                                 tokens_ids= token_ids)
 print("Text produce by un-finetuned Gpt-2: ", generated_text)
+
+#-----Testing training function for finetuning 
