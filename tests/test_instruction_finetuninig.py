@@ -52,6 +52,7 @@ instruction_finetuned_model, training_loss, validation_loss, track_tokens_seen= 
     validation_loader= validation_loader,
     optimizer=optim,
     device= device,
+    num_epochs= 1,
     eval_freq= 5,
     eval_iter= 5,
     start_context= formatted_input_sample,
