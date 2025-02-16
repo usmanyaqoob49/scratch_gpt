@@ -1,22 +1,17 @@
+from fastapi import FastAPI
+from pydantic import BaseModel
+from src.pretraining.pretrain_gpt import pretrain_gpt
 
 
-
-
-#--------------API that will take data file path and will pretrain gpt-2 (function to be used pretrain in pretrain_gpt.py in pretraining module.)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+app= FastAPI()
+#--------------API that will take data file path and will pretrain gpt-2 
+class PretrainingRequest(BaseModel):
+    file_path: str
+    num_epochs: int
+@app.post("/pretrain")
+def train(request: PretrainingRequest):
+    train_losses, validation_losses, tokens_seen = pretrain_gpt(request.file_path, request.epochs)
+    return train_losses, validation_losses
 
 
 #------------API to load openAI weights in our gpt architecture using src.pretrain.loading_weights_into_gpt.py 
