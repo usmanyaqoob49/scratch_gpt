@@ -1,16 +1,15 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Form
 from pydantic import BaseModel
 from src.pretraining.pretrain_gpt import pretrain_gpt
 
 
 app= FastAPI()
 #--------------API that will take data file path and will pretrain gpt-2 
-class PretrainingRequest(BaseModel):
-    file_path: str
-    num_epochs: int
 @app.post("/pretrain")
-def train(request: PretrainingRequest):
-    train_losses, validation_losses, tokens_seen = pretrain_gpt(request.file_path, request.epochs)
+async def train(
+    file_path: str = Form(...),
+    epochs: int = Form(...)):    
+    train_losses, validation_losses, tokens_seen = pretrain_gpt(file_path, epochs)
     return train_losses, validation_losses
 
 
