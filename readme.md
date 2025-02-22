@@ -1,7 +1,7 @@
 # scratch gpt
 I tried my best to do functional coding so that anyone can use this project for their usecase by using their own datasets. I tired my best to keep it clean but I would love to see it more improved :) 
 
-Everything is written using python and pytorch. 
+Everything is written using python and pytorch, no libraries or stuff. I tried to code everything from scratch. 
 
 Project Directory details:
 
