@@ -4,6 +4,7 @@ I tried my best to do functional coding so that anyone can use this project for 
 Everything is written using python and pytorch. 
 
 Project Directory details:
+
             - Data preparation codes that we need for using the coding the LLM like GPT-2 from scratch in src.data_preparation.
             - Scratch Codes of Scaled Self Attention, Causal Self Attention, Multihead Attention in src.attention_mechanism.
             - Transformer scratch code in src.transformer.
