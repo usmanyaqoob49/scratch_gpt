@@ -25,4 +25,4 @@ GO through the project in this order to get most out of it:
     - src.classification_finetuning
     - src.instruction_finetuning
 
-    
+Explore the test files in the same order as mentioned above.
